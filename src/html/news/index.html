@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <title>コンポーネント</title>
+  <meta name="description" content="コンポーネントリストの概要です" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="コンポーネント" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com" />
+  <meta property="og:image" content="https://example.com/images/common/ogp.jpg" />
+  <meta property="og:site_name" content="コンポーネント" />
+  <meta property="og:description" content="コンポーネントリストの概要です" />
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:description" content="コンポーネントリストの概要です" />
+  <meta name="twitter:title" content="コンポーネント" />
+  <meta name="twitter:image" content="https://example.com/images/common/ogp.jpg" />
+  <!-- icon -->
+  <link rel="icon" href="/assets/images/common/icon-16x16.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="/assets/images/common/icon-32x32.png" sizes="32x32" type="image/png" />
+  <link rel="icon" href="/assets/images/common/icon-48x48.png" sizes="48x48" type="image/png" />
+  <link rel="icon" href="/assets/images/common/icon-72x72.png" sizes="72x72" type="image/png" />
+  <link rel="apple-touch-icon" href="/assets/images/common/apple-touch-icon-152x152.png" />
+  <!--  ファビコン -->
+  <link rel="icon" href="#" />
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- css -->
+  <link rel="stylesheet" href="/assets/css/style.css?ver=6341869116" />
+  <!-- JavaScript -->
+  <script defer src="/assets/js/script.js?ver=6341869116"></script>
+</head>
+
+<body>
+  <header class="p-header l-header" id="js-header">
+    <div class="p-header__inner l-inner">
+      <div class="p-header__logo">
+        <h1 class="p-header__logo">
+          ロゴ
+          <picture>
+            <source srcset="/assets/images/common/logo.webp" type="image/webp" width="180" height="50">
+            <img src="/assets/images/common/logo.png" alt="" decoding="async" width="180" height="50">
+          </picture>
+        </h1>
+      </div>
+      <nav class="p-header__nav" aria-label="メインメニュー">
+        <ul class="p-header__lists">
+          <li class="p-header__list"><a href="">メニュー</a></li>
+          <li class="p-header__list"><a href="">メニュー</a></li>
+          <li class="p-header__list"><a href="">メニュー</a></li>
+          <li class="p-header__list"><a href="">メニュー</a></li>
+          <li class="p-header__list"><a href="">メニュー</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="p-main">
+    <div class="l-inner">
+      <section class="p-component l-section">
+        <div class="p-component__mainTitle">
+          <h2 class="c-heading c-heading--2">カード</h2>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-card</h3>
+        </div>
+        <div class="p-component__preview">
+          <div class="c-card ">
+            <picture class="c-card__image">
+              <source srcset="https://picsum.photos/600/400.webp" type="image/webp">
+              <img src="https://picsum.photos/600/400.jpg" alt="タイトルが入ります" width="600" height="400" decoding="async">
+            </picture>
+            <div class="c-card__body">
+              <time class="c-card__time" datetime="2023-05-01">
+                2023.05.01
+              </time>
+              <h3 class="c-card__title">
+                タイトルが入ります
+              </h3>
+              <p class="c-card__text">
+                テキストが入ります。テキストが入ります。テキストが入ります。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-card--shadow</h3>
+        </div>
+        <div class="p-component__preview">
+          <div class="c-card c-card--shadow">
+            <picture class="c-card__image">
+              <source srcset="https://picsum.photos/600/400.webp" type="image/webp">
+              <img src="https://picsum.photos/600/400.jpg" alt="タイトルが入ります" width="600" height="400" decoding="async">
+            </picture>
+            <div class="c-card__body">
+              <time class="c-card__time" datetime="2023-05-01">
+                2023.05.01
+              </time>
+              <h3 class="c-card__title">
+                タイトルが入ります
+              </h3>
+              <p class="c-card__text">
+                テキストが入ります。テキストが入ります。テキストが入ります。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-card--horizon</h3>
+        </div>
+        <div class="p-component__preview">
+          <div class="c-card c-card--horizon">
+            <picture class="c-card__image">
+              <source srcset="https://picsum.photos/600/400.webp" type="image/webp">
+              <img src="https://picsum.photos/600/400.jpg" alt="タイトルが入ります" width="600" height="400" decoding="async">
+            </picture>
+            <div class="c-card__body">
+              <time class="c-card__time" datetime="2023-05-01">
+                2023.05.01
+              </time>
+              <h3 class="c-card__title">
+                タイトルが入ります
+              </h3>
+              <p class="c-card__text">
+                テキストが入ります。テキストが入ります。テキストが入ります。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.p-cards</h3>
+        </div>
+        <div class="p-component__preview">
+          <div class="p-cards">
+            <div class="p-cards__card">
+              <div class="c-card ">
+                <picture class="c-card__image">
+                  <source srcset="https://picsum.photos/600/400.webp" type="image/webp">
+                  <img src="https://picsum.photos/600/400.jpg" alt="タイトル1が入ります" width="600" height="400"
+                    decoding="async">
+                </picture>
+                <div class="c-card__body">
+                  <time class="c-card__time" datetime="2023-05-01">
+                    2023.05.01
+                  </time>
+                  <h3 class="c-card__title">
+                    タイトル1が入ります
+                  </h3>
+                  <p class="c-card__text">
+                    テキストが入ります。テキストが入ります。テキストが入ります。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="p-cards__card">
+              <div class="c-card ">
+                <picture class="c-card__image">
+                  <source srcset="https://picsum.photos/600/400.webp" type="image/webp">
+                  <img src="https://picsum.photos/600/400.jpg" alt="タイトル2が入ります" width="600" height="400"
+                    decoding="async">
+                </picture>
+                <div class="c-card__body">
+                  <time class="c-card__time" datetime="2023-05-01">
+                    2023.05.01
+                  </time>
+                  <h3 class="c-card__title">
+                    タイトル2が入ります
+                  </h3>
+                  <p class="c-card__text">
+                    テキストが入ります。テキストが入ります。テキストが入ります。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="p-cards__card">
+              <div class="c-card ">
+                <picture class="c-card__image">
+                  <source srcset="https://picsum.photos/600/400.webp" type="image/webp">
+                  <img src="https://picsum.photos/600/400.jpg" alt="タイトル3が入ります" width="600" height="400"
+                    decoding="async">
+                </picture>
+                <div class="c-card__body">
+                  <time class="c-card__time" datetime="2023-05-01">
+                    2023.05.01
+                  </time>
+                  <h3 class="c-card__title">
+                    タイトル3が入ります
+                  </h3>
+                  <p class="c-card__text">
+                    テキストが入ります。テキストが入ります。テキストが入ります。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="p-cards__card">
+              <div class="c-card ">
+                <picture class="c-card__image">
+                  <source srcset="https://picsum.photos/600/400.webp" type="image/webp">
+                  <img src="https://picsum.photos/600/400.jpg" alt="タイトル4が入ります" width="600" height="400"
+                    decoding="async">
+                </picture>
+                <div class="c-card__body">
+                  <time class="c-card__time" datetime="2023-05-01">
+                    2023.05.01
+                  </time>
+                  <h3 class="c-card__title">
+                    タイトル4が入ります
+                  </h3>
+                  <p class="c-card__text">
+                    テキストが入ります。テキストが入ります。テキストが入ります。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="p-cards__card">
+              <div class="c-card ">
+                <picture class="c-card__image">
+                  <source srcset="https://picsum.photos/600/400.webp" type="image/webp">
+                  <img src="https://picsum.photos/600/400.jpg" alt="タイトル5が入ります" width="600" height="400"
+                    decoding="async">
+                </picture>
+                <div class="c-card__body">
+                  <time class="c-card__time" datetime="2023-05-01">
+                    2023.05.01
+                  </time>
+                  <h3 class="c-card__title">
+                    タイトル5が入ります
+                  </h3>
+                  <p class="c-card__text">
+                    テキストが入ります。テキストが入ります。テキストが入ります。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="p-cards__card">
+              <div class="c-card ">
+                <picture class="c-card__image">
+                  <source srcset="https://picsum.photos/600/400.webp" type="image/webp">
+                  <img src="https://picsum.photos/600/400.jpg" alt="タイトル6が入ります" width="600" height="400"
+                    decoding="async">
+                </picture>
+                <div class="c-card__body">
+                  <time class="c-card__time" datetime="2023-05-01">
+                    2023.05.01
+                  </time>
+                  <h3 class="c-card__title">
+                    タイトル6が入ります
+                  </h3>
+                  <p class="c-card__text">
+                    テキストが入ります。テキストが入ります。テキストが入ります。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="p-component l-section">
+        <div class="p-component__mainTitle">
+          <h2 class="c-heading c-heading--2">ボタン</h2>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-button</h3>
+        </div>
+        <div class="p-component__preview">
+          <a href="#" class="c-button ">ボタン</a>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-button--arrow</h3>
+        </div>
+        <div class="p-component__preview">
+          <a href="#" class="c-button c-button--arrow">矢印付きボタン</a>
+        </div>
+      </section>
+      <section class="p-component l-section">
+        <div class="p-component__mainTitle">
+          <h2 class="c-heading c-heading--2">リスト</h2>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-list</h3>
+        </div>
+        <div class="p-component__preview">
+          <ul class="c-list">
+            <li>リスト1</li>
+            <li>
+              リスト2
+              <ul>
+                <li>子リスト1</li>
+                <li>
+                  子リスト2
+                  <ul>
+                    <li>孫リスト1</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>リスト3</li>
+          </ul>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-list--decimal</h3>
+        </div>
+        <div class="p-component__preview">
+          <ul class="c-list c-list--decimal">
+            <li>リスト1</li>
+            <li>
+              リスト2
+              <ul>
+                <li>子リスト1</li>
+                <li>
+                  子リスト2
+                  <ul>
+                    <li>孫リスト1</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>リスト3</li>
+          </ul>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-list--arrow-start</h3>
+        </div>
+        <div class="p-component__preview">
+          <ul class="c-list c-list--arrow-start">
+            <li>リスト1</li>
+            <li>
+              リスト2
+              <ul>
+                <li>子リスト1</li>
+                <li>
+                  子リスト2
+                  <ul>
+                    <li>孫リスト1</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>リスト3</li>
+          </ul>
+        </div>
+      </section>
+      <section class="p-component l-section">
+        <div class="p-component__mainTitle">
+          <h2 class="c-heading c-heading--2">ドロワー</h2>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-drawer</h3>
+        </div>
+        <div class="p-component__preview">
+          <div class="c-drawer">
+            <button class="c-drawer__button js-drawerButton" type="button" aria-expanded="false">
+              <span class="c-drawer__line">メニューを開閉する</span>
+            </button>
+            <div class="c-drawer__modal" id="modal-drawer1" aria-hidden="true">
+              <div tabindex="-1" data-micromodal-close>
+                <div role="dialog" aria-modal="true">
+                  <nav id="modal-drawer-content1" aria-label="メニュー1">
+                    <ul class="c-drawer__lists">
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-drawer--open-right</h3>
+        </div>
+        <div class="p-component__preview">
+          <div class="c-drawer c-drawer--open-right">
+            <button class="c-drawer__button js-drawerButton" type="button" aria-expanded="false">
+              <span class="c-drawer__line">メニューを開閉する</span>
+            </button>
+            <div class="c-drawer__modal" id="modal-drawer2" aria-hidden="true">
+              <div tabindex="-1" data-micromodal-close>
+                <div role="dialog" aria-modal="true">
+                  <nav id="modal-drawer-content2" aria-label="メニュー2">
+                    <ul class="c-drawer__lists">
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-drawer--open-left</h3>
+        </div>
+        <div class="p-component__preview">
+          <div class="c-drawer c-drawer--open-left">
+            <button class="c-drawer__button js-drawerButton" type="button" aria-expanded="false">
+              <span class="c-drawer__line">メニューを開閉する</span>
+            </button>
+            <div class="c-drawer__modal" id="modal-drawer3" aria-hidden="true">
+              <div tabindex="-1" data-micromodal-close>
+                <div role="dialog" aria-modal="true">
+                  <nav id="modal-drawer-content3" aria-label="メニュー3">
+                    <ul class="c-drawer__lists">
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-drawer--open-top</h3>
+        </div>
+        <div class="p-component__preview">
+          <div class="c-drawer c-drawer--open-top">
+            <button class="c-drawer__button js-drawerButton" type="button" aria-expanded="false">
+              <span class="c-drawer__line">メニューを開閉する</span>
+            </button>
+            <div class="c-drawer__modal" id="modal-drawer4" aria-hidden="true">
+              <div tabindex="-1" data-micromodal-close>
+                <div role="dialog" aria-modal="true">
+                  <nav id="modal-drawer-content4" aria-label="メニュー4">
+                    <ul class="c-drawer__lists">
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                      <li class="c-drawer__list">
+                        <a class="c-drawer__link" href="">メニュー</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="p-component l-section">
+        <div class="p-component__mainTitle">
+          <h2 class="c-heading c-heading--2">アコーディオン</h2>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-accordion</h3>
+        </div>
+        <div class="p-component__preview">
+          <details class="c-accordion js-accordion">
+            <summary class="c-accordion__title js-accordion-summary">
+              アコーディオンのタイトル
+              <span class="c-accordion__icon">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+            </summary>
+            <div class="c-accordion__content js-accordion-content">
+              <div class="c-accordion__content-inner">
+                アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。
+              </div>
+            </div>
+          </details>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-accordion--type1</h3>
+        </div>
+        <div class="p-component__preview">
+          <details class="c-accordion js-accordion c-accordion--type1">
+            <summary class="c-accordion__title js-accordion-summary">
+              アコーディオンのタイトル
+              <span class="c-accordion__icon">
+                <i class="fa-solid fa-circle-chevron-down"></i>
+              </span>
+            </summary>
+            <div class="c-accordion__content js-accordion-content">
+              <div class="c-accordion__content-inner">
+                アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。
+              </div>
+            </div>
+          </details>
+        </div>
+        <div class="p-component__previewTitle">
+          <h3 class="c-heading c-heading--3">.c-accordion--type2</h3>
+        </div>
+        <div class="p-component__preview">
+          <details class="c-accordion js-accordion c-accordion--type2">
+            <summary class="c-accordion__title js-accordion-summary">
+              アコーディオンのタイトル
+              <span class="c-accordion__icon">
+              </span>
+            </summary>
+            <div class="c-accordion__content js-accordion-content">
+              <div class="c-accordion__content-inner">
+                アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。アコーディオンのテキストがはいります。
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div class="l-scroll-top">
+    <button class="c-scroll-top" id="js-scrollTop">
+      <span class="c-scroll-top__hidden">ページトップへ戻る</span>
+      <picture>
+        <source srcset="/assets/images/common/scroll-top.png" type="image/webp" width="64" height="64">
+        <img class="" src="/assets/images/common/scroll-top.png" alt="" width="64" height="64" decoding="async">
+      </picture>
+    </button>
+  </div>
+  <footer class="p-footer">
+    <div class="p-footer__inner l-inner">
+      <address class="p-footer__address">
+        <p>〒105-0011 東京都港区芝公園４丁目２−８</p>
+        <p>TEL:00-0000-0000</p>
+      </address>
+      <p class="p-footer__copy"><small>&copy; 会社名 <br class="u-hidden-pc">All rights reserved.</small></p>
+    </div>
+  </footer>
+</body>
+
+</html>

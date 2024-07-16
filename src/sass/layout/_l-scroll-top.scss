@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.l-scroll-top {
+  position: fixed;
+  bottom: rem(10);
+  right: rem(10);
+}
