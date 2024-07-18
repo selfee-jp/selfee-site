@@ -1,0 +1,498 @@
+@use "global" as *;
+
+.header {
+  height: rem(100);
+  width: 100%;
+  letter-spacing: 0.64;
+  background: $white;
+
+  @include mq("md") {
+    height: rem(50);
+  }
+}
+
+.header__inner {
+  position: relative;
+  z-index: $layer-header + 5;
+  padding-inline: rem(64) rem(20);
+  max-width: rem(1440);
+  width: 100%;
+  margin-inline: auto;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1300px) {
+    padding-inline: rem(30) rem(15);
+  }
+
+  @include mq(md) {
+    padding-inline: rem(15);
+  }
+}
+
+.header__logo {
+  font-size: 0;
+  height: inherit;
+  max-width: rem(220);
+  width: 100%;
+  flex-shrink: 0;
+
+  @media (max-width: 1300px) {
+    max-width: rem(180);
+  }
+
+  @include mq(inner) {}
+
+  @include mq(md) {
+    // max-width: rem(160);
+  }
+}
+
+.header__logo a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  // justify-content: center;
+  height: inherit;
+  padding-top: rem(18);
+
+}
+
+.header__logo img {
+  max-width: rem(211);
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+
+  @include mq("md") {}
+}
+
+.header__logo span {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.header__nav-lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+}
+
+.header__nav {
+  height: inherit;
+
+  @include mq("md") {
+    display: none;
+    height: inherit;
+  }
+}
+
+.header__nav-items {
+  display: flex;
+  justify-content: flex-end;
+  height: inherit;
+}
+
+.header__nav-item {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.header__nav-link {
+  cursor: pointer;
+  padding: rem(10);
+  height: inherit;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  white-space: nowrap;
+  transition: color 0.3s ease 0s;
+
+  @include mq(inner) {
+    padding: rem(8);
+  }
+}
+
+/* current */
+.header__nav-link.current {
+  color: $blue;
+}
+
+.header__drop-menu-item a.current {
+  color: $blue;
+}
+
+.header__nav-link.current,
+.header__drop-menu-item a.current {
+  color: $blue;
+}
+
+.header__nav-link-arrow {
+  width: rem(11);
+  height: rem(7);
+  margin-left: rem(5);
+}
+
+.header__nav-link-arrow img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* メニューアイテムのホバースタイル */
+.header__nav-item:hover .header__drop-menu-list {
+  opacity: 1;
+  /* 不透明度を最大に */
+  transition: opacity .7s, visibility .7s;
+  /* アニメーション設定 */
+  visibility: visible;
+  /* 下層メニューを表示 */
+}
+
+/* ドロップダウンメニュー */
+.header__drop-menu {
+  position: relative;
+}
+
+.header__drop-menu-list {
+  color: $black;
+  line-height: 1;
+  background-color: $white;
+  border-left: 1px solid $white02;
+  left: rem(0);
+  opacity: 0;
+  /* 不透明度を最小に */
+  position: absolute;
+  top: rem(60);
+  transition: all .3s;
+  visibility: hidden;
+  /* 下層メニューを非表示 */
+  width: max-content;
+  z-index: 1;
+}
+
+.header__drop-menu-item a {
+  padding: 0 rem(15);
+  display: block;
+  transition: all 0.3s ease-out;
+}
+
+.header__drop-menu-item span {
+  padding: rem(20) 0;
+  display: block;
+}
+
+.header__drop-menu-item:not(:first-child).header__drop-menu-item span {
+  border-top: 1px solid $gray;
+}
+
+
+@media (hover: hover) {
+  .header__nav-item a:hover {
+    color: $blue;
+  }
+
+  .header__drop-menu-list a:hover {
+    color: $blue;
+  }
+}
+
+
+
+.header__nav-contact {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: rem(10);
+
+  @media (max-width: 1300px) {
+    margin-left: 0;
+  }
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.header__nav-contact-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 rem(10);
+  }
+}
+
+
+.header__nav-contact-item:last-child {
+  margin-left: rem(20);
+
+
+  @media (max-width: 1200px) {
+    margin-left: rem(15);
+  }
+
+  @include mq(inner) {}
+
+  @include mq(md) {
+    margin-left: 0;
+  }
+}
+
+.header__nav-contact-item a {
+  display: block;
+  line-height: 1;
+  width: rem(180);
+  height: rem(80);
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-out;
+
+  @media (max-width: 1200px) {
+    width: rem(170);
+  }
+
+  @include mq(inner) {
+    // width: rem(150);
+  }
+
+  @include mq(md) {
+    width: 100%;
+  }
+}
+
+.header__nav-contact-item--blue a {
+  color: $white;
+  background-color: $blue;
+  border: 1px solid $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header__nav-contact-item--blue p {
+  letter-spacing: 0.64px;
+}
+
+.header__nav-contact-item--blue span {
+  font-size: rem(12);
+  letter-spacing: 0.48px;
+  padding-top: rem(3);
+}
+
+.header__nav-contact-item--white a {
+  color: $black;
+  background-color: $white;
+  border: 1px solid $black;
+}
+
+@media (hover: hover) {
+  .header__nav-contact-item--blue a:hover {
+    color: $blue;
+    background-color: $white;
+    opacity: .7;
+  }
+
+  .header__nav-contact-item--white a:hover {
+    color: $white;
+    background-color: $blue;
+    opacity: .7;
+  }
+}
+
+/* ドロワーメニューが開いた時のスタイル */
+.header.is-drawer-open .header__logo {
+  color: $white;
+}
+
+.header.is-drawer-open .header__hamburger span {
+  background-color: $white;
+}
+
+/* hamburger */
+.header__hamburger {
+  display: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  position: relative;
+  z-index: 999;
+  width: rem(20);
+  height: rem(16);
+  cursor: pointer;
+  transition: .3s;
+  right: 0;
+
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.header__hamburger.is-open {
+  background-color: transparent;
+}
+
+.header__hamburger span {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: rem(20);
+  height: 2px;
+  background-color: $blue;
+  transition: .5s;
+}
+
+.header__hamburger span:nth-of-type(1) {
+  top: -4px;
+}
+
+.header__hamburger span:nth-of-type(2) {
+  top: 0;
+}
+
+.header__hamburger span:nth-of-type(3) {
+  top: 4px;
+}
+
+.header__hamburger.is-open span:nth-of-type(1) {
+  top: 0;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.header__hamburger.is-open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.header__hamburger.is-open span:nth-of-type(3) {
+  top: -4px;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+
+/* drawer */
+.header__drawer {
+  position: fixed;
+  z-index: $layer-header + 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  color: $black;
+  transition: transform 0.5s ease;
+  transform: translateX(100%);
+  font-size: rem(12);
+  letter-spacing: 0.11em;
+  font-weight: 500;
+  margin-top: rem(50);
+}
+
+.header__drawer-bg {
+  background: rgba($black02, 0.9);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: $layer-header + 2;
+}
+
+.header__drawer-nav {
+  position: relative;
+  z-index: $layer-header + 3;
+  background: $white;
+  opacity: 0.9;
+  margin: auto;
+}
+
+.header__drawer.is-open {
+  transform: translateX(0);
+}
+
+.header__drawer::-webkit-scrollbar {
+  display: none;
+}
+
+.header__drawer-items {
+  @include mq(md) {
+    padding-left: rem(15);
+  }
+}
+
+.header__drawer-item--mt24 {
+  margin-top: rem(24);
+}
+
+.header__drawer-menu-link {
+  padding: .4em;
+}
+
+.header__drawer-menu-link span {
+  display: block;
+  width: 100%;
+}
+
+.header__drawer-menu-arrow {
+  width: rem(11);
+  height: rem(7);
+  transform: rotate(-90deg);
+}
+
+.header__drawer-menu-arrow img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.header__drawer-menu-item a {
+  display: flex;
+  align-items: center;
+}
+
+
+.header__drawer-link {
+  padding: rem(18) 0;
+  display: block;
+}
+
+/* spコンタクトボタン */
+.header__drawer-contact {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: rgba($blue03, 0.7);
+  padding: rem(5);
+  width: 100%;
+  z-index: 100;
+
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}
+
+/* ドロップダウンメニュー */
+.header__drawer-menu-list {
+  padding-left: rem(15);
+}
+
+/* current */
+.header__drawer-menu-link.current,
+.header__drawer-link.current {
+  color: $blue;
+}

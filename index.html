@@ -1,84 +1,159 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no" />
-  <!-- meta情報 -->
-  <title>コンポーネント</title>
-  <meta name="description" content="コンポーネントリストの概要です" />
-  <meta name="keywords" content="" />
-  <!-- ogp -->
-  <meta property="og:title" content="コンポーネント" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://example.com" />
-  <meta property="og:image" content="https://example.com/images/common/ogp.jpg" />
-  <meta property="og:site_name" content="コンポーネント" />
-  <meta property="og:description" content="コンポーネントリストの概要です" />
-  <!-- twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:description" content="コンポーネントリストの概要です" />
-  <meta name="twitter:title" content="コンポーネント" />
-  <meta name="twitter:image" content="https://example.com/images/common/ogp.jpg" />
-  <!-- icon -->
-  <link rel="icon" href="./assets/images/common/icon-16x16.png" sizes="16x16" type="image/png" />
-  <link rel="icon" href="./assets/images/common/icon-32x32.png" sizes="32x32" type="image/png" />
-  <link rel="icon" href="./assets/images/common/icon-48x48.png" sizes="48x48" type="image/png" />
-  <link rel="icon" href="./assets/images/common/icon-72x72.png" sizes="72x72" type="image/png" />
-  <link rel="apple-touch-icon" href="./assets/images/common/apple-touch-icon-152x152.png" />
-  <!--  ファビコン -->
-  <link rel="icon" href="#" />
-  <!-- fontawesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- css -->
-  <link rel="stylesheet" href="./assets/css/style.css?ver=8135459498" />
-  <!-- JavaScript -->
-  <script defer src="./assets/js/script.js?ver=8135459498"></script>
-</head>
-<body>
-  <header class="p-header l-header" id="js-header">
-    <div class="p-header__inner l-inner">
-      <div class="p-header__logo">
-        <h1 class="p-header__logo">
-          ロゴ
-          <picture>
-            <source srcset="./assets/images/common/logo.webp" type="image/webp" width="180" height="50">
-            <img src="./assets/images/common/logo.png" alt="" decoding="async" width="180" height="50">
-          </picture>
-        </h1>
-      </div>
-      <nav class="p-header__nav">
-        <ul class="p-header__lists">
-          <li class="p-header__list"><a href="">メニュー</a></li>
-          <li class="p-header__list"><a href="">メニュー</a></li>
-          <li class="p-header__list"><a href="">メニュー</a></li>
-          <li class="p-header__list"><a href="">メニュー</a></li>
-          <li class="p-header__list"><a href="">メニュー</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main class="p-main">
-    <div class="l-inner">
 
-    </div>
-  </main>
-  <div class="l-scroll-top">
-    <button class="c-scroll-top" id="js-scrollTop">
-      <picture>
-        <source srcset="./assets/images/common/scroll-top.png" type="image/webp" width="64" height="64">
-        <img class="" src="./assets/images/common/scroll-top.png" alt="" width="64" height="64" decoding="async">
-      </picture>
-    </button>
-  </div>
-  <footer class="p-footer">
-    <div class="p-footer__inner l-inner">
-      <address class="p-footer__address">
-        <p>〒105-0011 東京都港区芝公園４丁目２−８</p>
-        <p>TEL:00-0000-0000</p>
-      </address>
-      <p class="p-footer__copy"><small>&copy; 会社名 <br class="u-hidden-pc">All rights reserved.</small></p>
-    </div>
-  </footer>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- meta情報 -->
+	<title>コンポーネント</title>
+	<meta name="description" content="コンポーネントリストの概要です" />
+	<meta name="keywords" content="" />
+	<!-- ogp -->
+	<meta property="og:title" content="コンポーネント" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://example.com" />
+	<meta property="og:image" content="https://example.com/images/common/ogp.jpg" />
+	<meta property="og:site_name" content="コンポーネント" />
+	<meta property="og:description" content="コンポーネントリストの概要です" />
+	<!-- twitter -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:description" content="コンポーネントリストの概要です" />
+	<meta name="twitter:title" content="コンポーネント" />
+	<meta name="twitter:image" content="https://example.com/images/common/ogp.jpg" />
+	<!-- icon -->
+	<link rel="icon" href="./assets/images/common/icon-16x16.png" sizes="16x16" type="image/png" />
+	<link rel="icon" href="./assets/images/common/icon-32x32.png" sizes="32x32" type="image/png" />
+	<link rel="icon" href="./assets/images/common/icon-48x48.png" sizes="48x48" type="image/png" />
+	<link rel="icon" href="./assets/images/common/icon-72x72.png" sizes="72x72" type="image/png" />
+	<link rel="apple-touch-icon" href="./assets/images/common/apple-touch-icon-152x152.png" />
+	<!--  ファビコン -->
+	<link rel="icon" href="#" />
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- css -->
+	<link rel="stylesheet" href="./assets/css/style.css?ver=8135459498" />
+	<!-- JavaScript -->
+	<script defer src="./assets/js/script.js?ver=8135459498"></script>
+</head>
+
+<body>
+	<header class="header header--layout js-header">
+		<div class="header__inner">
+			<h1 class="header__logo">株式会社セルフィー
+				<a href="#body">
+					<img src="assets/images/common/logo.png" alt="株式会社セルフィー" width="161" height="61" loading="lazy">
+					<span>自動車整備業システムの開発・販売・導入指導</span></a>
+			</h1>
+			<div class="header__nav-lists">
+				<nav class="header__nav">
+					<ul class="header__nav-items">
+						<li class="header__nav-item">
+							<a class="header__nav-link current" href="index.html">ホーム</a>
+						</li>
+						<li class="header__nav-item">
+							<a class="header__nav-link" href="about/index.html">私たちについて</a>
+						</li>
+						<li class="header__nav-item">
+							<a class="header__nav-link" href="service/index.html">サービス</a>
+						</li>
+						<li class="header__nav-item">
+							<a class="header__nav-link" href="product/index.html">製品紹介</a>
+						</li>
+						<li class="header__nav-item">
+							<a class="header__nav-link" href="company/index.html">会社概要</a>
+						</li>
+						<li class="header__nav-item">
+							<a class="header__nav-link" href="recruit/index.html">採用情報</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="header__nav-contact">
+					<div class="header__nav-contact-items">
+						<div class="header__nav-contact-item header__nav-contact-item--blue">
+							<a href="download.html">
+								<p>リモートサポート</p>
+								<span>9:00~18:00(土日祝除く)</span>
+							</a>
+						</div>
+						<div class="header__nav-contact-item header__nav-contact-item--white">
+							<a href="contact.html">お問い合わせ</a>
+						</div>
+					</div>
+				</nav>
+				<button class="header__hamburger js-hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<div class="header__drawer js-drawer">
+				<div class="header__drawer-bg js-drawer-overlay"></div>
+				<nav class="header__drawer-nav">
+					<ul class="header__drawer-list">
+						<li class="header__drawer-item">
+							<a class="header__drawer-link current" href="index.html">ホーム</a>
+						</li>
+						<li class="header__drawer-item">
+							<a class="header__drawer-link" href="about/index.html">私たちについて</a>
+						</li>
+						<li class="header__drawer-item">
+							<a class="header__drawer-link" href="service/index.html">サービス</a>
+						</li>
+						<li class="header__drawer-item">
+							<a class="header__drawer-link" href="product/index.html">製品紹介</a>
+						</li>
+						<li class="header__drawer-item">
+							<a class="header__drawer-link" href="company/index.html">会社概要</a>
+						</li>
+						<li class="header__drawer-item">
+							<a class="header__drawer-link" href="recruit/index.html">採用情報</a>
+						</li>
+					</ul>
+				</nav>
+				<nav class="header__drawer-nav">
+					<div class="header__contact-items">
+						<div class="header__contact-item header__contact-item--blue">
+							<a href="download.html">リモートサポート
+								<span>9:00~18:00(土日祝除く)</span>
+							</a>
+						</div>
+						<div class="header__contact-item header__contact-item--white">
+							<a href="contact.html">お問い合わせ</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<main class="p-main">
+		<div class="mv">
+			<div class="l-inner">
+
+
+
+
+			</div>
+		</div>
+	</main>
+	<div class="l-scroll-top">
+		<button class="c-scroll-top" id="js-scrollTop">
+			<picture>
+				<source srcset="./assets/images/common/scroll-top.png" type="image/webp" width="64" height="64">
+				<img class="" src="./assets/images/common/scroll-top.png" alt="" width="64" height="64" decoding="async">
+			</picture>
+		</button>
+	</div>
+	<footer class="p-footer">
+		<div class="p-footer__inner l-inner">
+			<address class="p-footer__address">
+				<p>〒105-0011 東京都港区芝公園４丁目２−８</p>
+				<p>TEL:00-0000-0000</p>
+			</address>
+			<p class="p-footer__copy"><small>&copy; 会社名 <br class="u-hidden-pc">All rights reserved.</small></p>
+		</div>
+	</footer>
 </body>
+
 </html>

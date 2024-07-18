@@ -23,9 +23,26 @@ $base-font-size: 16;
 $base-color: #666;
 $sub-color: #ccc;
 $base-background: #fff;
-$black: #333;
+$black: #1D2124;
+$black02: #333;
 $white: #fff;
+$white02: #fff;
+$blue: #0057AD;
+$blue02: blue;
+$blue03: blue;
 $gray: #999;
 $pink: #cd8e9c;
 $light-pink: #e9cbca;
 $gold: #be9d61;
+
+/********************************
+* レイヤー
+********************************/
+$layer-modal: 100;
+$layer-drawer: 40;
+$layer-floating: 30;
+$layer-header: 35;
+$layer-footer: 10;
+$layer-up: 2;
+$layer-default: 1;
+$layer-background: -1;

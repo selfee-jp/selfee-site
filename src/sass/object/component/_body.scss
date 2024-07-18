@@ -1,0 +1,9 @@
+@use "global" as *;
+
+body {
+    color: $black;
+    font-family: "Hiragino Kaku Gothic ProN";
+    font-size: rem(16);
+    font-weight: 300;
+    line-height: calc(36 / 16);
+}
