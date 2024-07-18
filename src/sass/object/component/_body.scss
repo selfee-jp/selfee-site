@@ -7,3 +7,9 @@ body {
     font-weight: 300;
     line-height: calc(36 / 16);
 }
+
+.body-no-scroll {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}

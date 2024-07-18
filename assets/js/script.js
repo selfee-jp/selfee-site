@@ -4484,17 +4484,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "common": () => (/* binding */ common)
 /* harmony export */ });
 function common() {
-  var header = document.getElementById("js-header");
-  var headerScroll = function headerScroll() {
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 1 && window.innerWidth > 768) {
-        header.classList.add("is-scroll");
-      } else {
-        header.classList.remove("is-scroll");
-      }
-    });
-  };
-  headerScroll();
+  // const header = document.getElementById("js-header");
+
+  // const headerScroll = () => {
+  //   window.addEventListener("scroll", () => {
+  //     if (window.scrollY > 1 && window.innerWidth > 768) {
+  //       header.classList.add("is-scroll");
+  //     } else {
+  //       header.classList.remove("is-scroll");
+  //     }
+  //   });
+  // };
+
+  // headerScroll();
 }
 
 /***/ }),
@@ -4512,31 +4514,96 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var micromodal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! micromodal */ "./node_modules/micromodal/dist/micromodal.es.js");
 
 function drawer() {
-  MicroModal.init();
-  var buttons = document.querySelectorAll(".js-drawerButton");
-  var header = document.getElementById("js-header");
-  buttons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      // buttonの兄弟要素のIDを取得
-      var modal = button.nextElementSibling.id;
-      if (button.ariaExpanded == "false") {
-        button.ariaExpanded = true;
-        MicroModal.show(modal, {
-          disableScroll: true,
-          // ページスクロールを無効に
-          awaitOpenAnimation: true // 開閉時のアニメーションを可能に
-        });
+  // MicroModal.init();
 
-        header.classList.add("is-open");
-      } else {
-        button.ariaExpanded = false;
-        MicroModal.close(modal, {
-          awaitCloseAnimation: true
-        });
-        header.classList.remove("is-open");
+  // const buttons = document.querySelectorAll(".js-drawerButton");
+  // const header = document.getElementById("js-header");
+
+  // buttons.forEach((button) => {
+  //   button.addEventListener("click", () => {
+  //     // buttonの兄弟要素のIDを取得
+  //     const modal = button.nextElementSibling.id;
+  //     if (button.ariaExpanded == "false") {
+  //       button.ariaExpanded = true;
+  //       MicroModal.show(modal, {
+  //         disableScroll: true, // ページスクロールを無効に
+  //         awaitOpenAnimation: true, // 開閉時のアニメーションを可能に
+  //       });
+  //       header.classList.add("is-open");
+  //     } else {
+  //       button.ariaExpanded = false;
+  //       MicroModal.close(modal, {
+  //         awaitCloseAnimation: true,
+  //       });
+  //       header.classList.remove("is-open");
+  //     }
+  //   });
+  // });
+}
+
+/***/ }),
+
+/***/ "./js/_header.js":
+/*!***********************!*\
+  !*** ./js/_header.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "header": () => (/* binding */ header)
+/* harmony export */ });
+function header() {
+  document.addEventListener('DOMContentLoaded', function () {
+    // gsap.config({ nullTargetWarn: false })
+
+    document.querySelectorAll('.js-hamburger').forEach(function (hamburger) {
+      hamburger.addEventListener('click', function () {
+        this.classList.toggle('is-open');
+        var drawer = document.querySelector('.js-drawer');
+        if (drawer.classList.contains('is-open')) {
+          closeDrawer();
+        } else {
+          openDrawer();
+        }
+      });
+    });
+    document.querySelectorAll('.header__nav-item a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (document.querySelector('.js-hamburger').classList.contains('is-open')) {
+          closeDrawer();
+        }
+      });
+    });
+    document.querySelectorAll('.js-drawer a[href]').forEach(function (link) {
+      link.addEventListener('click', function () {
+        closeDrawer();
+      });
+    });
+
+    // js-drawer-overlayをクリックしたときにドロワーを閉じる
+    document.querySelector('.js-drawer-overlay').addEventListener('click', function () {
+      closeDrawer();
+    });
+    window.addEventListener('resize', function () {
+      if (window.matchMedia('(min-width: 768px)').matches) {
+        closeDrawer();
       }
     });
   });
+  function openDrawer() {
+    var drawer = document.querySelector('.js-drawer');
+    drawer.classList.add('is-open');
+    document.body.classList.add('body-no-scroll');
+  }
+  function closeDrawer() {
+    var drawer = document.querySelector('.js-drawer');
+    var header = document.querySelector('.js-header');
+    var hamburger = document.querySelector('.js-hamburger');
+    drawer.classList.remove('is-open');
+    hamburger.classList.remove('is-open');
+    document.body.classList.remove('body-no-scroll');
+  }
 }
 
 /***/ }),
@@ -14361,6 +14428,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _drawer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_drawer */ "./js/_drawer.js");
 /* harmony import */ var _slide__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_slide */ "./js/_slide.js");
 /* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_test */ "./js/_test.js");
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_header */ "./js/_header.js");
+
 
 
 
@@ -14372,6 +14441,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_common__WEBPACK_IMPORTED_MODULE_2__.common)();
 (0,_drawer__WEBPACK_IMPORTED_MODULE_3__.drawer)();
 (0,_slide__WEBPACK_IMPORTED_MODULE_4__.slide)();
+(0,_header__WEBPACK_IMPORTED_MODULE_6__.header)();
 (0,_test__WEBPACK_IMPORTED_MODULE_5__.test)();
 })();
 
