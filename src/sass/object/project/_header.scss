@@ -22,7 +22,7 @@
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 1300px) {
+  @include mq(inner) {
     padding-inline: rem(30) rem(15);
   }
 
@@ -38,11 +38,12 @@
   width: 100%;
   flex-shrink: 0;
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1260px) {
     max-width: rem(180);
   }
 
   @include mq(inner) {}
+
 
   @include mq(md) {
     // max-width: rem(160);
@@ -106,11 +107,10 @@
 
 .header__nav-link {
   cursor: pointer;
-  padding: rem(10);
+  padding: rem(10) rem(10);
   height: inherit;
   display: flex;
   align-items: center;
-  line-height: 1;
   white-space: nowrap;
   transition: color 0.3s ease 0s;
 
@@ -119,76 +119,64 @@
   }
 }
 
+.header__nav-link span {
+  max-width: fit-content;
+  padding-bottom: rem(6);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: $gray;
+    width: 0;
+    height: rem(1);
+    bottom: 0;
+    left: 0;
+    transition: width 0.2s ease-out 0s;
+  }
+}
+
 /* current */
-.header__nav-link.current {
-  color: $blue;
+.header__nav-link.current.header__nav-link span {
+  &::after {
+    width: 100%;
+  }
 }
 
-.header__drop-menu-item a.current {
-  color: $blue;
-}
+// .header__drop-menu-item a.current {
+//   color: $main-color;
+// }
 
-.header__nav-link.current,
-.header__drop-menu-item a.current {
-  color: $blue;
-}
+// .header__nav-link.current,
+// .header__drop-menu-item a.current {
+//   color: $main-color;
+// }
 
 /* メニューアイテムのホバースタイル */
-.header__nav-item:hover .header__drop-menu-list {
-  opacity: 1;
-  /* 不透明度を最大に */
-  transition: opacity .7s, visibility .7s;
-  /* アニメーション設定 */
-  visibility: visible;
-  /* 下層メニューを表示 */
-}
-
-/* ドロップダウンメニュー */
-.header__drop-menu {
-  position: relative;
-}
-
-.header__drop-menu-list {
-  color: $black;
-  line-height: 1;
-  background-color: $white;
-  border-left: 1px solid $white02;
-  left: rem(0);
-  opacity: 0;
-  /* 不透明度を最小に */
-  position: absolute;
-  top: rem(60);
-  transition: all .3s;
-  visibility: hidden;
-  /* 下層メニューを非表示 */
-  width: max-content;
-  z-index: 1;
-}
-
-.header__drop-menu-item a {
-  padding: 0 rem(15);
-  display: block;
-  transition: all 0.3s ease-out;
-}
-
-.header__drop-menu-item span {
-  padding: rem(20) 0;
-  display: block;
-}
-
-.header__drop-menu-item:not(:first-child).header__drop-menu-item span {
-  border-top: 1px solid $gray;
-}
+// .header__nav-item:hover .header__drop-menu-list {
+//   opacity: 1;
+//   /* 不透明度を最大に */
+//   transition: opacity .7s, visibility .7s;
+//   /* アニメーション設定 */
+//   visibility: visible;
+//   /* 下層メニューを表示 */
+// }
 
 
 @media (hover: hover) {
-  .header__nav-item a:hover {
-    color: $blue;
+  .header__nav-item a:hover.header__nav-link span {
+    &::after {
+      width: 100%;
+    }
   }
 
-  .header__drop-menu-list a:hover {
-    color: $blue;
+  .header__nav-item a:hover.header__nav-link {
+    opacity: 1;
   }
+
+  // .header__drop-menu-list a:hover {
+  //   color: $main-color;
+  // }
 }
 
 
@@ -200,9 +188,12 @@
   justify-content: space-between;
   margin-left: rem(10);
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1260px) {
     margin-left: 0;
+
   }
+
+  @include mq(inner) {}
 
   @include mq(md) {}
 }
@@ -211,6 +202,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: inherit;
 
   @include mq(md) {
     flex-direction: column;
@@ -222,12 +214,12 @@
   margin-left: rem(20);
 
 
-  @media (max-width: 1200px) {
-    // margin-left: rem(15);
+  @media (max-width: 1260px) {
+    margin-left: rem(15);
   }
 
   @include mq(inner) {
-    margin-left: rem(15);
+    // margin-left: rem(15);
   }
 
   @include mq(md) {
@@ -247,13 +239,12 @@
   justify-content: center;
   transition: all 0.3s ease-out;
 
-  @media (max-width: 1200px) {
-    // width: rem(170);
+  @media (max-width: 1260px) {
+    width: rem(170);
   }
 
   @include mq(inner) {
-    width: rem(170);
-    // width: rem(150);
+    // width: rem(170);
   }
 
   @include mq(md) {
@@ -264,8 +255,8 @@
 
 .header__nav-contact-item--blue a {
   color: $white;
-  background-color: $blue;
-  border: 1px solid $blue;
+  background-color: $main-color;
+  border: 1px solid $main-color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,22 +274,20 @@
 }
 
 .header__nav-contact-item--white a {
-  color: $black;
+  color: $text;
   background-color: $white;
-  border: 1px solid $black;
+  border: 1px solid $text;
 }
 
 @media (hover: hover) {
   .header__nav-contact-item--blue a:hover {
-    color: $blue;
+    color: $main-color;
     background-color: $white;
-    opacity: .7;
   }
 
   .header__nav-contact-item--white a:hover {
     color: $white;
-    background-color: $blue;
-    opacity: .7;
+    background-color: $text;
   }
 }
 
@@ -342,7 +331,7 @@
   display: block;
   width: rem(24);
   height: 1px;
-  background-color: $blue;
+  background-color: $main-color;
   transition: .5s;
 }
 
@@ -384,7 +373,7 @@
   width: 100%;
   overflow-y: scroll;
   scrollbar-width: none;
-  color: $black;
+  color: $text;
   transition: transform 0.5s ease;
   transform: translateX(100%);
   font-size: rem(12);
@@ -394,7 +383,7 @@
 }
 
 .header__drawer-bg {
-  background: rgba($blue, 0.9);
+  background: rgba($main-color, 0.9);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -476,8 +465,8 @@
 
 .header__drawer-contact-item--blue a {
   color: $white;
-  background-color: $blue;
-  border: 1px solid $blue;
+  background-color: $main-color;
+  border: 1px solid $main-color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -496,12 +485,12 @@
 
 
 .header__drawer-contact-item--white a {
-  color: $black;
+  color: $text;
   background-color: $white;
-  border: 1px solid $black;
+  border: 1px solid $text;
 }
 
 /* current */
 .header__drawer-link.current {
-  color: $blue;
+  color: $main-color;
 }

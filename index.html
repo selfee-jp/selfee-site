@@ -50,22 +50,22 @@
 				<nav class="header__nav">
 					<ul class="header__nav-items">
 						<li class="header__nav-item">
-							<a class="header__nav-link current" href="index.html">ホーム</a>
+							<a class="header__nav-link current" href="index.html"><span>ホーム</span></a>
 						</li>
 						<li class="header__nav-item">
-							<a class="header__nav-link" href="about/index.html">私たちについて</a>
+							<a class="header__nav-link" href="about/index.html"><span>私たちについて</span></a>
 						</li>
 						<li class="header__nav-item">
-							<a class="header__nav-link" href="service/index.html">サービス</a>
+							<a class="header__nav-link" href="service/index.html"><span>サービス</span></a>
 						</li>
 						<li class="header__nav-item">
-							<a class="header__nav-link" href="product/index.html">製品紹介</a>
+							<a class="header__nav-link" href="product/index.html"><span>製品紹介</span></a>
 						</li>
 						<li class="header__nav-item">
-							<a class="header__nav-link" href="company/index.html">会社概要</a>
+							<a class="header__nav-link" href="company/index.html"><span>会社概要</span></a>
 						</li>
 						<li class="header__nav-item">
-							<a class="header__nav-link" href="recruit/index.html">採用情報</a>
+							<a class="header__nav-link" href="recruit/index.html"><span>採用情報</span></a>
 						</li>
 					</ul>
 				</nav>
@@ -82,13 +82,13 @@
 						</div>
 					</div>
 				</nav>
-				<button class="header__hamburger js-hamburger is-open">
+				<button class="header__hamburger js-hamburger">
 					<span></span>
 					<span></span>
 					<span></span>
 				</button>
 			</div>
-			<div class="header__drawer js-drawer is-open">
+			<div class="header__drawer js-drawer">
 				<div class="header__drawer-bg js-drawer-overlay"></div>
 				<nav class="header__drawer-nav">
 					<ul class="header__drawer-items">
@@ -123,21 +123,204 @@
 						</div>
 					</div>
 				</nav>
-
 			</div>
 		</div>
 	</header>
 
-	<main class="p-main">
+	<main class="main">
+		<!-- mv -->
 		<div class="mv">
-			<div class="l-inner">
-
-
-
-
+			<picture class="mv__img">
+				<source srcset="./assets/images/top/top-mv_img-sp.webp" type="image/webp" media="(max-width: 768px)">
+				<source srcset="./assets/images/top/top-mv_img.webp" type="image/webp">
+				<img src="./assets/images/top/top-mv_img.png" alt="" width="1440" height="400" loading="lazy">
+			</picture>
+			<div class="mv__title">
+				日本の<span>自動車業界</span>を支える
+				<span>IT</span>企業<br>
+				お客様に<span>「信頼」</span>される<br>
+				<span>ビジネスパートナー</span>を目指す。
 			</div>
 		</div>
 	</main>
+
+	<!-- top-about -->
+	<section class="top-about section">
+		<div class="top-about__inner inner">
+			<div class="top-about__title-wrapper heading-wrapper">
+				<hgroup class="top-about__title heading">
+					<h2 class="heading__en"><span class="heading__en-big">A</span>bout us</h2>
+					<span class="heading__ja">私たちについて</span>
+				</hgroup>
+				<span class="top-about__title-line"></span>
+			</div>
+			<div class="top-about__body">
+				<div class="top-about__lead">自動車整備業を<br>
+					効率化させる<br>
+					システム開発</div>
+				<div class="top-about__text">私たちは、創業から30年間、多くのお客様にご愛顧いただいております。<br>
+					お客様目線を大切に、独自に開発している自動車整備業専門の総合管理システムは、操作性の良さから多くのお客様よりご好評をいただいております。<br>ユーザビリティを第一とした製品を開発・提供しています。</div>
+			</div>
+			<div class="top-about__btn">
+				<a class="btn btn--blue" href="about_index.html"><span>VIEW MORE</span></a>
+			</div>
+			<picture class="p-top-about__deco">
+				<img src="./assets/images/top/about-logo.svg" alt="株式会社セルフィーのロゴ" width="426" height="427">
+			</picture>
+		</div>
+	</section>
+
+	<!-- top-service -->
+	<section class="top-service section">
+		<div class="top-service__inner inner">
+			<div class="top-service__title-wrapper">
+				<hgroup class="top-service__title heading">
+					<h2 class="heading__en"><span class="heading__en-big">S</span>ervice</h2>
+					<span class="heading__ja">私たちについて</span>
+				</hgroup>
+				<span class="top-service__title-line"></span>
+			</div>
+			<ol class="top-service__list top-service-list">
+				<li class="top-service-list__item">
+					<picture class="top-service-list__item-img">
+						<source srcset="./assets/images/top/service_img01.webp" type="image/webp">
+						<img src="./assets/images/top/service_img01.jpg" alt="ソフトウエアサポートのイメージ画像" width="347" height="426" loading="lazy">
+					</picture>
+					<div class="top-service-list__item-text-wrap">
+						<hgroup class="top-service-list__item-title">
+							<span class="top-service-list__item-title-en">Software support</span>
+							<h3 class="top-service-list__item-title-h3">ソフトウエアサポート</h3>
+							<span class="top-service-list__item-title-ja">リモートサポート含む</span>
+						</hgroup>
+						<p class="top-service-list__item-text">当社のソフトウエアサポートサービスは(リモートサポート含む)、自動車整備業界の効率化を目指して設計されています。業務管理、在庫管理、顧客管理など、あらゆる面でのソフトウエアソリューションを提供し、業務のスピードアップと精度向上を実現します。<br>
+							最新の技術を駆使し、ユーザーフレンドリーなインターフェースを備えたアプリケーションは、簡単に導入・操作が可能です。<br>
+							また、24時間365日のサポート体制を整えており、いつでも迅速に問題解決を図ります。業務の効率化と生産性向上を追求する自動車整備業の皆様を強力にサポートします。</p>
+					</div>
+				</li>
+				<li class="top-service-list__item">
+					<picture class="top-service-list__item-img">
+						<source srcset="./assets/images/top/service_img02.webp" type="image/webp">
+						<img src="./assets/images/top/service_img02.jpg" alt="ハードウエアサポートのイメージ画像" width="347" height="426" loading="lazy">
+					</picture>
+					<div class="top-service-list__item-text-wrap">
+						<hgroup class="top-service-list__item-title">
+							<span class="top-service-list__item-title-en">Heardware support</span>
+							<h3 class="top-service-list__item-title-h3">ハードウエアサポート</h3>
+							<span class="top-service-list__item-title-ja">修理や代替え準備など </span>
+						</hgroup>
+						<p class="top-service-list__item-text">ハードウエアサポートでは、修理や代替え準備など自動車整備工場のニーズに合わせた最新の機器とツールの導入をお手伝いします。診断機器、テスト機器、整備用ツールなど、業務に必要なあらゆるハードウエアの選定、設置、保守をサポートします。専門の技術者が工場のレイアウトや業務内容に応じた最適な配置を提案し、導入後のメンテナンスも迅速に対応します。<br>
+							信頼性の高い機器と迅速なサポートで、作業の効率化とダウンタイムの最小化を実現し、スムーズな業務運営を支援します。</p>
+					</div>
+				</li>
+				<li class="top-service-list__item">
+					<picture class="top-service-list__item-img">
+						<source srcset="./assets/images/top/service_img03.webp" type="image/webp">
+						<img src="./assets/images/top/service_img03.jpg" alt="ITコンサルサポートのイメージ画像" width="347" height="426" loading="lazy">
+					</picture>
+					<div class="top-service-list__item-text-wrap">
+						<hgroup class="top-service-list__item-title">
+							<span class="top-service-list__item-title-en">Sheet metal</span>
+							<h3 class="top-service-list__item-title-h3">ITコンサルサポート</h3>
+							<span class="top-service-list__item-title-ja">相談など</span>
+						</hgroup>
+						<p class="top-service-list__item-text">ITコンサルサポートでは、自動車整備業界に特化したコンサルティングサービスを提供します。<br>
+							現行の業務プロセスの分析から、最新のIT技術を駆使した効率化の提案まで、トータルでサポートします。<br>
+							デジタル化の推進、データ管理の最適化、サイバーセキュリティ対策など、幅広い分野で専門的なアドバイスを行います。<br>
+							豊富な経験と知識を持つコンサルタントが、個々のニーズに応じた最適なソリューションを提供し、競争力の強化とビジネスの成長を支援します。</p>
+					</div>
+				</li>
+			</ol>
+			<div class="top-service__btn">
+				<a class="btn btn--blue" href="service_index.html"><span>VIEW MORE</span></a>
+			</div>
+		</div>
+	</section>
+
+	<!-- top-product -->
+	<section class="top-product section">
+		<div class="top-product__inner inner">
+			<div class="top-product__title-wrapper">
+				<hgroup class="top-product__title heading">
+					<h2 class="heading__en"><span class="heading__en-big">P</span>roduct</h2>
+					<span class="heading__ja">製品情報</span>
+				</hgroup>
+				<span class="top-product__title-line"></span>
+			</div>
+			<ul class="top-product">
+				<li class="top-product">
+					<picture class="top-product__img">
+						<source srcset="./assets/images/top/product_img01.webp" type="image/webp">
+						<img src="./assets/images/top/product_img01.webp" alt="無限シリーズのイメージ画像" width="500" height="285" loading="lazy">
+					</picture>
+					<div class="top-product__body">
+						<h3 class="top-product__title">無限シリーズ</h3>
+						<p class="top-product__txt">約３０年以上にわたり業界のノウハウを蓄積してきた自動車業界向けの業務用ソフトウエアです。</p>
+					</div>
+				</li>
+				<li class="top-product">
+					<picture class="top-product__img">
+						<source srcset="./assets/images/top/product_img02.webp" type="image/webp">
+						<img src="./assets/images/top/product_img02.webp" alt="オリジナルWeb制作のイメージ画像" width="500" height="285" loading="lazy">
+					</picture>
+					<div class="top-product__body">
+						<h3 class="top-product__title">オリジナルWeb制作</h3>
+						<p class="top-product__txt">当社では、デザインチームによる高品質なWEBサイト制作が可能です。私たちは、規模の大小を問わず、確かな品質のWEBサイトをお届けいたします。</p>
+					</div>
+				</li>
+				<li class="top-product">
+					<picture class="top-product__img">
+						<source srcset="./assets/images/top/product_img03.webp" type="image/webp">
+						<img src="./assets/images/top/product_img03.webp" alt="Webシステムのイメージ画像" width="500" height="285" loading="lazy">
+					</picture>
+					<div class="top-product__body">
+						<h3 class="top-product__title">Webシステム</h3>
+						<p class="top-product__txt">当社では、Slim FrameworkやVue.jsを使用したWEBシステムの構築を得意としており、E-ラーニングシステムやスクールの管理システムなど、さまざまな制作実績がございます。</p>
+					</div>
+				</li>
+				<li class="top-product">
+					<picture class="top-product__img">
+						<source srcset="./assets/images/top/product_img04.webp" type="image/webp">
+						<img src="./assets/images/top/product_img04.webp" alt="セルフィーセキュリティサービスのイメージ画像" width="500" height="285" loading="lazy">
+					</picture>
+					<div class="top-product__body">
+						<h3 class="top-product__title">セルフィーセキュリティサービス</h3>
+						<p class="top-product__txt">サポートスタッフがお客様のSecureAnywhereの管理・運用を支援いたします。</p>
+					</div>
+				</li>
+			</ul>
+			<div class="top-product__btn">
+				<a class="btn btn--black" href="product_index.html"><span>VIEW MORE</span></a>
+			</div>
+		</div>
+	</section>
+
+	<!-- top-info -->
+	<div class="top-info section">
+		<div class="p-top-info__wrapper inner">
+			<span class="p-tio-info__more">VIEW MORE</span>
+			<div class="p-top-info__box">
+				<div class="p-top-info__title">Information</div>
+				<a href="" class="p-top-info__link">
+					<ul class="p-top-info__lists">
+						<li class="p-top-info__list">
+							<time class="p-top-info__date" datetime="2023-11-02">2023.11.02</time>
+							<p>メンテナンスのお知らせ</p>
+						</li>
+						<li class="p-top-info__list">
+							<time class="p-top-info__date" datetime="2023-11-02">2023.12.12</time>
+							<p>23年度年末年始お休みのお知らせ</p>
+						</li>
+						<li class="p-top-info__list">
+							<time class="p-top-info__date" datetime="2023-11-02">2024.01.05</time>
+							<p>明けましておめでとうございます！</p>
+						</li>
+					</ul>
+				</a>
+			</div>
+
+		</div>
+	</div>
+
 	<div class="l-scroll-top">
 		<button class="c-scroll-top" id="js-scrollTop">
 			<picture>
@@ -146,14 +329,54 @@
 			</picture>
 		</button>
 	</div>
-	<footer class="p-footer">
-		<div class="p-footer__inner l-inner">
-			<address class="p-footer__address">
-				<p>〒105-0011 東京都港区芝公園４丁目２−８</p>
-				<p>TEL:00-0000-0000</p>
-			</address>
-			<p class="p-footer__copy"><small>&copy; 会社名 <br class="u-hidden-pc">All rights reserved.</small></p>
+	<footer class="footer">
+		<div class="footer__inner inner">
+			<div class="footer__body">
+				<address class="footer__address">
+					<p>広島県広島市西区山手町7-11-202</p>
+					<p>TEL. 092-402-7833</p>
+					<p>FAX. 092-402-7831</p>
+				</address>
+				<ul class="footer__lists">
+					<li class="footer__list">
+						<div class="footer__list-title">About</div>
+						<a href="about/index.html">私たちについて</a>
+					</li>
+					<li class="footer__list">
+						<div class="footer__list-title">Service</div>
+						<a href="service/index.html">自動車整備</a>
+						<a href="service/index.html">自動車販売</a>
+						<a href="service/index.html">自動車板金</a>
+					</li>
+					<li class="footer__list">
+						<div class="footer__list-title">Product</div>
+						<a href="product/index.html">無限4F7</a>
+						<a href="product/index.html">電子保適証システム</a>
+						<a href="product/index.html">OSSシステム</a>
+						<a href="product/index.html">無限4F6</a>
+						<a href="product/index.html">WEBシステム</a>
+						<a href="product/index.html">オリジナルWEB制作</a>
+					</li>
+					<li class="footer__list">
+						<div class="footer__list-title">Information</div>
+						<a href="information/index.html">お知らせ</a>
+					</li>
+					<li class="footer__list">
+						<div class="footer__list-title">Recruit</div>
+						<a href="recruit/index.html">採用情報</a>
+					</li>
+					<li class="footer__list">
+						<div class="footer__list-title">Contact</div>
+						<a href="contact/index.html">お問い合わせ</a>
+					</li>
+				</ul>
+			</div>
+			<ul class="footer__items">
+				<li class="footer__item"><a href="company/index.html">会社概要</a></li>
+				<li class="footer__item"><a href="privacy-policy/index.html">プライバシーポリシー</a></li>
+			</ul>
 		</div>
+		<p class="footer__copy"><small> Copyright (c) 2024 SELFEE Co., Ltd.</small></p>
 	</footer>
 </body>
 

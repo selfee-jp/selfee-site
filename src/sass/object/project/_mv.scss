@@ -1,6 +1,45 @@
 @use "global" as *;
 
-
 .mv {
-    background-color: lightblue;
+    position: relative;
+}
+
+.mv__img {
+    display: block;
+    padding-top: rem(70);
+
+    @include mq(md) {
+        margin-left: auto;
+        max-width: 70%;
+    }
+}
+
+.mv__img img {
+    display: block;
+}
+
+.mv__title {
+    position: absolute;
+    font-size: rem(26);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1.3px;
+    top: 30%;
+    left: calc(50% - min(50vw, #{rem(550)}));
+    transform: translateY(-50%);
+
+    @include mq(md) {
+        transform: translate(-50%, -50%);
+        left: 55%;
+        top: 20%;
+
+    }
+}
+
+.mv__title span {
+    color: $sub-color;
+    font-family: "Noto Sans";
+    font-size: rem(38);
+    font-weight: 700;
+    letter-spacing: 1.9px;
 }

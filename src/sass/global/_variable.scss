@@ -4,8 +4,8 @@
 $l-inner: 1200px;
 
 // 余白
-$padding-pc: 3.3333%;
-$padding-sp: 6%;
+$padding-pc: 5%;
+$padding-sp: 20px;
 
 /********************************
 * フォント
@@ -20,17 +20,23 @@ $base-font-size: 16;
 /********************************
 * カラー
 ********************************/
-$base-color: #666;
-$sub-color: #ccc;
-$base-background: #fff;
+$main-color: #0057AD;
+$sub-color: #0068B7;
+$text: #1D2124;
+$gray: #D6D6D6;
+
+
 $black: #1D2124;
+$blue: #0057AD;
+$blue02: #0068B7;
+
+$base-color: #666;
+$base-background: #fff;
 $black02: #333;
 $white: #fff;
 $white02: #fff;
-$blue: #0057AD;
-$blue02: blue;
+
 $blue03: blue;
-$gray: #999;
 $pink: #cd8e9c;
 $light-pink: #e9cbca;
 $gold: #be9d61;
