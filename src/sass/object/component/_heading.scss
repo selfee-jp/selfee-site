@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.heading-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(64);
+}
+
+.heading-wrapper--reverse {
+    flex-direction: row-reverse;
+}
+
+.heading {
+    font-family: $en-font-family;
+    max-width: fit-content;
+    text-align: right;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.heading--white {
+    color: $white;
+}
+
+.heading__en {
+    font-size: rem(40);
+    font-weight: 500;
+    letter-spacing: 1.6px;
+}
+
+.heading__en-big {
+    font-size: rem(60);
+    font-weight: 400;
+    letter-spacing: 2.4px;
+}
+
+.heading__ja {
+    padding-top: rem(8);
+    font-size: rem(16);
+    font-style: normal;
+    padding-top: rem(12);
+    font-weight: 300;
+}
+
+.heading__title-line {
+    width: 100%;
+    height: 1px;
+    background: $text;
+}
+
+.heading__title-line--white {
+    background: $white;
+}

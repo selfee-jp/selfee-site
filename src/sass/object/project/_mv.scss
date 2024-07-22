@@ -33,9 +33,13 @@
     left: calc(50% - min(50vw, #{rem(550)}));
     transform: translateY(-50%);
 
-    @include mq(md) {
+    @media (max-width: 1200px) {
         transform: translate(0);
         left: rem(30);
+
+    }
+
+    @include mq(md) {
         top: rem(80);
 
     }

@@ -1,14 +1,12 @@
 @use "global" as *;
 
 html {
-
   //~375px
   @media (max-width: 375px) {
     font-size: vw(375, $base-font-size);
   }
 
-  @if $rule =="max" {
-
+  @if $rule == "max" {
     // PCファースト
     //375px~767px
     @include mq("md") {
@@ -17,16 +15,13 @@ html {
 
     // 768px〜inner
     @include mq("inner") {
-      font-size: vw(strip-unit($inner), $base-font-size);
+      font-size: vw(strip-unit($l-inner), $base-font-size);
     }
-  }
-
-  @else {
-
+  } @else {
     // SPファースト
     // 768px~inner
     @include mq() {
-      font-size: vw(strip-unit($inner), $base-font-size);
+      font-size: vw(strip-unit($l-inner), $base-font-size);
     }
 
     // inner以上
@@ -39,6 +34,11 @@ html {
   font-size: #{$base-font-size}px;
 }
 
+body {
+  font-family: $base-font-family;
+  color: $base-color;
+  background-color: $base-background;
+}
 
 /* link */
 /* ============================================ */
@@ -47,11 +47,9 @@ a {
   color: inherit;
   transition: opacity 0.3s;
   cursor: pointer;
-
-  // &:hover {
-  //   opacity: 0.7;
-  // }
-
+  &:hover {
+    opacity: 0.8;
+  }
   @include mq("md") {
     opacity: unset;
   }

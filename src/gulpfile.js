@@ -23,7 +23,6 @@ const autoprefixer = require("autoprefixer"); // ベンダープレフィック�
 const cssdeclsort = require("css-declaration-sorter"); // CSS 宣言をソート
 const postcssPresetEnv = require("postcss-preset-env"); // CSS4未満のベンダープレフィックスを付与
 const cssnano = require("cssnano"); // CSS の圧縮
-const postcssCombineMediaQuery = require('postcss-combine-media-query'); // メディアクエリをまとめる
 
 // HTML
 const replace = require("gulp-replace"); // 文字列や正規表現による置換
@@ -86,17 +85,17 @@ const cssSass = (isProduction) => {
         outputStyle: isProduction ? "compressed" : "expanded", // コンパイル後のスタイル指定
       })
     )
+    .pipe(mmq()) // メディアクエリをまとめる
     .pipe(
       // ベンダープレフィックスを自動付与
       postcss([
         autoprefixer({ cascade: false, grid: true }),
         cssdeclsort({ order: "alphabetical" }),
         postcssPresetEnv({ browsers: browsers, stage: 3 }),
-        postcssCombineMediaQuery(), // メディアクエリをまとめる
         ...(isProduction ? [cssnano({ autoprefixer: false })] : []), // CSS の圧縮 (本番用のみ)
       ])
     )
-    .pipe(dest(distPath.css, { sourcemaps: isProduction ? false : "." })) // ソースマップを出力
+    .pipe(dest(distPath.css), { sourcemaps: isProduction ? false : "." }) // ソースマップを出力
     .pipe(notify({ message: "Sassをコンパイルしました", onLast: true }));
   // Sass コンパイル完了後に通知を行う
 };
@@ -169,7 +168,13 @@ const jsBundleDev = () => jsBundle(false); // 開発用の JavaScript タスク
 // ブラウザシンクの初期化タスク
 const browserSyncInit = () => {
   const browserSyncOptions = {
-    proxy: 'http://localhost:3000/',  // Local by Flywheel のローカルURLに修正
+    // notify: false, // 通知を無効にする
+    // ghostMode: false, // クリック、スクロール、フォーム入力の同期を無効にする
+    // // server: "../assets/",
+    // proxy: "http://moaru19.local/", // WordPressのローカルURLを設定
+    // open: true,
+    // stream: true,
+    proxy: 'http://moaru19.local/',  // Local by Flywheel のローカルURLに修正
     open: true,
     notify: false, // 通知を非表示
     stream: true,  // ファイルの変更を自動的にリロード
@@ -177,6 +182,16 @@ const browserSyncInit = () => {
   browserSync.init(browserSyncOptions);
 };
 
+// const browserSyncOption = {
+//   // server: distBase, // dist直下をルートとする
+//   proxy: 'http://moaru19.local/',  // Local by Flywheel のローカルURLに修正
+//   open: true,
+//   notify: false, // 通知を非表示
+//   stream: true,  // ファイルの変更を自動的にリロード
+// };
+// const browserSyncFunc = () => {
+//   browserSync.init(browserSyncOption);
+// };
 
 
 // ブラウザリロードタスク
