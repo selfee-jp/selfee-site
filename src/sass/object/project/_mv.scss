@@ -14,7 +14,7 @@
 
     @include mq(md) {
         margin-left: auto;
-        max-width: 80%;
+        max-width: 90%;
         padding-top: rem(300);
     }
 }
@@ -36,12 +36,16 @@
     @media (max-width: 1200px) {
         transform: translate(0);
         left: rem(30);
-
     }
 
     @include mq(md) {
         top: rem(80);
+        font-size: rem(22);
+        line-height: 1.8;
+    }
 
+    @include mq('sm') {
+        left: rem(20);
     }
 }
 
@@ -51,4 +55,8 @@
     font-size: rem(38);
     font-weight: 700;
     letter-spacing: 1.9px;
+
+    @include mq(md) {
+        font-size: rem(26);
+    }
 }

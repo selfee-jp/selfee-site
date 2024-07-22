@@ -1,12 +1,9 @@
 @use "global" as *;
 
-
 .top-product {
     background: $main-color;
     color: $white;
 }
-
-.top-product__inner {}
 
 .top-product__items {
     margin-top: rem(57);
@@ -19,7 +16,7 @@
     }
 
     @include mq(md) {
-        margin-top: rem(40);
+        // margin-top: rem(40);
         grid-template-columns: repeat(1, 1fr);
         max-width: 500px;
         margin-inline: auto;
@@ -32,6 +29,10 @@
 
 .top-product__body {
     padding-top: rem(40);
+
+    @include mq(md) {
+        padding-top: rem(20);
+    }
 }
 
 .top-product__head {
@@ -40,10 +41,18 @@
     line-height: 2.6;
     padding-bottom: rem(20);
     border-bottom: 1px solid $white;
+
+    @include mq(md) {
+        padding-bottom: rem(10);
+    }
 }
 
 .top-product__txt {
     margin-top: rem(32);
+
+    @include mq(md) {
+        margin-top: rem(20);
+    }
 }
 
 .top-product__btn {

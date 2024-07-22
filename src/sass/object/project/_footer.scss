@@ -1,0 +1,150 @@
+@use "global" as *;
+
+.footer {
+  padding-block: rem(80) 0;
+  background: $main-color;
+  color: $white;
+}
+
+.footer__inner {
+  padding-bottom: rem(18);
+
+  @include mq(md) {
+    max-width: rem(300);
+    margin-inline: auto;
+  }
+}
+
+.footer__body {
+  display: flex;
+
+  @include mq(md) {
+    flex-direction: column;
+  }
+}
+
+.footer__info {
+  width: rem(403);
+  max-width: 100%;
+
+  @include mq(md) {
+    width: 100%;
+  }
+}
+
+.footer__logo {
+  width: rem(252);
+  max-width: 100%;
+}
+
+.footer__logo a {}
+
+.footer__logo img {
+  display: block;
+}
+
+
+.footer__logo span {
+  padding-top: rem(8);
+}
+
+
+
+.footer__address {
+  letter-spacing: -0.24px;
+  margin-top: rem(40);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: rem(8);
+}
+
+.footer__address p {
+  line-height: 1;
+}
+
+.footer__lists {
+  width: rem(745);
+  max-width: 100%;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: rem(10);
+  justify-items: end;
+
+  @include mq(md) {
+    grid-template-columns: repeat(1, auto);
+    justify-items: start;
+    gap: rem(20);
+    margin-top: rem(60);
+  }
+
+
+}
+
+.footer__list {}
+
+.footer__list-title {
+  font-family: $en-font-family;
+  font-size: rem(18);
+  font-weight: 500;
+  letter-spacing: 0.36px;
+}
+
+
+.footer__list a {
+  color: $gray04;
+  font-family: "Rounded Mplus 1c";
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: 2.57;
+  letter-spacing: -0.21px;
+  position: relative;
+  display: block;
+  padding: .2em;
+  padding-left: rem(12);
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: $gray;
+    width: 4px;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+
+
+.footer__items {
+  margin-top: rem(28);
+  display: flex;
+  justify-content: flex-end;
+  gap: rem(15);
+  color: $gray04;
+
+  @include mq(md) {
+    justify-content: start;
+    flex-direction: column;
+  }
+}
+
+.footer__item a {
+  font-family: "Rounded Mplus 1c";
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: 2.57;
+  letter-spacing: -0.21px;
+  padding: .2em;
+  padding-left: 0;
+}
+
+.footer__copy {
+  font-family: Arial;
+  font-size: rem(16);
+  font-weight: 400;
+  letter-spacing: -0.24px;
+  padding: rem(20);
+  background: $black;
+  text-align: center;
+}

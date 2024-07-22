@@ -5,7 +5,7 @@
     padding-block: rem(80) rem(100);
 
     @include mq(md) {
-        padding-block: rem(60);
+        padding-block: rem(80);
     }
 }
 
@@ -28,7 +28,7 @@
     justify-content: space-between;
 
     @include mq(md) {
-        margin-top: rem(80);
+        margin-top: rem(40);
         flex-direction: column;
 
     }
@@ -42,7 +42,7 @@
     white-space: nowrap;
 
     @include mq(md) {
-        font-size: rem(54);
+        font-size: rem(40);
     }
 }
 
@@ -52,7 +52,7 @@
 
     @include mq(md) {
         max-width: 100%;
-        margin-top: rem(60);
+        margin-top: rem(40);
     }
 }
 

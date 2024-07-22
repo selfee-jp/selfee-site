@@ -6,6 +6,10 @@
 
 .top-service__lists {
     margin-top: rem(70);
+
+    @include mq(md) {
+        margin-top: rem(40);
+    }
 }
 
 .top-service-list {
@@ -18,7 +22,7 @@
     align-items: center;
 
     @include mq(md) {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 }
 
@@ -26,7 +30,7 @@
     // margin-top: rem(100);
 
     @include mq(md) {
-        margin-top: rem(100);
+        margin-top: rem(60);
     }
 }
 
@@ -34,7 +38,7 @@
     flex-direction: row-reverse;
 
     @include mq(md) {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 }
 
@@ -44,6 +48,7 @@
 
     @include mq(md) {
         max-width: rem(400);
+        margin-top: rem(40);
     }
 }
 
@@ -128,6 +133,10 @@
     font-weight: 600;
     letter-spacing: 0.96px;
     line-height: 1.5;
+
+    @include mq(md) {
+        font-size: rem(22);
+    }
 }
 
 .top-service-list__item-title-ja {
@@ -143,6 +152,7 @@
 
     @include mq(md) {
         margin-top: rem(20);
+        line-height: 2;
     }
 }
 

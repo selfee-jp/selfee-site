@@ -1,0 +1,93 @@
+@use "global" as *;
+
+
+.top-info {}
+
+
+.top-info__wrapper {}
+
+
+.p-tio-info__more {
+    text-align: right;
+    display: block;
+}
+
+.top-info__box {
+    display: flex;
+    align-items: center;
+    background: $main-color;
+
+    @include mq(md) {
+        flex-direction: column;
+    }
+}
+
+.top-info__title {
+    width: rem(243);
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    height: 100%;
+
+    @include mq(md) {
+        width: 100%;
+    }
+}
+
+.top-info__link {
+    display: block;
+    width: 100%;
+    background: $base-background;
+    border: 1px solid $text;
+    position: relative;
+    padding-block: rem(30);
+    padding-inline: rem(80) rem(20);
+
+    @include mq(md) {
+        padding-inline: rem(20);
+        padding-top: rem(40);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: url(../images/common/arrow-black.svg) no-repeat center center/contain;
+        width: rem(66);
+        height: rem(10);
+        top: rem(20);
+        right: rem(24);
+
+        @include mq(md) {
+            width: rem(50);
+            height: rem(8);
+        }
+    }
+}
+
+.top-info__lists {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: rem(15);
+
+    @include mq(md) {}
+}
+
+.top-info__list {
+    display: flex;
+    letter-spacing: -0.24px;
+
+    @include mq(md) {
+        flex-direction: column;
+    }
+}
+
+.top-info__date {
+    width: rem(102);
+    max-width: 100%;
+    flex-shrink: 0;
+    color: $gray03;
+}
+
+.top-info__list p {}
