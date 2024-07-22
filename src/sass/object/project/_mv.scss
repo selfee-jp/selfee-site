@@ -2,6 +2,10 @@
 
 .mv {
     position: relative;
+
+    @include mq(md) {
+        padding-inline: rem(20);
+    }
 }
 
 .mv__img {
@@ -10,7 +14,8 @@
 
     @include mq(md) {
         margin-left: auto;
-        max-width: 70%;
+        max-width: 80%;
+        padding-top: rem(300);
     }
 }
 
@@ -29,9 +34,9 @@
     transform: translateY(-50%);
 
     @include mq(md) {
-        transform: translate(-50%, -50%);
-        left: 55%;
-        top: 20%;
+        transform: translate(0);
+        left: rem(30);
+        top: rem(80);
 
     }
 }

@@ -1,11 +1,19 @@
 @use "global" as *;
 
 
-.top-about {}
+.top-about {
+    padding-block: rem(80) rem(100);
+
+    @include mq(md) {
+        padding-block: rem(60);
+    }
+}
 
 .section {}
 
-.top-about__inner {}
+.top-about__inner {
+    position: relative;
+}
 
 .inner {}
 
@@ -13,50 +21,17 @@
 
 .top-about__title {}
 
-.heading-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    // gap: rem(64);
-}
-
-.heading {
-    color: #1D2124;
-    font-family: Quicksand;
-    max-width: fit-content;
-    text-align: right;
-    line-height: 1;
-}
-
-.heading__en {
-    font-size: 40px;
-    font-weight: 500;
-    letter-spacing: 1.6px;
-}
-
-.heading__en-big {
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 2.4px;
-}
-
-.heading__ja {
-    padding-top: rem(8);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 300;
-}
-
-.top-about__title-line {
-    width: calc(897 / 1210)*100%;
-    height: 1px;
-    background: $text;
-}
 
 .top-about__body {
     margin-top: rem(115);
     display: flex;
     justify-content: space-between;
+
+    @include mq(md) {
+        margin-top: rem(80);
+        flex-direction: column;
+
+    }
 }
 
 .top-about__lead {
@@ -65,13 +40,20 @@
     line-height: 1.5;
     letter-spacing: 2.4px;
     white-space: nowrap;
+
+    @include mq(md) {
+        font-size: rem(54);
+    }
 }
 
 .top-about__text {
-    font-weight: 300;
-    line-height: calc(36 / 16);
     max-width: calc(575 / 1150)*100%;
     margin-top: rem(188);
+
+    @include mq(md) {
+        max-width: 100%;
+        margin-top: rem(60);
+    }
 }
 
 .top-about__btn {
@@ -79,36 +61,15 @@
     text-align: center;
 }
 
-.btn {
-    border-radius: 50px;
-    padding: rem(25) rem(69);
-    font-family: Quicksand;
-    font-size: rem(24);
-    font-weight: 500;
-    letter-spacing: 0.96px;
-    position: relative;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    display: inline-block;
 
-    &::after {
-        content: "";
-        position: absolute;
-        background: url(../images/common/arrow-white.svg) no-repeat center center/contain;
-        width: rem(66);
-        height: rem(10);
-        top: 50%;
-        transform: translateY(-50%);
-        right: rem(-33);
-        -webkit-filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
-        /* SafariなどのWebkitブラウザ用 */
-        filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
-    }
+.p-top-about__deco {
+    position: absolute;
+    max-width: rem(427);
+    width: 100%;
+    margin-inline: auto;
+    top: rem(80);
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mq(md) {}
 }
-
-.btn--blue {
-    background: linear-gradient(150deg, #0057AD 50%, #004080 50%);
-    color: $white;
-}
-
-.p-top-about__deco {}

@@ -1,0 +1,56 @@
+@use "global" as *;
+
+
+.top-product {
+    background: $main-color;
+    color: $white;
+}
+
+.top-product__inner {}
+
+.top-product__items {
+    margin-top: rem(57);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(63) rem(138);
+
+    @include mq(inner) {
+        gap: rem(63) rem(63);
+    }
+
+    @include mq(md) {
+        margin-top: rem(40);
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 500px;
+        margin-inline: auto;
+    }
+}
+
+.top-product__item {}
+
+.top-product__img {}
+
+.top-product__body {
+    padding-top: rem(40);
+}
+
+.top-product__head {
+    font-size: rem(22);
+    font-weight: 600;
+    line-height: 2.6;
+    padding-bottom: rem(20);
+    border-bottom: 1px solid $white;
+}
+
+.top-product__txt {
+    margin-top: rem(32);
+}
+
+.top-product__btn {
+    margin-top: rem(44);
+    text-align: center;
+}
+
+.btn {}
+
+.btn--black {}

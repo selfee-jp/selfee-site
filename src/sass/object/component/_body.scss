@@ -1,11 +1,16 @@
 @use "global" as *;
 
 body {
-    color: $black;
-    font-family: "Hiragino Kaku Gothic ProN";
+    color: $text;
+    font-family: $base-font-family;
     font-size: rem(16);
-    font-weight: 300;
+    font-weight: 400;
     line-height: calc(36 / 16);
+    background: $base-background;
+
+    @include mq(md) {
+        font-size: rem(16);
+    }
 }
 
 .body-no-scroll {
