@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.scroll-top {
+  height: rem(55);
+  width: rem(55);
+  position: fixed;
+  right: rem(20);
+  bottom: rem(20);
+  background: $main-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: $layer-floating;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+
+  @include mq('sm') {
+    bottom: rem(15);
+    right: rem(15);
+    height: rem(40);
+    width: rem(40);
+  }
+}
+
+.scroll-top:hover {
+  opacity: 0.7;
+}
+
+.scroll-top__arrow {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-top: 3px solid $white;
+  border-right: 3px solid $white;
+  transform: translateY(20%) rotate(-45deg);
+}

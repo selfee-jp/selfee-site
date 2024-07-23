@@ -4483,20 +4483,55 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "common": () => (/* binding */ common)
 /* harmony export */ });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollToPlugin */ "./node_modules/gsap/ScrollToPlugin.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__.ScrollToPlugin);
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger);
 function common() {
-  // const header = document.getElementById("js-header");
+  window.addEventListener('DOMContentLoaded', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.config({
+      nullTargetWarn: false
+    });
 
-  // const headerScroll = () => {
-  //   window.addEventListener("scroll", () => {
-  //     if (window.scrollY > 1 && window.innerWidth > 768) {
-  //       header.classList.add("is-scroll");
-  //     } else {
-  //       header.classList.remove("is-scroll");
-  //     }
-  //   });
-  // };
+    // フッター TOPスクロールボタン
+    window.addEventListener("scroll", function () {
+      var scrollTopButton = document.getElementById("js-scrollTop");
+      var isScrollingDown = window.scrollY > 400;
+      if (isScrollingDown && gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.getProperty(scrollTopButton, "opacity") === 0 || !isScrollingDown && gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.getProperty(scrollTopButton, "opacity") === 1) {
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(scrollTopButton, {
+          duration: 1,
+          autoAlpha: isScrollingDown ? 1 : 0,
+          ease: isScrollingDown ? "power3.out" : "power3.in"
+        });
+      }
+    });
+    document.getElementById("js-scrollTop").addEventListener("click", function () {
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(window, {
+        duration: 1,
+        scrollTo: {
+          y: 0,
+          autoKill: false
+        }
+      });
+    });
 
-  // headerScroll();
+    // 電話PC時は無効
+    var ua = navigator.userAgent.toLowerCase();
+    var isMobile = /iphone/.test(ua) || /android(.+)?mobile/.test(ua);
+    if (!isMobile) {
+      document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+        });
+        link.style.cursor = 'default'; // カーソルのスタイルをデフォルトに設定
+        link.style.opacity = '1'; // 不透明度を1に設定
+      });
+    }
+  });
 }
 
 /***/ }),

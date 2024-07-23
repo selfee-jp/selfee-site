@@ -25,7 +25,11 @@
 
 .top-product__item {}
 
-.top-product__img {}
+.top-product__img img {
+    aspect-ratio: 500 /287;
+    object-fit: cover;
+    height: auto;
+}
 
 .top-product__body {
     padding-top: rem(40);
