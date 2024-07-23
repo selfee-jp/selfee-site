@@ -22,11 +22,11 @@
     <meta name="twitter:title" content="株式会社セルフィー" />
     <meta name="twitter:image" content="https://example.com/images/common/ogp.jpg" />
     <!-- icon -->
-    <link rel="icon" href="./assets/images/common/icon-16x16.png" sizes="16x16" type="image/png" />
-    <link rel="icon" href="./assets/images/common/icon-32x32.png" sizes="32x32" type="image/png" />
-    <link rel="icon" href="./assets/images/common/icon-48x48.png" sizes="48x48" type="image/png" />
-    <link rel="icon" href="./assets/images/common/icon-72x72.png" sizes="72x72" type="image/png" />
-    <link rel="apple-touch-icon" href="./assets/images/common/apple-touch-icon-152x152.png" />
+    <link rel="icon" href="../assets/images/common/icon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="icon" href="../assets/images/common/icon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="../assets/images/common/icon-48x48.png" sizes="48x48" type="image/png" />
+    <link rel="icon" href="../assets/images/common/icon-72x72.png" sizes="72x72" type="image/png" />
+    <link rel="apple-touch-icon" href="../assets/images/common/apple-touch-icon-152x152.png" />
     <!--  ファビコン -->
     <link rel="icon" href="#" />
     <!-- フォント -->
@@ -36,9 +36,9 @@
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- css -->
-    <link rel="stylesheet" href="./assets/css/style.css?ver=8135459498" />
+    <link rel="stylesheet" href="../assets/css/style.css?ver=8135459498" />
     <!-- JavaScript -->
-    <script defer src="./assets/js/script.js?ver=8135459498"></script>
+    <script defer src="../assets/js/script.js?ver=8135459498"></script>
 </head>
 
 <body>
@@ -46,7 +46,7 @@
         <div class="header__inner">
             <h1 class="header__logo">株式会社セルフィー
                 <a href="#body">
-                    <img src="assets/images/common/logo.png" alt="株式会社セルフィー" width="161" height="61" loading="lazy">
+                    <img src="../assets/images/common/logo.png" alt="株式会社セルフィー" width="161" height="61" loading="lazy">
                     <!-- <span>自動車整備業システムの開発・販売・導入指導</span> -->
                 </a>
             </h1>
@@ -137,22 +137,121 @@
             <p>私たちについて</p>
         </div>
         <!-- mv -->
-        <div class="mv">
-            <div class="mv__bg">
-                <picture class="mv__img">
-                    <source srcset="./assets/images/top/top-mv_img-sp.webp" type="image/webp" media="(max-width: 768px)">
-                    <source srcset="./assets/images/top/top-mv_img.webp" type="image/webp">
-                    <img src="./assets/images/top/top-mv_img.png" alt="" width="1440" height="400" loading="lazy">
+        <div class="below-mv">
+            <picture class="below-mv__img">
+                <source srcset="../assets/images/below/about-mv.webp" type="image/webp">
+                <img src="../assets/images/below/about-mv.jpg" alt="男性社員の写真" width="1280" height="500">
+            </picture>
+            <hgroup class="below-mv__title__heading">
+                <h1 class="below-mv__heading-ja">私たちについて</h1>
+                <span class="below-mv__heading-en">About&emsp;us</span>
+            </hgroup>
+        </div>
+    </main>
+
+    <!-- about-policy -->
+    <section class="about-policy">
+        <div class="about-policy__inner inner">
+            <hgroup class="about-policy__title__heading">
+                <h2 class="about-policy__heading-ja">ポリシー</h2>
+                <span class="about-policy__heading-en">Policy</span>
+            </hgroup>
+            <div class="about-policy__message">人との繋がりを大切にし、<br>
+                社会に「信頼」される<br>
+                ビジネスパートナーを目指す。</div>
+            <div class="about-policy__body">
+                <picture class="about-policy__img">
+                    <source srcset="../assets/images/below/about_img01.webp" type="image/webp">
+                    <img src="../assets/images/below/about_img01.jpg" alt="男性社員の写真" width="546" height="400" loading="lazy">
                 </picture>
-                <div class="mv__title">
-                    日本の<span>自動車業界</span>を支える
-                    <span>IT</span>企業<br>
-                    お客様に<span>「信頼」</span>される<br>
-                    <span>ビジネスパートナー</span>を目指す。
+                <div class="about-policy__content">
+                    <p class="about-policy__text">原動力となるのは社員の持つ力であり、その原点は”人"です。
+                        当社”人”とのつながりを大切にする企業です。
+                    </p>
+                    <div class="about-policy__items">
+                        <dl>
+                            <div class="about-policy__item">
+                                <dt>感動を与える心</dt>
+                                <dd>満足だけでは終わらせないサービスを目指す気持ち</dd>
+                            </div>
+                            <div class="about-policy__item">
+                                <dt>感謝される心</dt>
+                                <dd>感謝されるような仕事をする心構え</dd>
+                            </div>
+                            <div class="about-policy__item">
+                                <dt>創意工夫する心</dt>
+                                <dd>創意工夫し、自分なりのスタイルを目指す心構え</dd>
+                            </div>
+                        </dl>
+                    </div>
+                    <p class="about-policy__text">この３つの心構えを胸に、ビジネスに取り組んでいます。
+                    </p>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
+    <!-- about-approach -->
+    <section class="about-approach">
+        <div class="about-approach__inner inner">
+            <hgroup class="about-approach__title__heading">
+                <h2 class="about-approach__heading-ja">アプローチ</h2>
+                <span class="about-approach__heading-en">Approach</span>
+            </hgroup>
+            <div class="about-approach__body">
+                <picture class="about-approach__img">
+                    <source srcset="../assets/images/below/about_img02.webp" type="image/webp">
+                    <img src="../assets/images/below/about_img02.jpg" alt="男性社員の写真" width="546" height="400" loading="lazy">
+                </picture>
+                <div class="about-approach__content">
+                    <p class="about-approach__text">高齢化する社会の中で、介護者のために必要な移動手段であるクルマを安全に運行するため、<br>
+                        福祉送迎運転者講習会や自動車整備を考え取り組む<br>
+                        「一般社団法人 日本福祉車両協会」の賛同会員として活躍しています。
+                    </p>
+                    <picture class="about-approach__img">
+                        <source srcset="../assets/images/below/about-approach_img01.webp" type="image/webp">
+                        <img src="../assets/images/below/about-approach_img01.png.jpg" alt="一般社団法人 日本福祉車両協会のロゴ" width="523" height="180" loading="lazy">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about-vision -->
+    <section class="about-vision">
+        <div class="about-vision__inner inner">
+            <hgroup class="about-vision__title__heading">
+                <h2 class="about-vision__heading-en">Vision</h2>
+            </hgroup>
+            <hgroup class="about-vision__title__heading">
+                <h3 class="about-vision__heading-ja">未来へ繋ぐ</h3>
+                <span class="about-vision__heading-en">Connect to the future</span>
+            </hgroup>
+            <div class="about-vision__message">自動車社会を支えるアプリケーション<br>
+                社会を支えるアプリケーション<br>
+                お客様のビジネスパートナーとして、<br>
+                ideaをシステムデザインします。</div>
+        </div>
+    </section>
+
+    <!-- about-partner -->
+    <section class="about-partner">
+        <div class="about-partner__inner inner">
+            <hgroup class="about-partner__title__heading">
+                <h2 class="about-partner__heading-ja">ビジネスパートナー</h2>
+                <span class="about-partner__heading-en">Business partner</span>
+            </hgroup>
+            <div class="about-partner__message">当社では、お客様の多様なニーズにお応えするために<br>
+                主に西日本地域に営業拠点を設けております。<br>
+                ご協力いただけるビジネスパートナーを随時募集しております。</div>
+            <picture class="about-approach__img">
+                <source srcset="../assets/images/below/about_img03.webp" type="image/webp">
+                <img src="../assets/images/below/about_img03.jpg" alt="男性社員の写真" width="546" height="400" loading="lazy">
+            </picture>
+            <div class="about-partner__btn">
+                <a href="" class="btn02"></a>
+            </div>
+        </div>
+    </section>
 
 
     <!-- scroll-top -->
@@ -167,7 +266,7 @@
                 <div class="footer__info">
                     <h2 class="footer__logo">株式会社セルフィー
                         <a href="#body">
-                            <img src="assets/images/common/logo-white.svg" alt="株式会社セルフィー" width="252" height="53" loading="lazy">
+                            <img src="../assets/images/common/logo-white.svg" alt="株式会社セルフィー" width="252" height="53" loading="lazy">
                             <span>SELFEE Co., Ltd.</span>
                         </a>
                     </h2>
