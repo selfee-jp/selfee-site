@@ -42,9 +42,6 @@
         top: rem(80);
         font-size: rem(22);
         line-height: 1.8;
-    }
-
-    @include mq('sm') {
         left: rem(20);
     }
 }
