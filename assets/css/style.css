@@ -2099,13 +2099,21 @@ body {
 	position: relative;
 }
 
+.mv__bg {
+	background: url(../images/top/top-mv_img-bg.webp) center bottom -180px/cover no-repeat;
+	padding-top: 4.375rem;
+}
+
 .mv__img {
 	display: block;
-	padding-top: 4.375rem;
+	margin-inline: auto;
+	max-width: 80rem;
 }
 
 .mv__img img {
 	display: block;
+	margin-left: auto;
+	max-width: 41.125rem;
 }
 
 .mv__title {
@@ -2126,6 +2134,15 @@ body {
 	font-size: 2.375rem;
 	font-weight: 700;
 	letter-spacing: 1.9px;
+}
+
+.mv__scroll {
+	bottom: -18.75rem;
+	left: calc(50% - min(50vw, 36.5625rem));
+	max-width: 32.125rem;
+	position: absolute;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
 }
 
 .p-cards {
@@ -2186,7 +2203,7 @@ body {
 }
 
 .top-about {
-	padding-block: 5rem 6.25rem;
+	padding-block: 17.375rem 6.25rem;
 }
 
 .top-about__inner {
@@ -2595,8 +2612,13 @@ body {
 
 .mv__title {
 	left: 1.875rem;
-	-webkit-transform: translate(0);
-	        transform: translate(0);
+	top: 20%;
+	-webkit-transform: translateY(0);
+	        transform: translateY(0);
+}
+
+.mv__scroll {
+	left: 1.875rem;
 }
 
 }
@@ -2749,14 +2771,10 @@ body {
 	        flex-direction: column;
 }
 
-.mv {
-	padding-inline: 1.25rem;
-}
-
 .mv__img {
 	margin-left: auto;
 	max-width: 90%;
-	padding-top: 18.75rem;
+	padding-top: 17.5rem;
 }
 
 .mv__title {
@@ -2768,6 +2786,10 @@ body {
 
 .mv__title span {
 	font-size: 1.625rem;
+}
+
+.mv__scroll {
+	display: none;
 }
 
 .p-cards {
