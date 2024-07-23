@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.below-mv {
+    position: relative;
+    color: $white;
+    margin-top: rem(40);
+
+    @include mq(md) {
+        margin-top: rem(20);
+    }
+}
+
+
+.below-mv__img {
+    display: block;
+    width: 100%;
+    margin-inline: auto;
+
+    @include mq(md) {
+        margin-left: auto;
+    }
+}
+
+.below-mv__img img {
+    display: block;
+    margin-left: auto;
+}
+
+.below-mv__title-heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+
+
+
+    @include mq(md) {}
+}
+
+.below-mv__heading-ja {
+    font-size: rem(18);
+    letter-spacing: 0.36px;
+
+}
+
+.below-mv__heading-en {
+    font-size: rem(60);
+    line-height: 1.2;
+}

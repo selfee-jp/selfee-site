@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb a {
+    display: block;
+    padding: .4em;
+}
+
+.breadcrumb p {
+    padding: .4em;
+}
