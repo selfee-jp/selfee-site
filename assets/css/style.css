@@ -1635,7 +1635,7 @@ body {
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	margin-inline: auto;
-	max-width: 90rem;
+	max-width: 80rem;
 	padding-inline: 4rem 1.25rem;
 	position: relative;
 	width: 100%;
@@ -2111,7 +2111,7 @@ body {
 .mv__title {
 	font-size: 1.625rem;
 	font-weight: 500;
-	left: calc(50% - min(50vw, 34.375rem));
+	left: calc(50% - min(50vw, 36.5625rem));
 	letter-spacing: 1.3px;
 	line-height: 1.5;
 	position: absolute;
@@ -2558,18 +2558,19 @@ body {
 
 }
 
-@media (max-width: 1400px) {
-
-.header__inner {
-	padding-inline: 1.875rem 0.9375rem;
-}
-
-}
-
 @media (max-width: 1300px) {
 
 .header__nav-contact-item a {
 	width: 10rem;
+}
+
+}
+
+@media (max-width: 1280px) {
+
+.header__inner {
+	max-width: 75.625rem;
+	padding-inline: 1.875rem;
 }
 
 }
@@ -2604,10 +2605,6 @@ body {
 
 html {
 	font-size: 1.3333333333vw;
-}
-
-.header__inner {
-	padding-inline: 0.9375rem 0.9375rem;
 }
 
 .header__nav-link {
@@ -2714,7 +2711,7 @@ body {
 }
 
 .header__inner {
-	padding-inline: 1.25rem 1.875rem;
+	padding-inline: 1.25rem 1.25rem;
 }
 
 .header__nav {

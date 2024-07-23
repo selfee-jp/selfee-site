@@ -30,7 +30,7 @@
     line-height: 1.5;
     letter-spacing: 1.3px;
     top: 30%;
-    left: calc(50% - min(50vw, #{rem(550)}));
+    left: calc(50% - min(50vw, #{rem(585)}));
     transform: translateY(-50%);
 
     @media (max-width: 1200px) {
