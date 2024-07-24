@@ -23,6 +23,10 @@
   padding-right: rem(30);
   padding-left: rem(30);
 
+  @include mq(md) {
+    max-width: rem(700);
+  }
+
   @include mq(sm) {
     padding-right: rem(20);
     padding-left: rem(20);

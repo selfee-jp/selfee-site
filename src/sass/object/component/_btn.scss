@@ -77,3 +77,15 @@
   background: $black;
   color: $white;
 }
+
+/* btn02 */
+.btn02 {
+  font-size: rem(18);
+  letter-spacing: 0.36px;
+  color: $white;
+  background: $blue;
+  line-height: 1;
+  padding: rem(27) rem(54);
+
+  @include mq(md) {}
+}

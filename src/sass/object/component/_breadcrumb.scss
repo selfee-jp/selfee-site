@@ -3,6 +3,10 @@
 .breadcrumb {
     display: flex;
     align-items: center;
+
+    @include mq(md) {
+        font-size: rem(14);
+    }
 }
 
 .breadcrumb a {
