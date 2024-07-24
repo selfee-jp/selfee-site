@@ -9,7 +9,8 @@
 }
 
 .mv__bg {
-  padding-top: rem(70);
+  // padding-top: rem(70);
+  padding-top: calc( ( (20 / 1280) * 100 ) * 1vw);
   background: url(../images/top/top-mv_img-bg.webp) center bottom -180px / cover no-repeat;
 }
 
@@ -23,7 +24,9 @@
   @include mq(md) {
     //margin-left: auto;
     //max-width: 90%;
-    padding-top: rem(280);
+    
+    //padding-top: rem(280);
+
   }
 }
 
@@ -32,6 +35,11 @@
   //max-width: rem(658);
   max-width: calc( ( (600 / 1280) * 100 ) * 1vw);
   margin-left: auto;
+
+ @include mq( xl ) {
+    max-width: calc( ( (500 / 1280) * 100 ) * 1vw);
+ }
+
 }
 
 .mv__title {
