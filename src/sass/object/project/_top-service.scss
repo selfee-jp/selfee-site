@@ -108,11 +108,10 @@
     counter-increment: number;
     content: "0" counter(number);
     font-size: rem(100);
-    font-style: normal;
     font-weight: 500;
     line-height: 1;
     display: block;
-
+    font-family: $en-font-family;
 
     @include mq(md) {
         font-size: rem(64);

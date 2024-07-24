@@ -86,6 +86,7 @@
   background: $blue;
   line-height: 1;
   padding: rem(27) rem(54);
+  display: inline-block;
 
   @include mq(md) {}
 }

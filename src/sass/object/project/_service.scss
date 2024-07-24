@@ -1,0 +1,195 @@
+@use "global" as *;
+
+.service {
+    padding-block: rem(110) rem(96);
+    overflow: hidden;
+
+    @include mq(md) {
+        padding-block: rem(60);
+    }
+}
+
+.service__lists {}
+
+.service-list {
+    counter-reset: number;
+}
+
+.service-list__item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @include mq(md) {
+        flex-direction: column-reverse;
+        padding-block: rem(20);
+    }
+}
+
+.service-list__item+.service-list__item {
+    margin-top: rem(80);
+
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+
+.service-list__item:nth-of-type(even) {
+    flex-direction: row-reverse;
+    background: $main-color;
+    color: $white;
+
+    @include mq(md) {
+        flex-direction: column-reverse;
+    }
+}
+
+.service-list__item-img {
+    max-width: rem(815);
+    width: 100%;
+
+    @include mq(md) {
+        max-width: 100%;
+    }
+}
+
+.service-list__item-img img {
+    object-fit: contain;
+}
+
+.service-list__item-text-wrap {
+    flex-shrink: 0;
+}
+
+
+
+.service-list__item-title-wrap {
+    line-height: 1;
+    padding-top: rem(10);
+}
+
+.service-list__item:nth-of-type(even) .service-list__item-title-number {
+    flex-direction: row-reverse;
+    text-align: right;
+
+    @include mq(md) {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+
+.service-list__item-title-number::before {
+    counter-increment: number;
+    content: "0" counter(number);
+    font-size: rem(80);
+    font-weight: 500;
+    line-height: 1;
+    font-family: $en-font-family;
+
+
+    @include mq(md) {
+        font-size: rem(64);
+    }
+}
+
+.service-list__item-title-h3 {
+    font-size: rem(32);
+    letter-spacing: 0.64px;
+    line-height: 1.5;
+    margin-top: rem(15);
+
+    @include mq(md) {
+        font-size: rem(22);
+    }
+}
+
+.service-list__item-title-ja {
+    font-size: rem(18);
+    letter-spacing: 0.36px;
+}
+
+.service-list__item-text {
+    line-height: 2;
+    max-width: rem(576);
+    width: 100%;
+    padding: rem(38) rem(60) rem(20) 0;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background: $white;
+
+    @include mq(md) {
+        padding: rem(20) 0;
+        margin-top: rem(20);
+        line-height: 2;
+        position: static;
+        max-width: 100%;
+    }
+}
+
+/* 2つ目 */
+.service-list__item:nth-of-type(even) {
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background: $main-color;
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+    }
+
+    &::before {
+        right: 0;
+    }
+
+    &::after {
+        left: 0;
+    }
+
+    @include mq(md) {}
+}
+
+
+/* 2つ目 */
+.service-list__item:nth-of-type(even) .service-list__item-title-wrap {
+    padding-left: rem(20);
+
+    @include mq(md) {
+        padding-left: 0;
+    }
+}
+
+/* 2つ目 */
+.service-list__item:nth-of-type(even) .service-list__item-img {
+    max-width: rem(800);
+
+    @include mq(md) {
+        max-width: 100%;
+    }
+}
+
+/* 2つ目 */
+.service-list__item:nth-of-type(even) .service-list__item-text {
+    padding: rem(26) 0 rem(30) rem(61);
+    background: $main-color;
+    left: auto;
+    right: 0;
+
+    @include mq(md) {
+        padding: rem(20) 0;
+    }
+}
+
+.service__btn {
+    margin-top: rem(80);
+    text-align: center;
+
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
