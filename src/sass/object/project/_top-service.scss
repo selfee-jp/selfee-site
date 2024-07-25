@@ -2,6 +2,8 @@
 
 .top-service {
     background: $sub-background;
+    font-size: rem(18);
+
 }
 
 .top-service__lists {
@@ -146,7 +148,7 @@
 
 .top-service-list__item-text {
     margin-top: rem(28);
-    font-size: rem(15);
+    font-size: rem(18);
     line-height: 1.6;
 
     @include mq(md) {

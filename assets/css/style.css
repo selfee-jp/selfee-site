@@ -875,7 +875,7 @@ body {
 	background: #fff;
 	color: #1D2124;
 	font-family: "Noto Sans JP", sans-serif;
-	font-size: 1rem;
+	font-size: 1.125rem;
 	font-weight: 300;
 	line-height: 2.25;
 }
@@ -2405,6 +2405,7 @@ body {
 }
 
 .top-about {
+	font-size: 1.125rem;
 	padding-block: 17.375rem 6.25rem;
 }
 
@@ -2451,6 +2452,10 @@ body {
 	-webkit-transform: translateX(-50%);
 	        transform: translateX(-50%);
 	width: 100%;
+}
+
+.top-info {
+	font-size: 1.125rem;
 }
 
 .p-tio-info__more {
@@ -2538,6 +2543,7 @@ body {
 .top-product {
 	background: #0057AD;
 	color: #fff;
+	font-size: 1.125rem;
 }
 
 .top-product__items {
@@ -2570,7 +2576,8 @@ body {
 }
 
 .top-product__txt {
-	margin-top: 2rem;
+	line-height: 2;
+	margin-top: 1.5625rem;
 }
 
 .top-product__btn {
@@ -2580,6 +2587,7 @@ body {
 
 .top-service {
 	background: rgba(0, 104, 183, 0.05);
+	font-size: 1.125rem;
 }
 
 .top-service__lists {
@@ -2695,7 +2703,7 @@ body {
 }
 
 .top-service-list__item-text {
-	font-size: 0.9375rem;
+	font-size: 1.125rem;
 	line-height: 1.6;
 	margin-top: 1.75rem;
 }

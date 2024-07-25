@@ -3,6 +3,8 @@
 .top-product {
     background: $main-color;
     color: $white;
+    font-size: rem(18);
+
 }
 
 .top-product__items {
@@ -52,7 +54,8 @@
 }
 
 .top-product__txt {
-    margin-top: rem(32);
+    margin-top: rem(25);
+    line-height: calc(36 / 18);
 
     @include mq(md) {
         margin-top: rem(20);
