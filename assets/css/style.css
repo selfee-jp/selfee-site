@@ -1562,19 +1562,24 @@ body {
 
 .below-mv {
 	color: #fff;
+	height: 31.25rem;
 	margin-top: 2.5rem;
 	position: relative;
 }
 
 .below-mv__img {
 	display: block;
+	height: 31.25rem;
 	margin-inline: auto;
 	width: 100%;
 }
 
 .below-mv__img img {
+	-o-object-fit: cover;
 	display: block;
+	height: 31.25rem;
 	margin-left: auto;
+	object-fit: cover;
 }
 
 .below-mv__title-heading {
@@ -2997,14 +3002,17 @@ body {
 }
 
 .below-mv {
+	height: auto;
 	margin-top: 0.625rem;
 }
 
+.below-mv__img {
+	height: auto;
+}
+
 .below-mv__img img {
-	-o-object-fit: cover;
 	aspect-ratio: 3/2;
 	height: auto;
-	object-fit: cover;
 }
 
 .below-mv__heading-ja {

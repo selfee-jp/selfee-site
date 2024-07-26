@@ -4,9 +4,11 @@
     position: relative;
     color: $white;
     margin-top: rem(40);
+    height: rem(500);
 
     @include mq(md) {
         margin-top: rem(10);
+        height: auto;
     }
 }
 
@@ -15,19 +17,22 @@
     display: block;
     width: 100%;
     margin-inline: auto;
+    height: rem(500);
 
-    @include mq(md) {}
+    @include mq(md) {
+        height: auto;
+    }
 }
 
 .below-mv__img img {
     display: block;
     margin-left: auto;
+    object-fit: cover;
+    height: rem(500);
 
     @include mq(md) {
-
-        aspect-ratio: 3/2;
-        object-fit: cover;
         height: auto;
+        aspect-ratio: 3/2;
     }
 }
 
