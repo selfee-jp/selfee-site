@@ -1,0 +1,53 @@
+@use "global" as *;
+
+
+.info {
+    padding-block: rem(68) rem(94);
+
+    @include mq(md) {
+        padding-block: rem(40) rem(60);
+    }
+}
+
+
+.info__lists {
+    padding-inline: rem(54);
+
+    @include mq(md) {
+        padding-inline: rem(15);
+    }
+}
+
+.info__list {
+    padding-block: rem(24) rem(18);
+    border-bottom: 1px solid $gray04;
+}
+
+.info__link {}
+
+.info__meta {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+    font-size: rem(14);
+}
+
+.info__date {
+    letter-spacing: 0.28px;
+    letter-spacing: 0.28px;
+    line-height: 1;
+}
+
+
+.info__label {
+    display: inline-block;
+    color: $white;
+    background: $main-color;
+    padding: rem(6) rem(16) rem(4);
+    line-height: 1;
+}
+
+.info__text {
+    letter-spacing: 0.32px;
+    margin-top: rem(8);
+}
