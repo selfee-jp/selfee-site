@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.product {
+    padding-block: rem(104) rem(80);
+
+    @include mq(md) {
+        padding-block: rem(60);
+    }
+}
+
+.product__inner {}
+
+.inner {}
+
+.product__items {}
+
+.product__item {}
+
+.product__title {}
+
+.product__img-box {}
+
+.product__img {}
+
+.product__img01 {}
+
+.product__img02 {}
+
+.product__box {}
+
+.product__text {}
+
+.product__item-head {}
+
+.product__item-text {}
+
+.product__img-web {}
+
+.product__img-web01 {}
+
+.product__img-web02 {}
+
+.product__img-service {}
