@@ -1,21 +1,6 @@
 @use "global" as *;
 
-
-.support {}
-
-.support__inner {}
-
-.inner {}
-
-.below-title {}
-
-.below-title__ja {}
-
-.below-title__en {}
-
-.below-title__en--p {}
-
-.support__box {
+.support {
     background: url(../images/below/support-bg.jpg) center center / cover no-repeat;
     padding-block: rem(50) rem(40);
 
@@ -88,6 +73,11 @@
 
 .support__item-details small {
     font-size: rem(18);
+    display: block;
+
+    @include mq(md) {
+        text-align: left;
+    }
 }
 
 .support__tel-lists {

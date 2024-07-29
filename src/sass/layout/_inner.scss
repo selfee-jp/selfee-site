@@ -32,3 +32,21 @@
     padding-left: rem(15);
   }
 }
+
+.inner--small {
+  margin: 0 auto;
+  width: 100%;
+  height: inherit;
+  max-width: rem(1100);
+  padding-right: rem(30);
+  padding-left: rem(30);
+
+  @include mq(md) {
+    max-width: rem(700);
+  }
+
+  @include mq(sm) {
+    padding-right: rem(15);
+    padding-left: rem(15);
+  }
+}
