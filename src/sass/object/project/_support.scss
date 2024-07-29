@@ -1,0 +1,232 @@
+@use "global" as *;
+
+
+.support {}
+
+.support__inner {}
+
+.inner {}
+
+.below-title {}
+
+.below-title__ja {}
+
+.below-title__en {}
+
+.below-title__en--p {}
+
+.support__box {
+    background: url(../images/below/support-bg.jpg) center center / cover no-repeat;
+    padding-block: rem(50) rem(40);
+
+    @include mq(md) {
+        background: url(../images/below/support-bg.jpg) right center / cover no-repeat;
+    }
+}
+
+.support__head {
+    text-align: center;
+    font-size: rem(22);
+    letter-spacing: 0.44px;
+    font-weight: 600;
+}
+
+.support__time {
+    text-align: center;
+    letter-spacing: 0.36px;
+    margin-top: rem(15);
+}
+
+.support__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(52) rem(40);
+    margin-top: rem(60);
+
+    @include mq(md) {
+        padding-inline: rem(10);
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.support__item {
+    background: $white;
+    text-align: center;
+    padding: rem(50) rem(50) rem(70);
+    line-height: normal;
+
+    @include mq(md) {
+        padding-inline: rem(20);
+    }
+}
+
+.support__item-head {
+    font-size: rem(22);
+    font-weight: 600;
+    letter-spacing: 0.44px;
+}
+
+.support__item-text {
+    margin-top: rem(40);
+    letter-spacing: 0.36px;
+
+    @include mq(md) {
+        text-align: left;
+        max-width: fit-content;
+        margin-inline: auto;
+    }
+}
+
+.support__item-details {
+    margin-top: rem(35);
+    letter-spacing: 0.36px;
+    max-width: fit-content;
+    margin-inline: auto;
+
+    @include mq(md) {}
+}
+
+.support__item-details small {
+    font-size: rem(18);
+}
+
+.support__tel-lists {
+    text-align: left;
+
+    @include mq(md) {
+        text-align: center;
+        line-height: 1.5;
+    }
+}
+
+.support__tel-lists span {
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.support__tel-lists a {
+    padding: .4em;
+    display: inline-block;
+
+    @include mq(md) {
+        display: block;
+    }
+}
+
+.support__item-details li:not(:first-child) {
+    @include mq(md) {
+        margin-top: rem(20);
+    }
+}
+
+.support__item-btn {
+    margin-top: rem(64);
+}
+
+.support__item-btn a {
+    margin-inline: auto;
+}
+
+.support__item-details small {
+    @include mq(md) {
+        text-align: left;
+    }
+}
+
+.support__btn {
+    margin-top: rem(40);
+}
+
+.support__btn a {
+    font-weight: 600;
+    font-size: rem(22);
+    letter-spacing: 0.44px;
+    background: rgba(106, 106, 106, 0.50);
+    line-height: 1.2;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: rem(550);
+    height: rem(100);
+    margin-inline: auto;
+
+    @include mq(md) {
+        max-width: rem(280);
+        height: rem(80);
+    }
+}
+
+.support__text {
+    margin-top: rem(35);
+    text-align: center;
+    display: block;
+    letter-spacing: .36px;
+
+    @include mq(md) {
+        text-align: left;
+    }
+}
+
+.support-about {
+    background: $text;
+    color: $white;
+    line-height: normal;
+    padding-block: rem(50) rem(80);
+
+    @include mq(md) {
+        padding-block: rem(40) rem(60);
+    }
+}
+
+.support-about__inner {}
+
+.support-about__title {
+    font-size: rem(22);
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: .44px;
+}
+
+.support-about__box {
+    margin-top: rem(30);
+    border: 1px solid $white;
+    padding: rem(30) rem(20) rem(10);
+    letter-spacing: 0.36px;
+    max-width: rem(830);
+    margin-inline: auto;
+
+    @include mq(md) {
+        max-width: rem(700);
+        margin-inline: auto;
+    }
+}
+
+.support-about__text {
+    text-align: center;
+
+    @include mq(md) {
+        // max-width: fit-content;
+        // margin-inline: auto;
+        text-align: left;
+    }
+}
+
+.support-about__text-box {
+    text-align: left;
+    max-width: fit-content;
+    margin-inline: auto;
+    margin-top: rem(30);
+
+    @include mq(md) {
+        // max-width: fit-content;
+        // margin-inline: auto;
+    }
+}
+
+.support-about__text p {}
+
+.support-about__text strong {
+    font-weight: 600;
+}

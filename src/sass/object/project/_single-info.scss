@@ -2,37 +2,19 @@
 
 
 .single-info {
-    padding-block: rem(80) rem(30);
-}
+    padding-block: 0 rem(103);
 
-.below-title {
-    letter-spacing: 0.36px;
-    text-align: center;
-}
-
-.below-title__ja {}
-
-.below-title__en {
-    font-size: rem(60);
-    display: block;
-    text-align: center;
-    line-height: 1.2;
-    position: relative;
-
-    &::after {
-        content: "";
-        position: absolute;
-        background: $text;
-        width: rem(95);
-        height: 1px;
-        bottom: -3px;
-        left: 50%;
-        transform: translateX(-50%);
+    @include mq(md) {
+        padding-block: 0 rem(80);
     }
 }
 
 .single-info__body {
-    padding-top: rem(120);
+    padding-top: rem(90);
+
+    @include mq(md) {
+        padding-top: rem(80);
+    }
 }
 
 .single-info__label {
@@ -48,21 +30,79 @@
 }
 
 .single-info__title {
-    margin-top: rem(30);
+    margin-top: rem(25);
     font-size: rem(22);
     font-weight: 600;
     letter-spacing: 0.44px;
+
+    @include mq(md) {
+        font-size: rem(18);
+        margin-top: rem(10);
+    }
 }
 
 .single-info__date {
     margin-top: rem(20);
+    display: inline-block;
+    padding: rem(20) rem(50) rem(20) rem(30);
+    background: $main-color;
+    color: $white;
+    letter-spacing: 0.28px;
+    font-size: rem(14);
+
+    @include mq(md) {
+        padding: rem(5) rem(10);
+        margin-top: rem(10);
+    }
 }
 
-.single-info__img {}
+.single-info__img {
+    margin-top: rem(50);
+    display: block;
 
-.single-info__content {}
+    @include mq(md) {
+        margin-top: rem(30);
+    }
+}
 
-.single-info__btns {}
+.single-info__img img {
+    object-fit: contain;
+
+    @include mq(md) {}
+}
+
+.single-info__content {
+    margin-top: rem(87);
+
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+
+.single-info__btns {
+    margin-top: rem(87);
+    display: flex;
+    justify-content: center;
+    gap: rem(64) rem(30);
+
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}
+
+.single-info__btns a {
+    display: block;
+    height: rem(50);
+    width: rem(150);
+    max-width: 100%;
+    background: $main-color;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.28px;
+    font-size: rem(14);
+}
 
 .single-info__prev {}
 

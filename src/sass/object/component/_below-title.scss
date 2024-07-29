@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.below-title {
+    letter-spacing: 0.36px;
+    text-align: center;
+    padding-block: rem(80) rem(30);
+
+    @include mq(md) {
+        padding-block: rem(40) rem(30);
+    }
+
+}
+
+.below-title__ja {}
+
+.below-title__en {
+    font-size: rem(60);
+    display: block;
+    text-align: center;
+    line-height: 1.2;
+    position: relative;
+
+    @include mq(md) {
+        font-size: rem(42);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        background: $text;
+        width: rem(95);
+        height: 1px;
+        bottom: -3px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.below-title__en--p {
+    &::after {
+        bottom: -10px;
+    }
+}

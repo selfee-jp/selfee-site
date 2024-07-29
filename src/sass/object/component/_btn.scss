@@ -84,9 +84,23 @@
   letter-spacing: 0.36px;
   color: $white;
   background: $blue;
-  line-height: 1;
+  line-height: 1.2;
   padding: rem(27) rem(54);
   display: inline-block;
 
   @include mq(md) {}
+}
+
+.btn02--support {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(320);
+  height: rem(80);
+  max-width: 100%;
+
+  @include mq(md) {
+    width: rem(280);
+  }
 }
