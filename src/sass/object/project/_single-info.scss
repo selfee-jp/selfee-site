@@ -1,0 +1,69 @@
+@use "global" as *;
+
+
+.single-info {
+    padding-block: rem(80) rem(30);
+}
+
+.below-title {
+    letter-spacing: 0.36px;
+    text-align: center;
+}
+
+.below-title__ja {}
+
+.below-title__en {
+    font-size: rem(60);
+    display: block;
+    text-align: center;
+    line-height: 1.2;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background: $text;
+        width: rem(95);
+        height: 1px;
+        bottom: -3px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.single-info__body {
+    padding-top: rem(120);
+}
+
+.single-info__label {
+    font-size: rem(14);
+    letter-spacing: 0.28px;
+    background: $main-color;
+    color: $white;
+    display: inline-block;
+    padding: rem(6) rem(14);
+    line-height: 1;
+
+    @include mq(md) {}
+}
+
+.single-info__title {
+    margin-top: rem(30);
+    font-size: rem(22);
+    font-weight: 600;
+    letter-spacing: 0.44px;
+}
+
+.single-info__date {
+    margin-top: rem(20);
+}
+
+.single-info__img {}
+
+.single-info__content {}
+
+.single-info__btns {}
+
+.single-info__prev {}
+
+.single-info__next {}
