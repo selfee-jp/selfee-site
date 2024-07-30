@@ -1,0 +1,79 @@
+@use "global" as *;
+
+
+.contact-box {
+    background: $main-color;
+    padding-block: rem(29) rem(34);
+    color: $white;
+    text-align: center;
+
+    @include mq(md) {}
+}
+
+.contact-box__inner {}
+
+.inner {}
+
+.contact-box__item {
+    max-width: rem(800);
+    margin-inline: auto;
+    border: 1px solid $white;
+    padding: rem(53) rem(20);
+}
+
+.contact-box__text {
+    font-size: rem(26);
+    font-weight: 600;
+    letter-spacing: 0.52px;
+
+    @include mq(md) {}
+}
+
+.contact-box__tel {
+    display: block;
+    letter-spacing: 1.06px;
+    font-size: rem(53);
+    font-weight: 700;
+
+    @include mq(md) {}
+}
+
+.contact-box__time {}
+
+.contact {
+    padding-block: rem(66) rem(110);
+}
+
+.contact__inner {}
+
+.contact__title {
+    letter-spacing: 0.52px;
+    font-size: rem(26);
+    font-weight: 600;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background: $text;
+        width: rem(95);
+        height: 1px;
+        bottom: rem(-5);
+        left: 0;
+    }
+}
+
+
+.contact__text {
+    margin-top: rem(40);
+}
+
+.contact__text p:not(:first-child) {
+    margin-top: rem(40);
+}
+
+.contact__box {
+    margin-top: rem(14);
+    max-width: rem(800);
+    margin-inline: auto;
+}

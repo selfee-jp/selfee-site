@@ -1,0 +1,313 @@
+@use "global" as *;
+
+/*==================================================================
+# 共通
+================================================================== */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    margin: 0;
+    padding: 0;
+    background: none;
+    background-image: none;
+    border-style: none;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: inherit;
+    font-family: inherit;
+    padding: rem(10) rem(16);
+    line-height: 1;
+    width: 100%;
+    outline: transparent;
+    border-radius: 10px;
+    background: $white;
+    font-size: rem(18);
+    border: 1px solid #000;
+
+    &:focus {
+        outline: 2px solid $main-color;
+    }
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9AA4AC;
+}
+
+
+.cf7__head {
+    margin-top: rem(64);
+    letter-spacing: 0.4px;
+    font-size: rem(20);
+    font-weight: 600;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background: $text;
+        width: rem(95);
+        height: 1px;
+        bottom: rem(-5);
+        left: 0;
+    }
+}
+
+.cf7__text {
+    margin-top: rem(40);
+    font-weight: 300;
+}
+
+
+.cf7__list {}
+
+.cf7__row {
+    display: flex;
+    align-items: center;
+}
+
+.cf7__rows {
+    margin-top: rem(30);
+}
+
+.cf7__row {
+    margin-top: rem(20);
+}
+
+.cf7__list dt:nth-of-type(n + 2),
+.cf7__list dd:nth-of-type(n + 2) {
+    margin-top: 20px;
+}
+
+.cf7__list dt {
+    // padding-top: 15px;
+    font-weight: 300;
+}
+
+.cf7__row dt {
+    width: 35%;
+    // padding-top: 15px;
+}
+
+.cf7__row dd {
+    width: 65%;
+}
+
+.cf7__textarea {
+    margin-top: rem(20);
+}
+
+/* 必須・任意 */
+.cf7__required,
+.cf7__optional {
+    margin-left: rem(3);
+    font-size: rem(22);
+    vertical-align: 1px;
+}
+
+.cf7__required {
+    color: #BE1D1D;
+}
+
+.cf7__optional {
+    background: #878D8E;
+}
+
+/* input・textarea */
+.cf7__list dd input[type="text"],
+.cf7__list dd input[type="tel"],
+.cf7__list dd input[type="email"],
+.cf7__list dd textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: #F4F4F4;
+}
+
+/* ドロップダウンメニュー */
+.cf7__select {
+    position: relative;
+}
+
+.cf7__select:before {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 10;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid #000;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    pointer-events: none;
+    content: '';
+}
+
+.cf7__select select {
+    width: 100%;
+    padding: 19px 20px;
+    background: #F4F4F4;
+    color: #a5a5a5;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* チェックボックス・ラジオボタン */
+.cf7__list dd .wpcf7-checkbox,
+.cf7__list dd .wpcf7-radio {
+    display: block;
+    padding: 15px 0 10px;
+}
+
+.cf7__radio {
+    margin-top: rem(30);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: rem(10);
+}
+
+/* 縦並び（チェックボックス・ラジオボタン） */
+.cf7__list dd .wpcf7-list-item {
+    display: block;
+    margin: 0;
+}
+
+.cf7__list dd .wpcf7-list-item:nth-child(n + 2) {
+    margin-top: 18px;
+}
+
+/* マウスカーソル（チェックボックス・ラジオボタン） */
+.cf7__list dd .wpcf7-list-item label {
+    cursor: pointer;
+}
+
+/* チェックボックス・ラジオボタン */
+input[type="checkbox"],
+input[type="radio"] {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    margin-right: 24px;
+    border: 1px solid #bcbcbc;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* チェックボックス */
+input[type="checkbox"]:checked {
+    border: 1px solid #000;
+    background: #000;
+}
+
+input[type="checkbox"]:checked:before {
+    position: absolute;
+    top: 1px;
+    left: 7px;
+    transform: rotate(50deg);
+    width: 10px;
+    height: 18px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    content: '';
+}
+
+/* ラジオボタン */
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #000;
+    content: '';
+}
+
+/* プレースホルダー */
+/* Google Chrome / Safari / Mozilla Firefox / Opera */
+.cf7__list dd input[type="text"]::placeholder,
+.cf7__list dd input[type="tel"]::placeholder,
+.cf7__list dd input[type="email"]::placeholder,
+.cf7__list dd textarea::placeholder {
+    color: #a5a5a5;
+}
+
+/* Microsoft Edge */
+.cf7__list dd input[type="text"]::-ms-input-placeholder,
+.cf7__list dd input[type="tel"]::-ms-input-placeholder,
+.cf7__list dd input[type="email"]::-ms-input-placeholder,
+.cf7__list dd textarea::-ms-input-placeholder {
+    color: #a5a5a5;
+}
+
+/* Internet Explorer */
+.cf7__list dd input[type="text"]:-ms-input-placeholder,
+.cf7__list dd input[type="tel"]:-ms-input-placeholder,
+.cf7__list dd input[type="email"]:-ms-input-placeholder,
+.cf7__list dd textarea:-ms-input-placeholder {
+    color: #a5a5a5;
+}
+
+/* 送信ボタン */
+.cf7__button {
+    padding-left: 72px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    width: 260px;
+    height: 60px;
+    background: #000;
+    color: #fff;
+    transition: opacity .6s;
+}
+
+input[type="submit"]:hover {
+    opacity: .6;
+}
+
+/* ajax-loader */
+.wpcf7-spinner {
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 767px) {
+
+    .cf7__list dt {
+        width: 100%;
+        margin-bottom: 15px;
+        padding-top: 0;
+    }
+
+    .cf7__list dd {
+        width: 100%;
+    }
+
+    .cf7__list dd:nth-of-type(n + 2) {
+        margin-top: 0;
+    }
+
+    .cf7__list dd .wpcf7-checkbox,
+    .cf7__list dd .wpcf7-radio {
+        padding: 15px 0 0;
+    }
+
+    /* 送信ボタン */
+    input[type="submit"] {
+        width: 180px;
+        height: 56px;
+    }
+
+}
