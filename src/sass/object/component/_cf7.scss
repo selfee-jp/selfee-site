@@ -52,7 +52,7 @@ textarea::placeholder {
         background: $text;
         width: rem(95);
         height: 1px;
-        bottom: rem(-5);
+        bottom: rem(-10);
         left: 0;
     }
 }
@@ -68,6 +68,10 @@ textarea::placeholder {
 .cf7__row {
     display: flex;
     align-items: center;
+
+    @include mq(md) {
+        flex-direction: column;
+    }
 }
 
 .cf7__rows {
@@ -90,11 +94,20 @@ textarea::placeholder {
 
 .cf7__row dt {
     width: 35%;
+
     // padding-top: 15px;
+    @include mq(md) {
+        width: 100%;
+    }
 }
 
 .cf7__row dd {
     width: 65%;
+
+    @include mq(md) {
+        width: 100%;
+        margin-top: rem(5);
+    }
 }
 
 .cf7__textarea {
@@ -123,8 +136,15 @@ textarea::placeholder {
 .cf7__list dd input[type="email"],
 .cf7__list dd textarea {
     width: 100%;
-    padding: 15px 20px;
-    background: #F4F4F4;
+    padding: rem(10) rem(20);
+    background: $white;
+    border: 1px solid #000;
+}
+
+.cf7__list dd textarea {
+    padding: rem(40) rem(30);
+    border: 1px solid #9AA4AC;
+    border-radius: 0;
 }
 
 /* ドロップダウンメニュー */
@@ -150,7 +170,7 @@ textarea::placeholder {
 .cf7__select select {
     width: 100%;
     padding: 19px 20px;
-    background: #F4F4F4;
+    // background: #F4F4F4;
     color: #a5a5a5;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -193,7 +213,7 @@ input[type="radio"] {
     width: 26px;
     height: 26px;
     margin-right: 24px;
-    border: 1px solid #bcbcbc;
+    border: 1px solid #000;
     cursor: pointer;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -241,7 +261,7 @@ input[type="radio"]:checked:before {
 .cf7__list dd input[type="tel"]::placeholder,
 .cf7__list dd input[type="email"]::placeholder,
 .cf7__list dd textarea::placeholder {
-    color: #a5a5a5;
+    color: #A6AFB7;
 }
 
 /* Microsoft Edge */
@@ -249,7 +269,7 @@ input[type="radio"]:checked:before {
 .cf7__list dd input[type="tel"]::-ms-input-placeholder,
 .cf7__list dd input[type="email"]::-ms-input-placeholder,
 .cf7__list dd textarea::-ms-input-placeholder {
-    color: #a5a5a5;
+    color: #A6AFB7;
 }
 
 /* Internet Explorer */
@@ -257,19 +277,19 @@ input[type="radio"]:checked:before {
 .cf7__list dd input[type="tel"]:-ms-input-placeholder,
 .cf7__list dd input[type="email"]:-ms-input-placeholder,
 .cf7__list dd textarea:-ms-input-placeholder {
-    color: #a5a5a5;
+    color: #A6AFB7;
 }
 
 /* 送信ボタン */
 .cf7__button {
-    padding-left: 72px;
     text-align: center;
+    margin-top: rem(64);
 }
 
 input[type="submit"] {
-    width: 260px;
-    height: 60px;
-    background: #000;
+    width: rem(320);
+    height: rem(80);
+    background: $main-color;
     color: #fff;
     transition: opacity .6s;
 }
@@ -285,29 +305,29 @@ input[type="submit"]:hover {
 
 @media screen and (max-width: 767px) {
 
-    .cf7__list dt {
-        width: 100%;
-        margin-bottom: 15px;
-        padding-top: 0;
-    }
+    // .cf7__list dt {
+    //     width: 100%;
+    //     margin-bottom: 15px;
+    //     padding-top: 0;
+    // }
 
-    .cf7__list dd {
-        width: 100%;
-    }
+    // .cf7__list dd {
+    //     width: 100%;
+    // }
 
-    .cf7__list dd:nth-of-type(n + 2) {
-        margin-top: 0;
-    }
+    // .cf7__list dd:nth-of-type(n + 2) {
+    //     margin-top: 0;
+    // }
 
-    .cf7__list dd .wpcf7-checkbox,
-    .cf7__list dd .wpcf7-radio {
-        padding: 15px 0 0;
-    }
+    // .cf7__list dd .wpcf7-checkbox,
+    // .cf7__list dd .wpcf7-radio {
+    //     padding: 15px 0 0;
+    // }
 
-    /* 送信ボタン */
-    input[type="submit"] {
-        width: 180px;
-        height: 56px;
-    }
+    // /* 送信ボタン */
+    // input[type="submit"] {
+    //     width: 180px;
+    //     height: 56px;
+    // }
 
 }
