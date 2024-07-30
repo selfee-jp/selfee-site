@@ -865,17 +865,6 @@ th {
 	width: 100%;
 }
 
-.l-header {
-	left: 0;
-	position: fixed;
-	top: 0;
-	z-index: 50;
-}
-
-.l-section {
-	margin-block: 2.8125rem;
-}
-
 .section {
 	padding-block: 5rem;
 }
@@ -3385,6 +3374,10 @@ input[type=submit]:hover {
 	margin-inline: auto;
 }
 
+.support__item-details small {
+	font-size: 1rem;
+}
+
 .support__btn {
 	margin-top: 2.5rem;
 }
@@ -4124,7 +4117,7 @@ body {
 
 .company__list-description {
 	max-width: 100%;
-	padding: 1.25rem;
+	padding: 2.5rem 1.25rem;
 }
 
 .company__office-items {
@@ -4283,6 +4276,10 @@ body {
 	-ms-grid-columns: (1fr)[1];
 	grid-template-columns: repeat(1, 1fr);
 	margin-top: 1.25rem;
+}
+
+.product__list-text {
+	padding-block: 1.25rem;
 }
 
 .product__img-webs {
@@ -4461,6 +4458,7 @@ body {
 }
 
 .support__item-details small {
+	margin-top: 0.625rem;
 	text-align: left;
 }
 

@@ -18,14 +18,12 @@
     }
 
     @include mq(md) {
-        // margin-top: rem(40);
         grid-template-columns: repeat(1, 1fr);
         max-width: 500px;
         margin-inline: auto;
     }
 }
 
-.top-product__item {}
 
 .top-product__img img {
     aspect-ratio: 500 /287;
@@ -66,7 +64,3 @@
     margin-top: rem(44);
     text-align: center;
 }
-
-.btn {}
-
-.btn--black {}

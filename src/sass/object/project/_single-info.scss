@@ -1,6 +1,5 @@
 @use "global" as *;
 
-
 .single-info {
     padding-block: 0 rem(103);
 
@@ -25,8 +24,6 @@
     display: inline-block;
     padding: rem(6) rem(14);
     line-height: 1;
-
-    @include mq(md) {}
 }
 
 .single-info__title {
@@ -67,8 +64,6 @@
 
 .single-info__img img {
     object-fit: contain;
-
-    @include mq(md) {}
 }
 
 .single-info__content {
@@ -103,7 +98,3 @@
     letter-spacing: 0.28px;
     font-size: rem(14);
 }
-
-.single-info__prev {}
-
-.single-info__next {}

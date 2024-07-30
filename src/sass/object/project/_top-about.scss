@@ -1,6 +1,5 @@
 @use "global" as *;
 
-
 .top-about {
     padding-block: rem(278) rem(100);
     font-size: rem(18);
@@ -10,17 +9,9 @@
     }
 }
 
-.section {}
-
 .top-about__inner {
     position: relative;
 }
-
-.inner {}
-
-.top-about__title-wrapper {}
-
-.top-about__title {}
 
 
 .top-about__body {
@@ -71,6 +62,4 @@
     top: rem(80);
     left: 50%;
     transform: translateX(-50%);
-
-    @include mq(md) {}
 }

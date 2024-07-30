@@ -62,9 +62,6 @@ textarea::placeholder {
     font-weight: 300;
 }
 
-
-.cf7__list {}
-
 .cf7__row {
     display: flex;
     align-items: center;
@@ -88,14 +85,12 @@ textarea::placeholder {
 }
 
 .cf7__list dt {
-    // padding-top: 15px;
     font-weight: 300;
 }
 
 .cf7__row dt {
     width: 35%;
 
-    // padding-top: 15px;
     @include mq(md) {
         width: 100%;
     }
@@ -170,7 +165,6 @@ textarea::placeholder {
 .cf7__select select {
     width: 100%;
     padding: 19px 20px;
-    // background: #F4F4F4;
     color: #a5a5a5;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -301,33 +295,4 @@ input[type="submit"]:hover {
 /* ajax-loader */
 .wpcf7-spinner {
     vertical-align: middle;
-}
-
-@media screen and (max-width: 767px) {
-
-    // .cf7__list dt {
-    //     width: 100%;
-    //     margin-bottom: 15px;
-    //     padding-top: 0;
-    // }
-
-    // .cf7__list dd {
-    //     width: 100%;
-    // }
-
-    // .cf7__list dd:nth-of-type(n + 2) {
-    //     margin-top: 0;
-    // }
-
-    // .cf7__list dd .wpcf7-checkbox,
-    // .cf7__list dd .wpcf7-radio {
-    //     padding: 15px 0 0;
-    // }
-
-    // /* 送信ボタン */
-    // input[type="submit"] {
-    //     width: 180px;
-    //     height: 56px;
-    // }
-
 }

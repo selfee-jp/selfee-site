@@ -29,7 +29,6 @@
 }
 
 .top-service-list__item+.top-service-list__item {
-    // margin-top: rem(100);
 
     @include mq(md) {
         margin-top: rem(60);

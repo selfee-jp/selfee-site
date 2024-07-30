@@ -68,15 +68,13 @@
     }
 }
 
-
-
 .company__list-description {
     padding: rem(23) rem(20);
     width: 100%;
 
     @include mq(md) {
         max-width: 100%;
-        padding: rem(20);
+        padding: rem(40) rem(20);
     }
 }
 
@@ -137,8 +135,6 @@
 
     @include mq(md) {}
 }
-
-
 
 .company-history__title {
     font-size: rem(20);

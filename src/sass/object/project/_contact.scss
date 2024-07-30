@@ -1,19 +1,13 @@
 @use "global" as *;
 
-
 .contact-box {
     background: $main-color;
     padding-block: rem(29) rem(34);
     color: $white;
     text-align: center;
     margin-top: rem(50);
-
-    @include mq(md) {}
 }
 
-.contact-box__inner {}
-
-.inner {}
 
 .contact-box__item {
     max-width: rem(800);
@@ -44,13 +38,9 @@
     }
 }
 
-.contact-box__time {}
-
 .contact {
     padding-block: rem(66) rem(110);
 }
-
-.contact__inner {}
 
 .contact__title {
     letter-spacing: 0.52px;

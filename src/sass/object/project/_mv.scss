@@ -2,37 +2,21 @@
 
 .mv {
   position: relative;
-
-  @include mq(md) {
-    // padding-inline: rem(20);
-  }
 }
 
 .mv__bg {
-  // padding-top: rem(70);
   padding-top: calc( ( (20 / 1280) * 100 ) * 1vw);
   background: url(../images/top/top-mv_img-bg.webp) center bottom -180px / cover no-repeat;
 }
 
 .mv__img {
   display: block;
-  //max-width: rem(1280);
-  //margin-inline: auto;
-
     margin-left: 10%;
     margin-right: 10%;
-  @include mq(md) {
-    //margin-left: auto;
-    //max-width: 90%;
-    
-    //padding-top: rem(280);
-
-  }
 }
 
 .mv__img img {
   display: block;
-  //max-width: rem(658);
   max-width: calc( ( (600 / 1280) * 100 ) * 1vw);
   margin-left: auto;
 
@@ -44,56 +28,29 @@
 
 .mv__title {
   position: absolute;
-  //font-size: rem(26);
   font-size: calc( ( (26 / 1280) * 100 ) * 1vw);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 1.3px;
   top: 30%;
-  //left: calc(50% - min(50vw, #{rem(585)}));
   left: 10%;
   transform: translateY(-50%);
-  
-/*
-  @media (max-width: 1200px) {
-    left: rem(30);
-    transform: translateY(0);
-    top: 20%;
-  }
-
-  @include mq(md) {
-    top: rem(80);
-    font-size: rem(22);
-    line-height: 1.8;
-    left: rem(20);
-  }*/
 }
 
 .mv__title span {
   color: $sub-color;
   font-family: "Noto Sans";
-  // font-size: rem(38);
   font-size: calc( ( (38 / 1280) * 100 ) * 1vw);
   font-weight: 700;
   letter-spacing: 1.9px;
-
-  /*@include mq(md) {
-    font-size: rem(26);
-  }*/
 }
 
 .mv__scroll {
   position: absolute;
-  //bottom: rem(-300);
-  //left: calc(50% - min(50vw, #{rem(585)}));
   left:10%;
   transform: translateY(-50%);
   max-width: rem(514);
-/*
-  @media (max-width: 1200px) {
-    left: rem(30);
-  }
-*/
+
   @include mq(md) {
     display: none;
   }

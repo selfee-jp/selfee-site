@@ -11,10 +11,6 @@
     }
 }
 
-.about__inner {}
-
-.inner {}
-
 .about__title__heading {
     text-align: center;
 }
@@ -89,8 +85,6 @@
     margin-inline: auto;
     display: block;
 }
-
-.about__img-content img {}
 
 .about__text {
     @include mq(md) {
@@ -170,10 +164,6 @@
     }
 }
 
-.about-vision__inner {}
-
-.inner {}
-
 .about-vision__title__sub-heading {
     margin-top: rem(64);
     line-height: 1;
@@ -199,9 +189,6 @@
     letter-spacing: .36px;
     font-size: rem(18);
     display: block;
-
-    @include mq(md) {}
-
 }
 
 
@@ -225,22 +212,6 @@
         padding-block: rem(80);
     }
 }
-
-.about-partner__inner {}
-
-.inner {}
-
-.about-partner__heading {}
-
-.about__heading {}
-
-.about-partner__heading-ja {}
-
-.about__heading-ja {}
-
-.about-partner__heading-en {}
-
-.about__heading-en {}
 
 .about-partner__message {
     margin-top: rem(50);

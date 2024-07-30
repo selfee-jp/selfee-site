@@ -119,8 +119,11 @@
 }
 
 .support__item-details small {
+    font-size: rem(16);
+
     @include mq(md) {
         text-align: left;
+        margin-top: rem(10);
     }
 }
 
@@ -170,8 +173,6 @@
     }
 }
 
-.support-about__inner {}
-
 .support-about__title {
     font-size: rem(22);
     font-weight: 600;
@@ -197,8 +198,6 @@
     text-align: center;
 
     @include mq(md) {
-        // max-width: fit-content;
-        // margin-inline: auto;
         text-align: left;
     }
 }
@@ -208,14 +207,7 @@
     max-width: fit-content;
     margin-inline: auto;
     margin-top: rem(30);
-
-    @include mq(md) {
-        // max-width: fit-content;
-        // margin-inline: auto;
-    }
 }
-
-.support-about__text p {}
 
 .support-about__text strong {
     font-weight: 600;

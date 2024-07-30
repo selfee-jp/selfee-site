@@ -15,7 +15,6 @@
     position: relative;
     z-index: $layer-header + 5;
     padding-inline: rem(64) rem(20);
-    // max-width: rem(1280);
     width: 100%;
     margin-inline: auto;
     height: inherit;
@@ -23,12 +22,7 @@
     justify-content: space-between;
 
     @media (max-width: 1280px) {
-        // max-width: rem(1210);
         padding-inline: rem(30);
-    }
-
-    @include mq(inner) {
-        // padding-inline: rem(15) rem(15);
     }
 
     @include mq(md) {
@@ -46,39 +40,24 @@
     @media (max-width: 1260px) {
         max-width: rem(180);
     }
-
-    @include mq(inner) {}
-
-
-    @include mq(md) {
-        // max-width: rem(160);
-    }
 }
 
 .header__logo a {
     display: flex;
     align-items: center;
     flex-direction: column;
-    // justify-content: center;
     height: inherit;
     padding-top: rem(18);
 
 }
 
 .header__logo img {
-    // max-width: rem(211);
     width: 100%;
     height: auto;
     object-fit: contain;
 
     @include mq("md") {}
 }
-
-// .header__logo span {
-//   font-size: 10px;
-//   letter-spacing: 0.5px;
-//   white-space: nowrap;
-// }
 
 .header__nav-lists {
     display: flex;
@@ -148,25 +127,6 @@
     }
 }
 
-// .header__drop-menu-item a.current {
-//   color: $main-color;
-// }
-
-// .header__nav-link.current,
-// .header__drop-menu-item a.current {
-//   color: $main-color;
-// }
-
-/* メニューアイテムのホバースタイル */
-// .header__nav-item:hover .header__drop-menu-list {
-//   opacity: 1;
-//   /* 不透明度を最大に */
-//   transition: opacity .7s, visibility .7s;
-//   /* アニメーション設定 */
-//   visibility: visible;
-//   /* 下層メニューを表示 */
-// }
-
 
 @media (hover: hover) {
     .header__nav-item a:hover.header__nav-link span {
@@ -178,10 +138,6 @@
     .header__nav-item a:hover.header__nav-link {
         opacity: 1;
     }
-
-    // .header__drop-menu-list a:hover {
-    //   color: $main-color;
-    // }
 }
 
 
@@ -195,12 +151,7 @@
 
     @media (max-width: 1260px) {
         margin-left: 0;
-
     }
-
-    @include mq(inner) {}
-
-    @include mq(md) {}
 }
 
 .header__nav-contact-items {
@@ -221,10 +172,6 @@
 
     @media (max-width: 1260px) {
         margin-left: rem(15);
-    }
-
-    @include mq(inner) {
-        // margin-left: rem(15);
     }
 
     @include mq(md) {
@@ -295,15 +242,6 @@
         background-color: $text;
     }
 }
-
-/* ドロワーメニューが開いた時のスタイル */
-// .header.is-drawer-open .header__logo {
-//   color: $white;
-// }
-
-// .header.is-drawer-open .header__hamburger span {
-//   background-color: $white;
-// }
 
 /* hamburger */
 .header__hamburger {
@@ -437,7 +375,6 @@
 }
 
 /* spコンタクトボタン */
-
 .header__drawer-contact-items {
     display: flex;
     align-items: center;
@@ -464,8 +401,6 @@
     transition: all 0.3s ease-out;
     margin-inline: auto;
     width: rem(200);
-
-    @include mq(md) {}
 }
 
 .header__drawer-contact-item--blue a {

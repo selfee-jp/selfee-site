@@ -1,13 +1,8 @@
 @use "global" as *;
 
-
 .top-info {
     font-size: rem(18);
-
 }
-
-
-.top-info__wrapper {}
 
 
 .p-tio-info__more {
@@ -92,5 +87,3 @@
     flex-shrink: 0;
     color: $gray03;
 }
-
-.top-info__list p {}

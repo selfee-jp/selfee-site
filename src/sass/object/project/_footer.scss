@@ -37,8 +37,6 @@
   max-width: 100%;
 }
 
-.footer__logo a {}
-
 .footer__logo img {
   display: block;
 }
@@ -77,11 +75,7 @@
     gap: rem(20);
     margin-top: rem(60);
   }
-
-
 }
-
-.footer__list {}
 
 .footer__list-title {
   font-family: $en-font-family;
