@@ -96,6 +96,7 @@
   display: block;
   padding: .2em;
   padding-left: rem(12);
+  transition: all 0.3s ease-out .1s;
 
   &::before {
     content: "";
@@ -131,6 +132,15 @@
   letter-spacing: -0.21px;
   padding: .2em;
   padding-left: 0;
+  transition: all 0.3s ease-out .1s;
+}
+
+@media (hover: hover) {
+
+  .footer__item a:hover,
+  .footer__list a:hover {
+    color: $white;
+  }
 }
 
 .footer__copy {

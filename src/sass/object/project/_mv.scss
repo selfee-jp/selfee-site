@@ -5,30 +5,30 @@
 }
 
 .mv__bg {
-  padding-top: calc( ( (20 / 1280) * 100 ) * 1vw);
+  padding-top: calc(((20 / 1280) * 100) * 1vw);
   background: url(../images/top/top-mv_img-bg.webp) center bottom -180px / cover no-repeat;
 }
 
 .mv__img {
   display: block;
-    margin-left: 10%;
-    margin-right: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .mv__img img {
   display: block;
-  max-width: calc( ( (600 / 1280) * 100 ) * 1vw);
+  max-width: calc(((600 / 1280) * 100) * 1vw);
   margin-left: auto;
 
- @include mq( xl ) {
-    max-width: calc( ( (500 / 1280) * 100 ) * 1vw);
- }
+  @include mq(xl) {
+    max-width: calc(((500 / 1280) * 100) * 1vw);
+  }
 
 }
 
 .mv__title {
   position: absolute;
-  font-size: calc( ( (26 / 1280) * 100 ) * 1vw);
+  font-size: calc(((26 / 1280) * 100) * 1vw);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 1.3px;
@@ -40,18 +40,34 @@
 .mv__title span {
   color: $sub-color;
   font-family: "Noto Sans";
-  font-size: calc( ( (38 / 1280) * 100 ) * 1vw);
+  font-size: calc(((38 / 1280) * 100) * 1vw);
   font-weight: 700;
   letter-spacing: 1.9px;
 }
 
-.mv__scroll {
+.mv__scroll-box {
   position: absolute;
-  left:10%;
+  left: 10%;
   transform: translateY(-50%);
-  max-width: rem(514);
 
   @include mq(md) {
     display: none;
   }
+}
+
+.mv__scroll {
+  display: block;
+  max-width: rem(514);
+}
+
+.js-mv-title {
+  position: relative;
+  transform: translateY(20px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.js-mv-img {
+  opacity: 0;
+  transform: translateY(20px);
 }

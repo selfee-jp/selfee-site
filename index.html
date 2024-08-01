@@ -73,13 +73,13 @@
         <nav class="header__nav-contact u-desktop">
           <div class="header__nav-contact-items">
             <div class="header__nav-contact-item header__nav-contact-item--blue">
-              <a href="support/index.html">
+              <a class="header__contact-link--blue" href="support/index.html">
                 <p>リモートサポート</p>
                 <span>9:00~18:00(土日祝除く)</span>
               </a>
             </div>
             <div class=" header__nav-contact-item header__nav-contact-item--white">
-              <a href="contact.html">お問い合わせ</a>
+              <a class="header__contact-link--white" href="contact.html"><span>お問い合わせ</span></a>
             </div>
           </div>
         </nav>
@@ -132,20 +132,24 @@
     <!-- mv -->
     <div class="mv">
       <div class="mv__bg">
-        <picture class="mv__img">
+        <picture class="mv__img js-mv-img">
           <source srcset="./assets/images/top/top-mv_img-sp.webp" type="image/webp" media="(max-width: 768px)">
           <source srcset="./assets/images/top/top-mv_img.webp" type="image/webp">
           <img src="./assets/images/top/top-mv_img.png" alt="車やモニターの画像" width="1440" height="400">
         </picture>
         <div class="mv__title">
-          日本の<span>自動車業界</span>を支える
-          <span>IT</span>企業<br>
-          お客様に<span>「信頼」</span>される<br>
-          <span>ビジネスパートナー</span>を目指す。
+          <p class="js-mv-title">
+            日本の<span>自動車業界</span>を支える
+            <span>IT</span>企業<br>
+          </p>
+          <p class="js-mv-title">お客様に<span>「信頼」</span>される<br></p>
+          <p class="js-mv-title"><span>ビジネスパートナー</span>を目指す。</p>
         </div>
-        <picture class="mv__scroll">
-          <img src="./assets/images/top/scroll.svg" alt="スクロールする" width="1440" height="400">
-        </picture>
+        <div class="mv__scroll-box">
+          <picture class="mv__scroll">
+            <img src="./assets/images/top/scroll.svg" alt="スクロールする" width="1440" height="400">
+          </picture>
+        </div>
       </div>
     </div>
 
@@ -180,7 +184,7 @@
       <div class="top-service__inner inner">
         <div class="top-service__title-wrapper heading-wrapper heading-wrapper--reverse">
           <hgroup class="top-service__title heading">
-            <span class="heading__en js-text-effect js-text-effect--head js-splitText" aria-label="About us">service</span>
+            <span class="heading__en js-text-effect js-splitText js-text-effect--head" aria-label="About us">service</span>
             <h2 class="heading__ja">サービス</h2>
           </hgroup>
           <span class="heading__title-line"></span>

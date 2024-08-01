@@ -205,7 +205,7 @@
     }
 }
 
-.header__nav-contact-item--blue a {
+.header__contact-link--blue {
     color: $white;
     background-color: $main-color;
     border: 1px solid $main-color;
@@ -213,33 +213,78 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 
 .header__nav-contact-item--blue p {
     letter-spacing: 0.64px;
+    position: relative;
+    z-index: 2;
 }
 
 .header__nav-contact-item--blue span {
     font-size: rem(12);
     letter-spacing: 0.48px;
     padding-top: rem(3);
+    position: relative;
+    z-index: 2;
 }
 
-.header__nav-contact-item--white a {
+.header__contact-link--white {
     color: $text;
     background-color: $white;
     border: 1px solid $text;
+    position: relative;
+    overflow: hidden;
+}
+
+.header__nav-contact-item--white span {
+    position: relative;
+    z-index: 2;
+}
+
+.header__contact-link--blue::before {
+    background: $white;
+    content: "";
+    inset: 0;
+    position: absolute;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.header__contact-link--white::before {
+    background: $text;
+    content: "";
+    inset: 0;
+    position: absolute;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
 }
 
 @media (hover: hover) {
-    .header__nav-contact-item--blue a:hover {
+    .header__contact-link--blue:hover {
         color: $main-color;
-        background-color: $white;
     }
 
-    .header__nav-contact-item--white a:hover {
+    .header__contact-link--blue:hover.header__contact-link--blue::before {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        color: $main-color;
+    }
+
+    .header__contact-link--white:hover {
         color: $white;
-        background-color: $text;
+    }
+
+    .header__contact-link--white:hover.header__contact-link--white::before {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        color: $white;
     }
 }
 

@@ -8,12 +8,14 @@ import { header } from "./_header";
 import { img } from "./_img";
 import { textScroll } from "./_textScroll";
 import { line } from "./_line";
+import { mv } from "./_mv";
 
 accordion();
 animation();
 common();
 drawer();
 slide();
+mv();
 line();
 textScroll();
 img();
