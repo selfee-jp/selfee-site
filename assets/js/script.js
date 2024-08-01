@@ -4426,12 +4426,13 @@ function animation() {
       scrollTrigger: {
         trigger: element,
         // トリガーとなる要素を指定
-        start: "top 90%" // スクロール開始位置を指定
+        start: "top 90%",
+        // スクロール開始位置を指定
         //markers: true,
+        toggleActions: 'play none none reverse'
       }
     });
   });
-
   var fadeInLeftElements = document.querySelectorAll(".js-fade-in-left");
   fadeInLeftElements.forEach(function (element) {
     gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(element, {
@@ -4467,6 +4468,49 @@ function animation() {
         start: "top 70%" // スクロール開始位置を指定
         //markers: true,
       }
+    });
+  });
+  // matchMedia
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.matchMedia();
+
+  // 761px以上の時 PC
+  mm.add('(min-width:761px)', function () {
+    var cardWrappers = document.querySelectorAll('.js-card-wrapper');
+    cardWrappers.forEach(function (wrapper) {
+      var cards = wrapper.querySelectorAll('.js-card');
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(cards, {
+        autoAlpha: 0,
+        y: 10
+      }, {
+        y: 0,
+        autoAlpha: 1,
+        stagger: .1,
+        duration: .5,
+        scrollTrigger: {
+          trigger: wrapper,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse'
+        }
+      });
+    });
+  });
+
+  // 760px以下の時 sp
+  mm.add('(max-width:760px)', function () {
+    var cards = document.querySelectorAll('.js-card');
+    // card card card cards
+    cards.forEach(function (card) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(card, {
+        autoAlpha: 0,
+        y: 10
+      }, {
+        y: 0,
+        autoAlpha: 1,
+        scrollTrigger: {
+          trigger: card,
+          start: 'top 85%'
+        }
+      });
     });
   });
 }
@@ -4643,6 +4687,91 @@ function header() {
 
 /***/ }),
 
+/***/ "./js/_img.js":
+/*!********************!*\
+  !*** ./js/_img.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "img": () => (/* binding */ img)
+/* harmony export */ });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollToPlugin */ "./node_modules/gsap/ScrollToPlugin.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__.ScrollToPlugin);
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger);
+function img() {
+  window.addEventListener('DOMContentLoaded', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.config({
+      nullTargetWarn: false
+    });
+    var clipPathElements = document.querySelectorAll(".js-clip-path");
+    clipPathElements.forEach(function (element) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(element, {
+        autoAlpha: 0
+      }, {
+        autoAlpha: 1,
+        webkitMaskImage: 'linear-gradient(to right, black 100%, transparent 100%)',
+        maskImage: 'linear-gradient(to right, black 100%, transparent 100%)',
+        duration: .3,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          toggleActions: 'play none none reverse'
+        }
+      });
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./js/_line.js":
+/*!*********************!*\
+  !*** ./js/_line.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "line": () => (/* binding */ line)
+/* harmony export */ });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollToPlugin */ "./node_modules/gsap/ScrollToPlugin.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__.ScrollToPlugin);
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger);
+function line() {
+  console.log("表示テスト");
+  var lines = document.querySelectorAll(".heading__title-line");
+  lines.forEach(function (line) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(line, {
+      width: "0%"
+    }, {
+      width: "100%",
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: line,
+        start: "top 80%",
+        // トリガー位置の調整
+        toggleActions: 'play none none reverse'
+      }
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./js/_slide.js":
 /*!**********************!*\
   !*** ./js/_slide.js ***!
@@ -4685,18 +4814,69 @@ function slide() {
 
 /***/ }),
 
-/***/ "./js/_test.js":
-/*!*********************!*\
-  !*** ./js/_test.js ***!
-  \*********************/
+/***/ "./js/_textScroll.js":
+/*!***************************!*\
+  !*** ./js/_textScroll.js ***!
+  \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "test": () => (/* binding */ test)
+/* harmony export */   "textScroll": () => (/* binding */ textScroll)
 /* harmony export */ });
-function test() {
-  console.log("表示テスト");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollToPlugin */ "./node_modules/gsap/ScrollToPlugin.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__.ScrollToPlugin);
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger);
+function textScroll() {
+  window.addEventListener('DOMContentLoaded', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.config({
+      nullTargetWarn: false
+    });
+    var splitTarget = document.querySelectorAll('.js-splitText');
+
+    // spanタグに分割する関数
+    splitTarget.forEach(function (target) {
+      var newText = '';
+      var spanText = target.textContent; // ターゲットの中身を取得
+      spanText.split('').forEach(function (char, index) {
+        if (index === 0 && target.classList.contains('js-text-effect--head')) {
+          newText += '<span class="char heading__en-big">' + char + '</span>'; // 最初の文字にクラスを追加
+        } else if (index === 5 && target.classList.contains('js-text-effect--about')) {
+          newText += '<span class="char heading__en-space">' + char + '</span>'; // 6つ目の文字にクラスを追加
+        } else {
+          newText += '<span class="char">' + char + '</span>';
+        }
+      });
+      target.innerHTML = newText; // ターゲットに生成した要素を挿入
+    });
+
+    var textEffect = document.querySelectorAll('.js-text-effect'); // ターゲットとなる要素を全取得
+    textEffect.forEach(function (target) {
+      var spans = target.querySelectorAll('.char');
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(spans, {
+        duration: 0.5,
+        autoAlpha: 1,
+        rotateY: '0deg',
+        // 回転させる時
+        // duration: 1, autoAlpha: 1, translateY: 0, // 下から出現させる時
+        stagger: {
+          each: 0.1
+        },
+        scrollTrigger: {
+          trigger: target,
+          // start: 'bottom bottom',
+          start: "top 80%",
+          // markers: true,
+          toggleActions: 'play none none reverse'
+        }
+      });
+    });
+  });
 }
 
 /***/ }),
@@ -14462,8 +14642,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_common */ "./js/_common.js");
 /* harmony import */ var _drawer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_drawer */ "./js/_drawer.js");
 /* harmony import */ var _slide__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_slide */ "./js/_slide.js");
-/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_test */ "./js/_test.js");
+/* harmony import */ var _line__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_line */ "./js/_line.js");
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_header */ "./js/_header.js");
+/* harmony import */ var _img__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_img */ "./js/_img.js");
+/* harmony import */ var _textScroll__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./_textScroll */ "./js/_textScroll.js");
+
+
+
 
 
 
@@ -14476,8 +14661,11 @@ __webpack_require__.r(__webpack_exports__);
 (0,_common__WEBPACK_IMPORTED_MODULE_2__.common)();
 (0,_drawer__WEBPACK_IMPORTED_MODULE_3__.drawer)();
 (0,_slide__WEBPACK_IMPORTED_MODULE_4__.slide)();
+(0,_line__WEBPACK_IMPORTED_MODULE_5__.line)();
+(0,_textScroll__WEBPACK_IMPORTED_MODULE_8__.textScroll)();
+(0,_img__WEBPACK_IMPORTED_MODULE_7__.img)();
 (0,_header__WEBPACK_IMPORTED_MODULE_6__.header)();
-(0,_test__WEBPACK_IMPORTED_MODULE_5__.test)();
+(0,_line__WEBPACK_IMPORTED_MODULE_5__.test)();
 })();
 
 /******/ })()

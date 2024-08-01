@@ -35,6 +35,7 @@ export function animation() {
           trigger: element, // トリガーとなる要素を指定
           start: "top 90%", // スクロール開始位置を指定
           //markers: true,
+          toggleActions: 'play none none reverse',
         },
       }
     );
@@ -83,4 +84,39 @@ export function animation() {
       }
     );
   });
+      // matchMedia
+      const mm = gsap.matchMedia();
+
+      // 761px以上の時 PC
+      mm.add('(min-width:761px)', () => {
+        const cardWrappers = document.querySelectorAll('.js-card-wrapper');
+        cardWrappers.forEach((wrapper) => {
+          const cards = wrapper.querySelectorAll('.js-card');
+          gsap.fromTo(cards, { autoAlpha: 0, y: 10 },
+            {
+              y: 0, autoAlpha: 1, stagger: .1, duration: .5, scrollTrigger: {
+                trigger: wrapper,
+                start: 'top 85%',
+                toggleActions: 'play none none reverse',
+              }
+            }
+          );
+        });
+      });
+  
+      // 760px以下の時 sp
+      mm.add('(max-width:760px)', function () {
+        const cards = document.querySelectorAll('.js-card');
+        // card card card cards
+        cards.forEach((card) => {
+          gsap.fromTo(card, { autoAlpha: 0, y: 10 }, {
+            y: 0, autoAlpha: 1, scrollTrigger: {
+              trigger: card,
+              start: 'top 85%',
+            }
+          });
+        });
+      });
+
+      
 }

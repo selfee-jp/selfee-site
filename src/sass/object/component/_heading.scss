@@ -33,6 +33,11 @@
     font-size: rem(60);
     font-weight: 400;
     letter-spacing: 2.4px;
+    display: inline;
+}
+
+.heading__en-space {
+    padding-left: rem(10);
 }
 
 .heading__ja {
@@ -63,7 +68,8 @@
 }
 
 .heading__title-line {
-    width: 100%;
+    // width: 100%;
+    width: 0%;
     height: 1px;
     background: $text;
 }

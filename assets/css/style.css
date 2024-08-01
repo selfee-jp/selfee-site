@@ -847,6 +847,19 @@ th {
 	top: 0;
 }
 
+.js-text-effect {
+	line-height: 1;
+	overflow: hidden;
+}
+
+.js-text-effect span {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transform: rotateY(90deg);
+	        transform: rotateY(90deg);
+	visibility: hidden;
+}
+
 .inner {
 	height: inherit;
 	margin: 0 auto;
@@ -1031,264 +1044,6 @@ body {
 	max-width: 100%;
 	padding: 0;
 	width: 20rem;
-}
-
-.c-accordion {
-	border: 0.125rem solid #666;
-}
-
-.c-accordion summary::-webkit-details-marker {
-	display: none;
-}
-
-.c-accordion__title {
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	background: #666;
-	color: #fff;
-	cursor: pointer;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	font-size: 1.125rem;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
-	padding: 1.25rem 2.5rem;
-	text-decoration: none;
-	width: 100%;
-}
-
-.c-accordion__icon i {
-	font-size: 1rem;
-	position: relative;
-	right: 0;
-	-webkit-transition: -webkit-transform 0.3s;
-	transition: -webkit-transform 0.3s;
-	transition: transform 0.3s;
-	transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-.c-accordion.is-open .c-accordion__icon i {
-	-webkit-transform: rotate(-180deg);
-	        transform: rotate(-180deg);
-}
-
-.c-accordion__content {
-	background: #fff;
-	color: #666;
-	font-size: 1.125rem;
-	overflow: hidden;
-	text-decoration: none;
-}
-
-.c-accordion__content-inner {
-	padding: 1.25rem 2.5rem;
-}
-
-/* .c-accordion--type1 */
-
-.c-accordion--type1 .c-accordion__title {
-	background: #fff;
-	color: #666;
-	-webkit-transition: border 0.3s;
-	transition: border 0.3s;
-}
-
-.c-accordion--type1 .c-accordion__icon i {
-	font-size: 1.25rem;
-}
-
-/* .c-accordion--type2 */
-
-.c-accordion--type2 .c-accordion__title {
-	position: relative;
-}
-
-.c-accordion--type2 .c-accordion__icon::before,
-.c-accordion--type2 .c-accordion__icon::after {
-	background: #fff;
-	content: "";
-	height: 0.125rem;
-	position: absolute;
-	right: 1.875rem;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
-	-webkit-transition: 0.3s all;
-	transition: 0.3s all;
-	width: 0.9375rem;
-}
-
-.c-accordion--type2 .c-accordion__icon::after {
-	-webkit-transform: translate(-50%, -50%) rotate(-90deg);
-	        transform: translate(-50%, -50%) rotate(-90deg);
-}
-
-.c-accordion--type2.is-open .c-accordion__icon::after {
-	-webkit-transform: translate(-50%, -50%) rotate(0deg);
-	        transform: translate(-50%, -50%) rotate(0deg);
-}
-
-.c-card__body {
-	padding: 0.9375rem;
-}
-
-.c-card__time {
-	font-size: 0.875rem;
-}
-
-.c-card__title {
-	font-size: 1.25rem;
-	font-weight: bold;
-	margin-top: 0.625rem;
-}
-
-.c-card__text {
-	margin-top: 0.625rem;
-}
-
-.c-card--shadow {
-	-webkit-box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.3);
-	        box-shadow: 0 0 0.3125rem 0 rgba(0, 0, 0, 0.3);
-}
-
-.c-card--horizon {
-	display: -ms-grid;
-	display: grid;
-	-ms-grid-columns: 20% 80%;
-	grid-template-columns: 20% 80%;
-}
-
-.c-card--horizon .c-card__body {
-	padding: 0.625rem 0.9375rem;
-}
-
-.c-list,
-.c-list li ul {
-	list-style-type: disc;
-	padding-left: 1.875rem;
-	padding-right: 0.625rem;
-}
-
-.c-list li {
-	margin-bottom: 0.9375rem;
-}
-
-.c-list li ul li {
-	margin-top: 0.9375rem;
-}
-
-.c-list--decimal,
-.c-list--decimal li ul {
-	list-style-type: decimal;
-}
-
-.c-list--arrow-start,
-.c-list--arrow-start li ul {
-	list-style-type: none;
-}
-
-.c-list--arrow-start li {
-	position: relative;
-}
-
-.c-list--arrow-start li::before {
-	content: "\f054";
-	font-family: "Font Awesome 6 Free";
-	font-size: 0.75rem;
-	font-weight: 900;
-	left: -1rem;
-	position: absolute;
-	top: 0.125rem;
-}
-
-.c-lower-head {
-	height: 28.75rem;
-	position: relative;
-}
-
-.c-lower-head::before {
-	background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(rgb(90, 90, 90)));
-	background-image: linear-gradient(0deg, rgba(255, 255, 255, 0), rgb(90, 90, 90));
-	content: "";
-	height: 9.375rem;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-}
-
-.c-lower-head__bg img {
-	-o-object-fit: cover;
-	height: 100%;
-	object-fit: cover;
-	width: 100%;
-}
-
-.c-lower-head__inner {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: end;
-	-webkit-justify-content: flex-end;
-	    -ms-flex-pack: end;
-	        justify-content: flex-end;
-	left: 50%;
-	margin-inline: auto;
-	max-width: 48.75rem;
-	padding-inline: 3.3333%;
-	position: absolute;
-	top: 50%;
-	-webkit-transform: translateX(-50%);
-	        transform: translateX(-50%);
-	width: 100%;
-}
-
-.c-lower-head__title {
-	-ms-writing-mode: tb-rl;
-	background: #666;
-	color: #fff;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	font-size: 2.0625rem;
-	height: 19.375rem;
-	-webkit-box-pack: start;
-	-webkit-justify-content: flex-start;
-	    -ms-flex-pack: start;
-	        justify-content: flex-start;
-	letter-spacing: 0.3125rem;
-	padding-block: 0.3125rem;
-	padding-top: 1.25rem;
-	-webkit-writing-mode: vertical-rl;
-	    -ms-writing-mode: tb-rl;
-	        writing-mode: vertical-rl;
-}
-
-.c-text {
-	font-size: 1.0625rem;
-	letter-spacing: -0.0625rem;
-	line-height: 2.4705882353;
-	text-align: justify;
-}
-
-.c-text__name {
-	font-family: "Noto Sans JP", sans-serif;
-	font-weight: bold;
-}
-
-.c-vertical-line {
-	background: #666;
-	height: 6.25rem;
-	margin-inline: auto;
-	width: 0.0625rem;
 }
 
 /*==================================================================
@@ -1683,9 +1438,14 @@ input[type=submit]:hover {
 }
 
 .heading__en-big {
+	display: inline;
 	font-size: 3.75rem;
 	font-weight: 400;
 	letter-spacing: 2.4px;
+}
+
+.heading__en-space {
+	padding-left: 0.625rem;
 }
 
 .heading__ja {
@@ -1715,7 +1475,7 @@ input[type=submit]:hover {
 .heading__title-line {
 	background: #1D2124;
 	height: 1px;
-	width: 100%;
+	width: 0%;
 }
 
 .heading__title-line--white {
@@ -2475,8 +2235,6 @@ input[type=submit]:hover {
 	width: 100%;
 }
 
-/* メニューアイテムのホバースタイル */
-
 .header__nav-contact {
 	-webkit-box-align: center;
 	-webkit-align-items: center;
@@ -2574,8 +2332,6 @@ input[type=submit]:hover {
 	border: 1px solid #1D2124;
 	color: #1D2124;
 }
-
-/* ドロワーメニューが開いた時のスタイル */
 
 /* hamburger */
 
@@ -2877,19 +2633,7 @@ input[type=submit]:hover {
 	position: absolute;
 	top: 30%;
 	-webkit-transform: translateY(-50%);
-	        transform: translateY(-50%); /*
-    @media (max-width: 1200px) {
-      left: rem(30);
-      transform: translateY(0);
-      top: 20%;
-    }
-
-    @include mq(md) {
-      top: rem(80);
-      font-size: rem(22);
-      line-height: 1.8;
-      left: rem(20);
-    }*/
+	        transform: translateY(-50%);
 }
 
 .mv__title span {
@@ -2897,18 +2641,12 @@ input[type=submit]:hover {
 	font-family: "Noto Sans";
 	font-size: 2.96875vw;
 	font-weight: 700;
-	letter-spacing: 1.9px; /*@include mq(md) {
-    font-size: rem(26);
-  }*/
+	letter-spacing: 1.9px;
 }
 
 .mv__scroll {
 	left: 10%;
-	max-width: 32.125rem; /*
-    @media (max-width: 1200px) {
-      left: rem(30);
-    }
-  */
+	max-width: 32.125rem;
 	position: absolute;
 	-webkit-transform: translateY(-50%);
 	        transform: translateY(-50%);
@@ -2954,7 +2692,7 @@ input[type=submit]:hover {
 	gap: 1.1875rem;
 	-ms-grid-columns: (1fr)[4];
 	grid-template-columns: repeat(4, 1fr);
-	margin-top: 0.625rem;
+	margin-top: 0.9375rem;
 	padding-inline: 2.125rem;
 }
 
@@ -3719,9 +3457,7 @@ input[type=submit]:hover {
 	text-align: right;
 }
 
-.top-service-list__item-title-number::before {
-	content: "0" counter(number);
-	counter-increment: number;
+.top-service-list__item-title-number {
 	display: block;
 	font-family: "Quicksand", sans-serif;
 	font-size: 6.25rem;
@@ -3939,27 +3675,6 @@ body {
 
 .btn02--support {
 	width: 17.5rem;
-}
-
-.c-lower-head {
-	height: 14.375rem;
-}
-
-.c-lower-head__title {
-	font-size: 1.375rem;
-	height: 13.125rem;
-	padding-top: 0.625rem;
-	position: relative;
-	right: 1.25rem;
-	top: -2.5rem;
-}
-
-.c-text {
-	font-size: 1rem;
-}
-
-.c-vertical-line {
-	height: 4.125rem;
 }
 
 .cf7__row {
@@ -4606,7 +4321,7 @@ body {
 	text-align: left;
 }
 
-.top-service-list__item-title-number::before {
+.top-service-list__item-title-number {
 	font-size: 4rem;
 }
 

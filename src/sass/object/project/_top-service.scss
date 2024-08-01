@@ -105,9 +105,9 @@
 }
 
 
-.top-service-list__item-title-number::before {
-    counter-increment: number;
-    content: "0" counter(number);
+.top-service-list__item-title-number {
+    // counter-increment: number;
+    // content: "0" counter(number);
     font-size: rem(100);
     font-weight: 500;
     line-height: 1;
