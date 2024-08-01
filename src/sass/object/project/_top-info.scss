@@ -42,6 +42,7 @@
     position: relative;
     padding-block: rem(30);
     padding-inline: rem(80) rem(20);
+    transition: all 0.2s ease-out .1s;
 
     @include mq(md) {
         padding-inline: rem(20);
@@ -56,11 +57,22 @@
         height: rem(10);
         top: rem(20);
         right: rem(24);
+        transition: all 0.2s ease-out .1s;
 
         @include mq(md) {
             width: rem(50);
             height: rem(8);
         }
+    }
+}
+
+@media (hover: hover) {
+    .top-info__link:hover .top-info__list {
+        color: $main-color;
+    }
+
+    .top-info__link:hover.top-info__link::before {
+        right: rem(20);
     }
 }
 

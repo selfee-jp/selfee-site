@@ -959,6 +959,8 @@ body {
 	letter-spacing: 0.96px;
 	padding: 0.8125rem 4.3125rem;
 	position: relative;
+	-webkit-transition: all 0.2s ease-out 0.1s;
+	transition: all 0.2s ease-out 0.1s;
 }
 
 .btn::after {
@@ -978,36 +980,6 @@ body {
 .btn--blue {
 	background: linear-gradient(150deg, #0057AD 50%, #004080 50%);
 	color: #fff;
-}
-
-.btn--bgleft span {
-	color: #fff;
-	position: relative;
-	z-index: 3; /*z-indexの数値をあげて文字を背景よりも手前に表示*/
-}
-
-/*== 背景が流れる（左から右） */
-
-.btn--bgleft:before {
-	background: linear-gradient(150deg, #004080 50%, #0057AD 50%); /*背景色*/
-	border-radius: 50px;
-	content: ""; /*絶対配置で位置を指定*/
-	display: inline-block; /*色や形状*/
-	height: 100%; /*アニメーション*/
-	left: 0;
-	overflow: hidden;
-	position: absolute;
-	top: 0;
-	-webkit-transform: scale(0, 1);
-	        transform: scale(0, 1);
-	-webkit-transform-origin: right top;
-	        transform-origin: right top;
-	-webkit-transition: -webkit-transform 0.3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
-	transition: -webkit-transform 0.3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
-	transition: transform 0.3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
-	transition: transform 0.3s cubic-bezier(0.8, 0, 0.2, 1) 0s, -webkit-transform 0.3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
-	width: 100%;
-	z-index: 2;
 }
 
 .btn--black {
@@ -3345,6 +3317,8 @@ input[type=submit]:hover {
 	padding-block: 1.875rem;
 	padding-inline: 5rem 1.25rem;
 	position: relative;
+	-webkit-transition: all 0.2s ease-out 0.1s;
+	transition: all 0.2s ease-out 0.1s;
 	width: 100%;
 }
 
@@ -3355,6 +3329,8 @@ input[type=submit]:hover {
 	position: absolute;
 	right: 1.5rem;
 	top: 1.25rem;
+	-webkit-transition: all 0.2s ease-out 0.1s;
+	transition: all 0.2s ease-out 0.1s;
 	width: 4.125rem;
 }
 
@@ -3585,14 +3561,11 @@ input[type=submit]:hover {
 
 @media (hover: hover) {
 
-/*hoverした際の形状*/
-
-.btn--bgleft:hover:before {
-	overflow: hidden;
-	-webkit-transform: scale(1, 1);
-	        transform: scale(1, 1);
-	-webkit-transform-origin: left top;
-	        transform-origin: left top;
+.btn:hover {
+	-webkit-box-shadow: 6px 6px 11px rgba(0, 0, 0, 0.4);
+	        box-shadow: 6px 6px 11px rgba(0, 0, 0, 0.4);
+	-webkit-transform: translateY(-2px);
+	        transform: translateY(-2px);
 }
 
 .footer__item a:hover,
@@ -3626,6 +3599,14 @@ input[type=submit]:hover {
 	color: #fff;
 	-webkit-transform: translateX(0);
 	        transform: translateX(0);
+}
+
+.top-info__link:hover .top-info__list {
+	color: #0057AD;
+}
+
+.top-info__link:hover.top-info__link::before {
+	right: 1.25rem;
 }
 
 }
