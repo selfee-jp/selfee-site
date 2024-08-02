@@ -964,16 +964,22 @@ body {
 }
 
 .btn::after {
-	background: url(../images/common/arrow-white.svg) no-repeat center center/contain;
+	-webkit-mask: url(../images/common/arrow-white.svg) no-repeat center center/cover;
+	background: url(../images/common/arrow-white.svg) no-repeat center center/contain; /* SafariなどのWebkitブラウザ用 */
+	background: #fff;
 	content: "";
 	-webkit-filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
 	        filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
 	height: 0.625rem;
+	-webkit-mask: url(../images/common/arrow-white.svg) no-repeat center center/cover;
+	        mask: url(../images/common/arrow-white.svg) no-repeat center center/cover;
 	position: absolute;
-	right: -2.0625rem; /* SafariなどのWebkitブラウザ用 */
+	right: -2.0625rem;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	        transform: translateY(-50%);
+	-webkit-transition: all 0.2s ease-out 0.1s;
+	transition: all 0.2s ease-out 0.1s;
 	width: 4.125rem;
 }
 
@@ -982,9 +988,17 @@ body {
 	color: #fff;
 }
 
+.btn--blue::after {
+	background: #0068B7;
+}
+
 .btn--black {
 	background: #1D2124;
 	color: #fff;
+}
+
+.btn--black::after {
+	background: #fff;
 }
 
 /* btn02 */
@@ -3568,6 +3582,11 @@ input[type=submit]:hover {
 	        transform: translateY(-2px);
 }
 
+.btn:hover:after {
+	-webkit-animation: fuwafuwa 0.5s linear infinite;
+	        animation: fuwafuwa 0.5s linear infinite;
+}
+
 .footer__item a:hover,
 .footer__list a:hover {
 	color: #fff;
@@ -3606,7 +3625,7 @@ input[type=submit]:hover {
 }
 
 .top-info__link:hover.top-info__link::before {
-	right: 1.25rem;
+	right: 0.625rem;
 }
 
 }
@@ -4470,6 +4489,44 @@ to {
 to {
 	-webkit-transform: rotate(1turn);
 	        transform: rotate(1turn);
+}
+
+}
+
+@-webkit-keyframes fuwafuwa {
+
+0% {
+	-webkit-transform: translate(0, -2px);
+	        transform: translate(0, -2px);
+}
+
+50% {
+	-webkit-transform: translate(-5px, -2px);
+	        transform: translate(-5px, -2px);
+}
+
+100% {
+	-webkit-transform: translate(0, -2px);
+	        transform: translate(0, -2px);
+}
+
+}
+
+@keyframes fuwafuwa {
+
+0% {
+	-webkit-transform: translate(0, -2px);
+	        transform: translate(0, -2px);
+}
+
+50% {
+	-webkit-transform: translate(-5px, -2px);
+	        transform: translate(-5px, -2px);
+}
+
+100% {
+	-webkit-transform: translate(0, -2px);
+	        transform: translate(0, -2px);
 }
 
 }

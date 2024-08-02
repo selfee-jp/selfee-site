@@ -15,23 +15,46 @@
   &::after {
     content: "";
     position: absolute;
-    background: url(../images/common/arrow-white.svg) no-repeat center center/contain;
     width: rem(66);
     height: rem(10);
     top: 50%;
     transform: translateY(-50%);
     right: rem(-33);
+    background: url(../images/common/arrow-white.svg) no-repeat center center/contain;
     -webkit-filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
     /* SafariなどのWebkitブラウザ用 */
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+    mask: url(../images/common/arrow-white.svg) no-repeat center center/cover;
+    -webkit-mask: url(../images/common/arrow-white.svg) no-repeat center center/cover;
+    background: $white;
+    transition: all 0.2s ease-out 0.1s;
   }
 }
 
 .btn--blue {
   background: linear-gradient(150deg, #0057AD 50%, #004080 50%);
   color: $white;
+
+  &::after {
+    background: #0068B7;
+  }
 }
 
+.btn:hover:after {}
+
+@keyframes fuwafuwa {
+  0% {
+    transform: translate(0, -2px)
+  }
+
+  50% {
+    transform: translate(-5px, -2px)
+  }
+
+  100% {
+    transform: translate(0, -2px)
+  }
+}
 
 @media (hover: hover) {
 
@@ -39,12 +62,20 @@
     box-shadow: 6px 6px 11px rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
   }
+
+  .btn:hover:after {
+    animation: fuwafuwa .5s linear infinite;
+  }
 }
 
 
 .btn--black {
   background: $black;
   color: $white;
+
+  &::after {
+    background: $white;
+  }
 }
 
 /* btn02 */
