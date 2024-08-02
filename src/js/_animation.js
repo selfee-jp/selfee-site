@@ -98,7 +98,7 @@ export function animation() {
                 trigger: wrapper,
                 start: 'top 75%',
                 toggleActions: 'play none none reverse',
-          markers: true,
+          // markers: true,
               }
             }
           );
