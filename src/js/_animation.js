@@ -34,7 +34,7 @@ export function animation() {
         scrollTrigger: {
           trigger: element, // トリガーとなる要素を指定
           start: "top 90%", // スクロール開始位置を指定
-          //markers: true,
+          // markers: true,
           toggleActions: 'play none none reverse',
         },
       }
@@ -96,8 +96,9 @@ export function animation() {
             {
               y: 0, autoAlpha: 1, stagger: .1, duration: .5, scrollTrigger: {
                 trigger: wrapper,
-                start: 'top 85%',
+                start: 'top 75%',
                 toggleActions: 'play none none reverse',
+          markers: true,
               }
             }
           );

@@ -2954,9 +2954,7 @@ input[type=submit]:hover {
 	text-align: right;
 }
 
-.service-list__item-title-number::before {
-	content: "0" counter(number);
-	counter-increment: number;
+.service-list__item-title-number {
 	font-family: "Quicksand", sans-serif;
 	font-size: 5rem;
 	font-weight: 500;
@@ -4193,7 +4191,7 @@ body {
 	text-align: left;
 }
 
-.service-list__item-title-number::before {
+.service-list__item-title-number {
 	font-size: 4rem;
 }
 

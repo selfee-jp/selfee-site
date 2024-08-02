@@ -4428,7 +4428,7 @@ function animation() {
         // トリガーとなる要素を指定
         start: "top 90%",
         // スクロール開始位置を指定
-        //markers: true,
+        // markers: true,
         toggleActions: 'play none none reverse'
       }
     });
@@ -4488,8 +4488,9 @@ function animation() {
         duration: .5,
         scrollTrigger: {
           trigger: wrapper,
-          start: 'top 85%',
-          toggleActions: 'play none none reverse'
+          start: 'top 75%',
+          toggleActions: 'play none none reverse',
+          markers: true
         }
       });
     });

@@ -77,9 +77,7 @@
 }
 
 
-.service-list__item-title-number::before {
-    counter-increment: number;
-    content: "0" counter(number);
+.service-list__item-title-number {
     font-size: rem(80);
     font-weight: 500;
     line-height: 1;
