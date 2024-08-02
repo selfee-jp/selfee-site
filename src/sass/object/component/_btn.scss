@@ -20,7 +20,7 @@
     top: 50%;
     transform: translateY(-50%);
     right: rem(-33);
-    background: url(../images/common/arrow-white.svg) no-repeat center center/contain;
+    // background: url(../images/common/arrow-white.svg) no-repeat center center/contain;
     -webkit-filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
     /* SafariなどのWebkitブラウザ用 */
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
@@ -39,8 +39,6 @@
     background: #0068B7;
   }
 }
-
-.btn:hover:after {}
 
 @keyframes fuwafuwa {
   0% {
@@ -87,8 +85,41 @@
   line-height: 1.2;
   padding: rem(27) rem(54);
   display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid $blue;
 
   @include mq(md) {}
+}
+
+.btn02 span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn02::before {
+  background: $white;
+  content: "";
+  inset: 0;
+  position: absolute;
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+
+@media (hover: hover) {
+  .btn02:hover {
+    color: $blue;
+  }
+
+  .btn02:hover.btn02::before {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    color: $blue;
+  }
+
 }
 
 .btn02--support {

@@ -4735,6 +4735,44 @@ window.addEventListener('DOMContentLoaded', function () {
     yoyo: true,
     ease: "power1.inOut"
   });
+
+  /* initial */
+  // gsap.set('.js-brightness', { filter: 'brightness(0)' })
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set('.img.blur', {
+    filter: 'blur(10px)'
+  });
+  // gsap.set('.img.grayscale', { filter: 'grayscale(0)' })
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set('.js-move-text', {
+    y: 20,
+    autoAlpha: 0
+  });
+  // const effect = ['brightness(.5)', 'blur(0px)', 'grayscale(1)'];//変化後の値を定義
+  var effect = ['blur(0px)']; //変化後の値を定義
+
+  /* 一番行数が少なく済みそう */
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray('.trigger-effect').forEach(function (trigger, i) {
+    // 全ての.trigger-effectに対してアニメーションを定義していく
+    var image = trigger.querySelector('.img');
+    var text = trigger.querySelectorAll('.js-move-text');
+    gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+      trigger: trigger,
+      start: 'top 90%',
+      onEnter: function onEnter() {
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(image, {
+          filter: effect[i],
+          duration: 2
+        });
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(text, {
+          y: 20,
+          autoAlpha: 0
+        }, {
+          y: 0,
+          autoAlpha: 1,
+          stagger: .2
+        });
+      }
+    });
+  });
 });
 
 /***/ }),

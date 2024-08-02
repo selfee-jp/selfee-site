@@ -72,13 +72,13 @@
                 <nav class="header__nav-contact u-desktop">
                     <div class="header__nav-contact-items">
                         <div class="header__nav-contact-item header__nav-contact-item--blue">
-                            <a href="support/index.html">
+                            <a class="header__contact-link--blue" href="support/index.html">
                                 <p>リモートサポート</p>
                                 <span>9:00~18:00(土日祝除く)</span>
                             </a>
                         </div>
-                        <div class="header__nav-contact-item header__nav-contact-item--white">
-                            <a href="contact.html">お問い合わせ</a>
+                        <div class=" header__nav-contact-item header__nav-contact-item--white">
+                            <a class="header__contact-link--white" href="contact.html"><span>お問い合わせ</span></a>
                         </div>
                     </div>
                 </nav>
@@ -136,7 +136,7 @@
             </div>
         </div>
         <!-- mv -->
-        <div class="below-mv">
+        <div class="below-mv js-clip-path">
             <picture class="below-mv__img">
                 <source srcset="../assets/images/below/about-mv.webp" type="image/webp">
                 <img src="../assets/images/below/about-mv.jpg" alt="男性社員の写真" width="1280" height="500">
@@ -151,18 +151,18 @@
         <section class="about">
             <div class="about__inner inner">
                 <hgroup class="about__title__heading about__heading">
-                    <h2 class="about__heading-ja">ポリシー</h2>
-                    <span class="about__heading-en">Policy</span>
+                    <h2 class="about__heading-ja js-fade-in">ポリシー</h2>
+                    <span class="about__heading-en js-fade-in">Policy</span>
                 </hgroup>
-                <h3 class="about__message">人との繋がりを大切にし、<br>
+                <h3 class="about__message js-fade-in">人との繋がりを大切にし、<br>
                     社会に「信頼」される<br>
                     ビジネスパートナーを目指す。</h3>
                 <div class="about__body">
-                    <picture class="about__img">
+                    <picture class="about__img js-clip-path">
                         <source srcset="../assets/images/below/about_img01.webp" type="image/webp">
                         <img src="../assets/images/below/about_img01.jpg" alt="男性社員の写真" width="546" height="400" loading="lazy">
                     </picture>
-                    <div class="about__content">
+                    <div class="about__content js-fade-in">
                         <p class="about__text">原動力となるのは社員の持つ力であり、その原点は”人"です。
                             当社”人”とのつながりを大切にする企業です。
                         </p>
@@ -192,15 +192,15 @@
         <section class="about">
             <div class="about__inner inner">
                 <hgroup class="about__title__heading">
-                    <h2 class="about__heading-ja">アプローチ</h2>
-                    <span class="about__heading-en">Approach</span>
+                    <h2 class="about__heading-ja js-fade-in">アプローチ</h2>
+                    <span class="about__heading-en js-fade-in">Approach</span>
                 </hgroup>
                 <div class="about__body about__body--reverse">
-                    <picture class="about__img">
+                    <picture class="about__img  js-clip-path">
                         <source srcset="../assets/images/below/about_img02.webp" type="image/webp">
                         <img src="../assets/images/below/about_img02.jpg" alt="男性社員の写真" width="546" height="400" loading="lazy">
                     </picture>
-                    <div class="about__content">
+                    <div class="about__content js-fade-in">
                         <p class="about__text about__text--reverse">高齢化する社会の中で、介護者のために必要な移動手段であるクルマを安全に運行するため、<br class="u-desktop">
                             福祉送迎運転者講習会や自動車整備を考え取り組む<br class="u-desktop">
                             「一般社団法人 日本福祉車両協会」の賛同会員として活躍しています。
@@ -215,19 +215,22 @@
         </section>
 
         <!-- about-vision -->
-        <section class="about-vision">
+        <section class="about-vision trigger-effect">
             <div class="about-vision__inner inner">
                 <hgroup class="about-vision__heading">
-                    <h2 class="about-vision__heading-en about__heading-en">Vision</h2>
+                    <h2 class="about-vision__heading-en about__heading-en js-move-text">Vision</h2>
                 </hgroup>
                 <hgroup class="about-vision__title__sub-heading">
-                    <h3 class="about-vision__sub-heading-ja">未来へ繋ぐ</h3>
-                    <span class="about-vision__sub-heading-en">Connect to the future</span>
+                    <h3 class="about-vision__sub-heading-ja js-move-text">未来へ繋ぐ</h3>
+                    <span class="about-vision__sub-heading-en js-move-text">Connect to the future</span>
                 </hgroup>
-                <div class="about-vision__message">自動車社会を支えるアプリケーション<br>
+                <div class="about-vision__message js-move-text">自動車社会を支えるアプリケーション<br>
                     社会を支えるアプリケーション<br>
                     お客様のビジネスパートナーとして、<br>
                     ideaをシステムデザインします。</div>
+            </div>
+            <div class="about-vision__img-wrap">
+                <img class="about-vision__img img blur" width="1440" height="300" src="../assets/images/below/about_img03.webp" alt="">
             </div>
         </section>
 
@@ -235,18 +238,18 @@
         <section class="about-partner">
             <div class="about-partner__inner inner">
                 <hgroup class="about-partner__heading about__heading">
-                    <h2 class="about-partner__heading-ja">ビジネスパートナー</h2>
-                    <span class="about-partner__heading-en">Business partner</span>
+                    <h2 class="about__heading-ja js-fade-in">ビジネスパートナー</h2>
+                    <span class="about__heading-en js-fade-in">Business partner</span>
                 </hgroup>
-                <div class="about-partner__message">当社では、お客様の多様なニーズにお応えするために<br class="u-desktop">
+                <div class="about-partner__message js-fade-in">当社では、お客様の多様なニーズにお応えするために<br class="u-desktop">
                     主に西日本地域に営業拠点を設けております。<br>
                     ご協力いただけるビジネスパートナーを随時募集しております。</div>
-                <picture class="about__img">
+                <picture class="about__img js-fade-in">
                     <source srcset="../assets/images/below/about_img04.webp" type="image/webp">
                     <img src="../assets/images/below/about_img04.png" alt="ビジネスパートナーを紹介する地図" width="1044" height="1042" loading="lazy">
                 </picture>
-                <div class="about-partner__btn">
-                    <a href="contact/index.html" class="btn02">お問い合わせはこちら</a>
+                <div class="about-partner__btn js-fade-in">
+                    <a href="contact/index.html" class="btn02"><span>お問い合わせはこちら</span></a>
                 </div>
             </div>
         </section>

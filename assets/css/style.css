@@ -965,7 +965,6 @@ body {
 
 .btn::after {
 	-webkit-mask: url(../images/common/arrow-white.svg) no-repeat center center/cover;
-	background: url(../images/common/arrow-white.svg) no-repeat center center/contain; /* SafariなどのWebkitブラウザ用 */
 	background: #fff;
 	content: "";
 	-webkit-filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
@@ -974,7 +973,7 @@ body {
 	-webkit-mask: url(../images/common/arrow-white.svg) no-repeat center center/cover;
 	        mask: url(../images/common/arrow-white.svg) no-repeat center center/cover;
 	position: absolute;
-	right: -2.0625rem;
+	right: -2.0625rem; /* SafariなどのWebkitブラウザ用 */
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	        transform: translateY(-50%);
@@ -1005,12 +1004,31 @@ body {
 
 .btn02 {
 	background: #0057AD;
+	border: 1px solid #0057AD;
 	color: #fff;
 	display: inline-block;
 	font-size: 1.125rem;
 	letter-spacing: 0.36px;
 	line-height: 1.2;
+	overflow: hidden;
 	padding: 1.6875rem 3.375rem;
+	position: relative;
+}
+
+.btn02 span {
+	position: relative;
+	z-index: 2;
+}
+
+.btn02::before {
+	background: #fff;
+	content: "";
+	inset: 0;
+	position: absolute;
+	-webkit-transform: translateX(-105%);
+	        transform: translateX(-105%);
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
 }
 
 .btn02--support {
@@ -1632,11 +1650,37 @@ input[type=submit]:hover {
 /* about-vision */
 
 .about-vision {
-	background: url(../images/below/about_img03.webp) center center/cover no-repeat;
 	color: #fff;
 	margin-top: 6.5rem;
 	padding-block: 7.5rem 6.5rem;
+	position: relative;
 	text-align: center;
+}
+
+.about-vision__img {
+	-o-object-fit: cover;
+	height: 100%;
+	left: 50%;
+	object-fit: cover;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	width: 100%;
+	z-index: -1;
+}
+
+.about-vision__img-wrap {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	-webkit-transition: -webkit-transform 0.8s ease-out;
+	transition: -webkit-transform 0.8s ease-out;
+	transition: transform 0.8s ease-out;
+	transition: transform 0.8s ease-out, -webkit-transform 0.8s ease-out;
+	width: 100%;
+	z-index: -1;
 }
 
 .about-vision__title__sub-heading {
@@ -3585,6 +3629,16 @@ input[type=submit]:hover {
 .btn:hover:after {
 	-webkit-animation: fuwafuwa 0.5s linear infinite;
 	        animation: fuwafuwa 0.5s linear infinite;
+}
+
+.btn02:hover {
+	color: #0057AD;
+}
+
+.btn02:hover.btn02::before {
+	color: #0057AD;
+	-webkit-transform: translateX(0);
+	        transform: translateX(0);
 }
 
 .footer__item a:hover,
