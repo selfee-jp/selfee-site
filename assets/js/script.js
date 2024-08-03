@@ -4489,8 +4489,8 @@ function animation() {
         scrollTrigger: {
           trigger: wrapper,
           start: 'top 75%',
-          toggleActions: 'play none none reverse',
-          markers: true
+          toggleActions: 'play none none reverse'
+          // markers: true,
         }
       });
     });
@@ -4707,6 +4707,8 @@ window.addEventListener('DOMContentLoaded', function () {
   gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.config({
     nullTargetWarn: false
   });
+
+  // 画像が横から出てくるアニメーション
   var clipPathElements = document.querySelectorAll(".js-clip-path");
   clipPathElements.forEach(function (element) {
     gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(element, {
@@ -4715,7 +4717,7 @@ window.addEventListener('DOMContentLoaded', function () {
       autoAlpha: 1,
       webkitMaskImage: 'linear-gradient(to right, black 100%, transparent 100%)',
       maskImage: 'linear-gradient(to right, black 100%, transparent 100%)',
-      duration: .3,
+      duration: 0.3,
       ease: "power1.out",
       scrollTrigger: {
         trigger: element,
@@ -4724,55 +4726,95 @@ window.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-  var scrollImg = document.querySelector('.mv__scroll img');
-  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(scrollImg, {
-    opacity: 0,
-    y: 10
-  }, {
-    opacity: 1,
-    y: 0,
-    duration: 1.5,
-    repeat: -1,
-    yoyo: true,
-    ease: "power1.inOut"
-  });
 
-  /* initial */
-  // gsap.set('.js-brightness', { filter: 'brightness(0)' })
-  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set('.img.blur', {
-    filter: 'blur(10px)'
-  });
-  // gsap.set('.img.grayscale', { filter: 'grayscale(0)' })
+  // MVのスクロールアニメーション
+  var scrollImg = document.querySelector('.mv__scroll img');
+  if (scrollImg) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(scrollImg, {
+      opacity: 0,
+      y: 10
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 1.5,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut"
+    });
+  }
+
+  // 文字が順番に出てくるアニメーション
   gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set('.js-move-text', {
     y: 20,
     autoAlpha: 0
   });
-  // const effect = ['brightness(.5)', 'blur(0px)', 'grayscale(1)'];//変化後の値を定義
-  var effect = ['blur(0px)']; //変化後の値を定義
-
-  /* 一番行数が少なく済みそう */
-  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray('.trigger-effect').forEach(function (trigger, i) {
-    // 全ての.trigger-effectに対してアニメーションを定義していく
-    var image = trigger.querySelector('.img');
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray('.trigger-effect').forEach(function (trigger) {
     var text = trigger.querySelectorAll('.js-move-text');
     gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
       trigger: trigger,
-      start: 'top 90%',
+      start: 'top 80%',
       onEnter: function onEnter() {
-        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(image, {
-          filter: effect[i],
-          duration: 2
-        });
         gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(text, {
           y: 20,
           autoAlpha: 0
         }, {
           y: 0,
           autoAlpha: 1,
-          stagger: .2
+          stagger: 0.2
         });
       }
     });
+  });
+
+  // 通常のパララックスエフェクト
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray('.js-parallax').forEach(function (parallax) {
+    var img = parallax.querySelector('.js-parallax__img');
+    if (img) {
+      // 縦方向の移動
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(img, {
+        y: 100
+      }, {
+        y: -100,
+        scrollTrigger: {
+          trigger: parallax,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1
+        }
+      });
+
+      // ぼかしからくっきりと
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(img, {
+        filter: 'blur(10px)'
+      }, {
+        filter: 'blur(0px)',
+        scrollTrigger: {
+          trigger: parallax,
+          start: 'top bottom',
+          end: 'top center',
+          scrub: 1
+        }
+      });
+    }
+  });
+
+  // FV用のパララックスエフェクト
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.utils.toArray('.js-parallax-mv').forEach(function (parallax) {
+    var img = parallax.querySelector('.js-parallax__img-mv');
+    if (img) {
+      // 縦方向の移動
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(img, {
+        y: 50
+      }, {
+        y: -50,
+        scrollTrigger: {
+          trigger: parallax,
+          start: 'top center',
+          end: 'bottom top',
+          scrub: 1
+        }
+      });
+    }
   });
 });
 

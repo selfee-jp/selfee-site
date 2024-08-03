@@ -151,6 +151,13 @@
     }
 }
 
+// .js-parallax {
+//     // position: relative;
+//     overflow: hidden;
+// }
+
+.js-parallax__img {}
+
 /* about-vision */
 .about-vision {
     text-align: center;
@@ -158,6 +165,7 @@
     padding-block: rem(120) rem(104);
     margin-top: rem(104);
     position: relative;
+    overflow: hidden;
     // background: url(../images/below/about_img03.webp) center center / cover no-repeat;
 
     @include mq(md) {
@@ -165,9 +173,10 @@
     }
 }
 
-.about-vision__img {
+// .js-parallax__img-mv,
+.js-parallax__img {
     width: 100%;
-    height: 100%;
+    height: 150%;
     object-fit: cover;
     position: absolute;
     top: 50%;
@@ -176,7 +185,7 @@
     transform: translate(-50%, -50%);
 }
 
-.about-vision__img-wrap {
+.js-parallax__img-wrap {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -222,7 +231,6 @@
     max-width: fit-content;
     margin-inline: auto;
 }
-
 
 
 
