@@ -3,6 +3,7 @@
 
 .info {
     padding-block: rem(68) rem(94);
+    background: $white;
 
     @include mq(md) {
         padding-block: rem(40) rem(60);

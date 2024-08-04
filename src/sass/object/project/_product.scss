@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .product {
+    background: $white;
     padding-block: rem(104) rem(80);
 
     @include mq(md) {

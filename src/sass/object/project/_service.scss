@@ -3,6 +3,7 @@
 .service {
     padding-block: rem(110) rem(96);
     overflow: hidden;
+    background: $white;
 
     @include mq(md) {
         padding-block: rem(60);
@@ -17,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    z-index: 3;
 
     @include mq(md) {
         flex-direction: column-reverse;

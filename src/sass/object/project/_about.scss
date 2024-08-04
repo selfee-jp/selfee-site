@@ -3,11 +3,12 @@
 /* about */
 
 .about {
-    padding-top: rem(104);
+    padding-block: rem(104);
     line-height: 1.5;
+    background: $white;
 
     @include mq(md) {
-        padding-top: rem(80);
+        padding-block: rem(80);
     }
 }
 
@@ -163,14 +164,10 @@
     text-align: center;
     color: $white;
     padding-block: rem(120) rem(104);
-    margin-top: rem(104);
     position: relative;
     overflow: hidden;
+    // background: $white;
     // background: url(../images/below/about_img03.webp) center center / cover no-repeat;
-
-    @include mq(md) {
-        margin-top: rem(80);
-    }
 }
 
 // .js-parallax__img-mv,
@@ -194,6 +191,7 @@
     z-index: -1;
     transition: transform .8s ease-out;
 }
+
 
 .about-vision__title__sub-heading {
     margin-top: rem(64);
@@ -239,6 +237,7 @@
     padding-block: rem(104);
     text-align: center;
     background: rgba(0, 104, 183, 0.05);
+    background: $white;
 
     @include mq(md) {
         padding-block: rem(80);

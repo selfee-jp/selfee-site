@@ -1,12 +1,18 @@
 @use "global" as *;
 
 .breadcrumb {
-    display: flex;
-    align-items: center;
+    padding-bottom: rem(40);
+    background: $white;
 
     @include mq(md) {
+        padding-bottom: rem(10);
         font-size: rem(14);
     }
+}
+
+.breadcrumb__wrap {
+    display: flex;
+    align-items: center;
 }
 
 .breadcrumb a {
