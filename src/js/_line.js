@@ -2,12 +2,11 @@ import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollToPlugin);
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 export function line() {
-  console.log("表示テスト");
 
+  // タイトルラインのアニメーション
   const lines = document.querySelectorAll(".heading__title-line");
   lines.forEach((line) => {
     gsap.fromTo(line, 
