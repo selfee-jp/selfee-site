@@ -8,6 +8,7 @@ import { line } from "./_line";
 import { textScroll } from "./_textScroll";
 import { img } from "./_img";
 import { header } from "./_header";
+import { timeline } from "./_timeline";
 
 // accordion();
 animation();
@@ -18,5 +19,6 @@ mv();
 line();
 textScroll();
 img();
+timeline();
 header();
 // test();

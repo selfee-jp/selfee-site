@@ -596,6 +596,80 @@ function textScroll() {
 
 /***/ }),
 
+/***/ "./js/_timeline.js":
+/*!*************************!*\
+  !*** ./js/_timeline.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "timeline": () => (/* binding */ timeline)
+/* harmony export */ });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollToPlugin */ "./node_modules/gsap/ScrollToPlugin.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollToPlugin__WEBPACK_IMPORTED_MODULE_1__.ScrollToPlugin);
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger);
+function timeline() {
+  window.addEventListener('DOMContentLoaded', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.config({
+      nullTargetWarn: false
+    });
+    var companyHistoryWrapper = document.querySelector('.company-history__wrapper');
+    if (companyHistoryWrapper) {
+      // タイムラインのコンテンツ表示
+      var historyElements = document.querySelectorAll(".company-history__list");
+      historyElements.forEach(function (element) {
+        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(element, {
+          autoAlpha: 0,
+          y: 5
+        }, {
+          autoAlpha: 1,
+          y: 0,
+          duration: 2,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: element,
+            // トリガーとなる要素を指定
+            start: "top 75%",
+            // スクロール開始位置を指定
+            toggleActions: 'play none none reverse'
+            // markers: true,
+          }
+        });
+      });
+
+      // .company-history__wrapper が存在する場合のみ以下のコードを実行
+      var line = document.querySelector('.company-history__line');
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(line, {
+        scaleY: 0,
+        duration: .5
+      }, {
+        scaleY: 1,
+        transformOrigin: "top center",
+        duration: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: '.company-history__wrapper',
+          // トリガーとなる要素を指定
+          start: "top 70%",
+          // スクロール開始位置を指定
+          end: "bottom bottom",
+          toggleActions: 'play none none reverse',
+          scrub: true
+          // markers: true,
+        }
+      });
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./node_modules/gsap/CSSPlugin.js":
 /*!****************************************!*\
   !*** ./node_modules/gsap/CSSPlugin.js ***!
@@ -10360,11 +10434,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _textScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_textScroll */ "./js/_textScroll.js");
 /* harmony import */ var _img__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_img */ "./js/_img.js");
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./_header */ "./js/_header.js");
+/* harmony import */ var _timeline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./_timeline */ "./js/_timeline.js");
 // import { accordion } from "./_accordion";
 
 
 
 // import { slide } from "./_slide";
+
 
 
 
@@ -10380,6 +10456,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_line__WEBPACK_IMPORTED_MODULE_4__.line)();
 (0,_textScroll__WEBPACK_IMPORTED_MODULE_5__.textScroll)();
 (0,_img__WEBPACK_IMPORTED_MODULE_6__.img)();
+(0,_timeline__WEBPACK_IMPORTED_MODULE_8__.timeline)();
 (0,_header__WEBPACK_IMPORTED_MODULE_7__.header)();
 // test();
 })();

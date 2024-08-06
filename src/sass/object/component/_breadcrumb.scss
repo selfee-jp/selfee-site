@@ -1,11 +1,12 @@
 @use "global" as *;
 
 .breadcrumb {
-    padding-bottom: rem(40);
+    // padding-bottom: rem(40);
+    padding-bottom: 0.5rem;
     background: $white;
 
     @include mq(md) {
-        padding-bottom: rem(10);
+        // padding-bottom: rem(10);
         font-size: rem(14);
     }
 }
