@@ -44,6 +44,7 @@
     display: block;
   }
 }
+
 .u-mobile--grid {
   display: none;
 
@@ -57,6 +58,15 @@
   display: none;
 
   @include mq("sm") {
+    display: block;
+  }
+}
+
+//smのみ表示
+.u-410 {
+  display: none;
+
+  @media (max-width: 410px) {
     display: block;
   }
 }
